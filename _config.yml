@@ -28,9 +28,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  SwissOpenEM
 
 # Build settings
-theme: minima
-plugins:
-  - jekyll-feed
+remote_theme: hydecorp/hydejack@v9.1.6
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -40,14 +38,14 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - README.md
+
+plugins:
+  - jekyll-include-cache
