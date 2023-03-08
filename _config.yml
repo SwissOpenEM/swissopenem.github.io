@@ -18,11 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Swiss Open EM Data Network (OpEM)
+title: OpEM
 email: spencer.bliven@psi.ch
 description: >- # this means to ignore newlines until "baseurl:"
-  The Swiss Open EM Data Network (OpEM) aims to improve open research data
-  practices across the Swiss electron microscopy community.
+  The Swiss Open EM Data Network
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  SwissOpenEM
@@ -49,3 +48,22 @@ exclude:
 
 plugins:
   - jekyll-include-cache
+
+
+# Hydejack config: https://hydejack.com/docs/config/
+#accent_image: /assets/img/sidebar-bg.jpg
+#accent_color: rgb(79,177,186)
+
+author:
+  name:  Spencer Bliven
+  email: spencer.bliven@psi.ch
+  social:
+    github:  SwissOpenEM
+    email: spencer.bliven@psi.ch
+
+
+menu:
+  - title: Overview
+    url:   /overview/
+  - title: Members
+    url:   /members/
