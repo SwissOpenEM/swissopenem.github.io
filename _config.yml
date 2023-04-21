@@ -51,8 +51,6 @@ plugins:
 
 
 # Hydejack config: https://hydejack.com/docs/config/
-#accent_image: /assets/img/sidebar-bg.jpg
-#accent_color: rgb(79,177,186)
 
 author:
   name:  Spencer Bliven
@@ -61,9 +59,13 @@ author:
     github:  SwissOpenEM
     email: spencer.bliven@psi.ch
 
+accent_image: /assets/img/orientation-map.jpg
+#accent_color: rgb(79,177,186)
 
 menu:
   - title: Overview
     url:   /overview/
   - title: Members
     url:   /members/
+  - title: Jobs
+    url:   /jobs/
