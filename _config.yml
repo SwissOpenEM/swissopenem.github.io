@@ -61,6 +61,7 @@ author:
 
 accent_image: /assets/img/orientation-map.jpg
 #accent_color: rgb(79,177,186)
+sidebar_footer: "[Image: Kunze and Sologubenko, ScopeM](https://scopem.ethz.ch/gallery/orientation-map.html)"
 
 menu:
   - title: Overview
