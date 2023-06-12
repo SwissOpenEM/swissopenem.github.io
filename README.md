@@ -1,6 +1,6 @@
 # SwissOpenEM website
 
-## Building
+## Building locally
 
 The website is based on jekyll.
 
@@ -12,3 +12,11 @@ Next install the required gems:
 And serve the website:
 
     bundle exec jekyll serve
+
+## Building with docker
+
+You can also run jekyll in a docker container
+
+    docker-compose up -d
+
+This is equivalent running `jekyll serve`.
