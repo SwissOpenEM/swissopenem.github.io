@@ -4,3 +4,24 @@
     width: 100%;
     font-size: 80%;
 }
+
+.center {
+    text-align: center;
+}
+
+.button {
+    background: var(--accent-color-faded);
+    border: solid 1px var(--accent-color-darkened) !important;
+    border-radius: 5px;
+    padding: .5ex 2em;
+    text-align: center;
+    display: inline-block;
+    font-size: larger;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    &:hover {
+        background: var(--accent-color);
+    }
+}
