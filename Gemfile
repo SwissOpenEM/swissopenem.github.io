@@ -17,6 +17,7 @@ group :jekyll_plugins do
   gem "jekyll-theme-hydejack"
   gem "jekyll-include-cache"
   gem "webrick"
+  gem "jekyll-redirect-from"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -48,7 +48,10 @@ exclude:
 
 plugins:
   - jekyll-include-cache
+  - jekyll-redirect-from
 
+whitelist:
+  - jekyll-redirect-from
 
 # Hydejack config: https://hydejack.com/docs/config/
 
