@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: OpEM
+title: OpenEM
 email: spencer.bliven@psi.ch
 description: >- # this means to ignore newlines until "baseurl:"
   The Swiss Open EM Data Network
@@ -65,7 +65,7 @@ author:
 logo: /assets/img/logo-512x512.png
 accent_image: /assets/img/orientation-map.jpg
 #accent_color: rgb(79,177,186)
-sidebar_footer: "[Image: Kunze and Sologubenko, ScopeM](https://scopem.ethz.ch/gallery/orientation-map.html)"
+sidebar_footer: "[Image Credits](/news/2023/06/14/logo.html)"
 
 favicon: /assets/icons/favicon.ico
 apple_touch_icon: /assets/icons/apple-touch-icon.png

@@ -5,7 +5,7 @@
 layout: home
 ---
 
-The Open EM Data Network (OpEM) is a consortium of Swiss electron microscopy facilities working together to:
+The Open EM Data Network (OpenEM) is a consortium of Swiss electron microscopy facilities working together to:
 
 - Improve Open Research Data (ORD) practices in the Swiss EM community
 - Provide an open and [FAIR](https://force11.org/info/the-fair-data-principles/) repository for Swiss EM data not hosted elsewhere
