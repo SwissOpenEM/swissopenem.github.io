@@ -20,6 +20,7 @@
   font-size: larger;
   font-weight: bold;
   padding: .5ex 2em;
+  margin: .5ex;
   text-align: center;
 
   text-decoration: none;
@@ -27,6 +28,10 @@
    &:hover {
     background: var(--accent-color);
   }
+}
+
+.button-container {
+  display: inline-block;
 }
 
 .avatar {

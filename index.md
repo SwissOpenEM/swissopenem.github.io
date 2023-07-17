@@ -15,4 +15,6 @@ The Open EM Data Network (OpenEM) is a consortium of Swiss electron microscopy f
 
 For more information, see the [overview](/overview).
 
+<div class="center">
 {% include button.html contents="Overview" href="/overview" %}
+</div>

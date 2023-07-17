@@ -5,14 +5,12 @@
   - contents: Button contents. Accepts simple markdown.
   - href (optional): URL
 {% endcomment -%}
-<div class="center">
-  {%- if include.href -%}
-    <a class="button" href="{{include.href}}">
-      {{- include.contents | markdownify | remove: "<p>" | remove: "</p>" -}}
-    </a>
-  {%- else -%}
-    <div class="button">
-      {{- include.contents | markdownify | remove: "<p>" | remove: "</p>" -}}
-    </div>
-  {%- endif -%}
-</div>
+{%- if include.href -%}
+  <a class="button" href="{{include.href}}">
+    {{- include.contents | markdownify | remove: "<p>" | remove: "</p>" -}}
+  </a>
+{%- else -%}
+  <div class="button">
+    {{- include.contents | markdownify | remove: "<p>" | remove: "</p>" -}}
+  </div>
+{%- endif -%}
