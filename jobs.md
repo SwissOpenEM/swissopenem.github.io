@@ -1,6 +1,6 @@
 ---
 title: "Job Openings"
-slug: jobs
+permalink: /jobs/
 layout: list
 menu: true
 description: Recruiting and job opportunities
