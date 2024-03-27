@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Recruiting software engineers in Lausanne and Geneva"
+title:  "[Closed] Recruiting software engineers in Lausanne and Geneva"
 date:   2023-07-17 12:21:40 +0100
 categories: jobs
 ---
@@ -15,5 +15,3 @@ Additionally, DCI-Lausanne (UNIL/EPFL) is looking for a software engineer.
 </div>
 
 Additional jobs may be posted soon at other [participating institutions](/members).
-
-

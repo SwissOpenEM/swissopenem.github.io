@@ -1,8 +1,9 @@
 ---
 title: "Job Openings"
+slug: jobs
 permalink: /jobs/
 layout: list
-menu: true
+menu: false
 description: Recruiting and job opportunities
 ---
 
