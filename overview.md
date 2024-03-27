@@ -29,3 +29,11 @@ OpenEM is a Swiss Open Research Data Grants (CHORD) project funded by
 
 All major academic electron microscopy facilities in Switzerland participate in
 the network. For details see the [members page](/members/).
+
+### Resources
+
+For more information, see
+
+- [OpenEM Poster](https://zenodo.org/record/7845286)
+- [Github organization](https://github.com/SwissOpenEM/)
+- [SciCat](https://scicatproject.github.io/)
