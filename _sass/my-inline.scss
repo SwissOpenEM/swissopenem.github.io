@@ -2,7 +2,7 @@
   bottom: 2px;
   font-size: 80%;
   position: fixed;
-  width: 100%;
+  max-width: $sidebar-width;
 }
 
 .center {
