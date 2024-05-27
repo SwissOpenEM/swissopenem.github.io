@@ -65,7 +65,11 @@ author:
 logo: /assets/img/logo-512x512.png
 accent_image: /assets/img/orientation-map.jpg
 #accent_color: rgb(79,177,186)
-sidebar_footer: "[Image Credits](/news/2023/06/14/logo.html)"
+sidebar_footer: |-
+  OpenEM is supported by the [Open Research Data Program](https://open-research-data-portal.ch/)
+  of the [ETH Board](https://ethrat.ch/en/measure-1-calls-for-field-specific-actions/).
+  
+  [Image Credits](/news/2023/06/14/logo.html)"
 
 favicon: /assets/icons/favicon.ico
 apple_touch_icon: /assets/icons/apple-touch-icon.png
