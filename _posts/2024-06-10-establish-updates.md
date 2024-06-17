@@ -17,3 +17,5 @@ On 13 June 2024, the two establish projects financed by the ETH Domain ORD progr
 The establish projects aim at establishing ORD practices that are already existing, with a research agenda and a common understanding about ORD practices. The goal is that they become the de facto standards in a community and raise the quality level. 
  
 Anyone is welcome to attend this event online. You can register for free [here](https://lnkd.in/gAQSeQgd).
+
+Slides from the presentation are available from [zenodo](https://zenodo.org/doi/10.5281/zenodo.11632469).
