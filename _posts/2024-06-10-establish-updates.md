@@ -19,3 +19,5 @@ The establish projects aim at establishing ORD practices that are already existi
 Anyone is welcome to attend this event online. You can register for free [here](https://lnkd.in/gAQSeQgd).
 
 Slides from the presentation are available from [zenodo](https://zenodo.org/doi/10.5281/zenodo.11632469).
+
+*Edit*: A recording of the presentations can be viewed [here](https://epfl.zoom.us/rec/play/rWpJ4kYbs9Y5tCWx7HSKAjtJ88DpSprhpgrChGQ6MXSq4awDtVU7csV6MUYrfnCSiVuIdQfVoBRel01O.Ck4LyAPReXgo7fm4?canPlayFromShare=true&from=my_recording&continueMode=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fepfl.zoom.us%2Frec%2Fshare%2FxzKmvOza1unpe_fI7fycddZwltVoXbDDB4sZAITIM76xYg5wx1caRPxedjOKhi3P.jzbj-h0fjspgWxrE). The OpenEM portion starts at 41:03 in the recording.
