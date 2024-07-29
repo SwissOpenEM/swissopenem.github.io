@@ -1,0 +1,8 @@
+- id: 1
+  description: "Developing automated deposition tools for cryo-EM"
+  status: "Open"
+  table: "tec"
+- id: 2
+  description: "Expanding automated deposition tools for other EM disciplines"
+  status: "Open"
+  table: "tec"

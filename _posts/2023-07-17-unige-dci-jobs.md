@@ -10,8 +10,9 @@ The Dubochet Center for Imaging in Geneva (University of Geneva) has an opening 
 Additionally, DCI-Lausanne (UNIL/EPFL) is looking for a software engineer.
 
 <div class="center">
-{% include button.html contents="DCI-Geneva" href="https://jobs.unige.ch/www/wd_portal.show_job?p_web_site_id=1&p_web_page_id=61431" -%}
-{% include button.html contents="DCI-Lausanne" href="https://recruiting.epfl.ch/Vacancies/2973/Description/2" %}
+[Apply for the DCI-Geneva position](https://jobs.unige.ch/www/wd_portal.show_job?p_web_site_id=1&p_web_page_id=61431)
+
+[Apply for the DCI-Lausanne position](https://recruiting.epfl.ch/Vacancies/2973/Description/2)
 </div>
 
 Additional jobs may be posted soon at other [participating institutions](/members).

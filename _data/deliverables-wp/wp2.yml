@@ -1,0 +1,8 @@
+- id: 1
+  description: "SciCat Data Catalog is hosted at PSI and provides storage, archiving, and publishing for large-scale facilities (SLS, SwissFEL, etc)."
+  status: "Done"
+  table: "tec"
+- id: 2
+  description: "Integrate institute storage options "
+  status: "In Progress"
+  table: "tec"

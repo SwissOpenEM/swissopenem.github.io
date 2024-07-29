@@ -1,0 +1,283 @@
+/* --- Beautiful Jekyll Modifications --- */
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  h1 {
+    font-size: 2.25rem !important;
+  }
+  h2 {
+    font-size: 1.875rem !important;
+  }
+  h3 {
+    font-size: 1.5rem !important;
+  }
+  h4 {
+    font-size: 1.125rem !important;
+  }
+
+  table {
+    border-collapse: collapse; /* Entfernt Abstände zwischen den Zellen */
+    width: 100% !important; /* Setzt die Breite der Tabelle auf maximalen Inhalt */
+}
+
+.navbar-custom {
+    background-color: white;
+    border-bottom: 1px solid #DDDDDD;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+}
+
+.navbar-custom .navbar-nav .nav-item {
+    letter-spacing: normal;
+}
+
+.navbar-nav {
+    margin: auto !important;
+  }
+
+/*.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus ,
+.navbar-custom .navbar-nav .nav-link:hover,
+.navbar-custom .navbar-nav .nav-link:focus,
+.navbar-custom .navbar-nav .dropdown-menu .dropdown-item:hover,
+.navbar-custom .navbar-nav .dropdown-menu .dropdown-item:focus {
+  color: #0085A1;
+  background-color: white;
+}*/
+
+  @media (min-width: 1200px) {
+    #main-navbar {
+        flex: 0;
+      }
+  }
+
+  footer { 
+    border-top: 5px solid transparent; /* Set the border width to 5px */
+    border-image-source: url('/assets/img/orientation-map.jpg'); /* Set the image as the border */
+    border-image-slice: 5; 
+    border-image-repeat: repeat; 
+    background-color: white;
+  }
+
+  footer .copyright {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  footer .footer-custom-content {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .post-preview a {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .blog-tags {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #full-tags-list {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .intro-header .post-heading .post-subheading {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .intro-header.big-img .img-desc {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .pagination .page-item .page-link {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+/* --- News --- */
+
+.timeline {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #ccc;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin: 1em 0;
+  }
+  
+  .timeline-item.left::before {
+    content: '';
+    position: absolute;
+    top: 1em;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item.right::before {
+    content: '';
+    position: absolute;
+    top: 1em;
+    right: 50%;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    transform: translateX(50%);
+  }
+  
+  .timeline-content {
+    width: 45%;
+    padding: 1em;
+    background: #f9f9f9;
+    border-radius: 4px;
+    font-weight: normal;
+  }
+  
+  .timeline-item.left .timeline-content {
+    float: left;
+    clear: left;
+    margin-right: 55%;
+  }
+  
+  .timeline-item.right .timeline-content {
+    float: right;
+    clear: right;
+    margin-left: 55%;
+  }
+  
+  .timeline-item::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  /* --- Deliverables --- */
+
+  .deliverable-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+  
+  .deliverable-box {
+      flex: 1;
+      margin: 0 10px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  
+  .deliverable-box.active {
+      background-color: #f0f0f0;
+      border-color: #000;
+  }
+  
+  .deliverable-content {
+      margin-top: 20px;
+      font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+      .deliverable-container {
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+  
+      .deliverable-box {
+          margin: 10px;
+          width: 35%; /* Passt zwei Boxen nebeneinander */
+      }
+  }
+
+/* --- Work Package Tasks --- */
+
+.wp-bar {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 20px 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.wp-header-row {
+  display: flex; /* Flex-Container für die Header-Zeile */
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.wp-header-col {
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.wp-col {
+  padding: 8px 10px;
+  text-align: center;
+}
+
+/* Flexeigenschaften für die Spalten */
+.wp-header-col:first-child,
+.wp-col:first-child {
+  flex: 0 0 80px; /* Feste Breite für die erste Spalte */
+}
+
+.wp-header-col:last-child,
+.wp-col:last-child {
+  flex: 0 0 80px; /* Feste Breite für die dritte Spalte */
+}
+
+.wp-header-col:nth-child(2),
+.wp-col:nth-child(2) {
+  flex: 1; /* Zweite Spalte nimmt den verbleibenden Raum ein */
+}
+
+.wp-row {
+  display: flex; /* Flex-Container für die Datenzeile */
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.wp-row:last-child {
+  border-bottom: none; /* Entfernt den untersten Rand für die letzte Zeile */
+}
+
+.wp-status {
+  padding: 5px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+.wp-status.open {
+  background-color: #e74c3c; /* Rot */
+}
+
+.wp-status.in-progress {
+  background-color: #f39c12; /* Orange */
+}
+
+.wp-status.done {
+  background-color: #2ecc71; /* Grün */
+}

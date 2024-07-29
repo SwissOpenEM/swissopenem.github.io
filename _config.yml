@@ -21,13 +21,90 @@
 title: OpenEM
 email: spencer.bliven@psi.ch
 description: >- # this means to ignore newlines until "baseurl:"
-  The Swiss Open EM Data Network
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It wpear in your document head meta (for
+  Google search results) and in your feed.xml site description.ill ap
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  SwissOpenEM
+
+# If you want to have an image logo in the top-left corner instead of having the title of the website,
+# then specify the following parameter
+title-img: "/assets/img/logo-wide-1024x317.png"
+
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Build settings
-remote_theme: hydecorp/hydejack@v9.1.6
+theme: beautiful-jekyll-theme
+plugins:
+  - jekyll-sass-converter
+  - jekyll-feed
+
+###############################################
+# --- List of links in the navigation bar --- #
+###############################################
+
+# Add a search button to the navbar
+post_search: true
+
+navbar-links:
+  News: "news"
+  The Project:
+    - About: "about"
+    - Deliverables: "deliverables"
+    - Roadmap: "roadmap"
+    - Software: "software"
+    - References: "references"
+  Team: "team"
+  Outreach: "outreach"
+  Documentation: "documentation"
+
+# For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
+site-css:
+  - "/assets/css/customOpenEM.css"
+
+# If you have common JavaScript files that should be included in every page, list them here
+#site-js:
+#  - "/assets/js/custom-script.js"
+
+  #####################################
+# --- Footer social media links --- #
+#####################################
+
+# Select the social network links that you want to show in the footer.
+# You can change the order that they show up on the page by changing the order here.
+# Uncomment the links you want to show and add your information to each one.
+social-network-links:
+  email: "spencer.bliven@psi.ch"
+  rss: false # remove this line if you don't want to show an RSS link at the bottom
+  # facebook: deanattali
+  github: SwissOpenEM
+  # twitter: 
+  # patreon: 
+  # youtube: 
+#  medium: yourname
+#  reddit: yourname
+#  linkedin: 
+#  xing: yourname
+#  stackoverflow: "
+#  snapchat: 
+#  instagram: 
+#  spotify: yourname
+#  telephone: +14159998888
+#  steam: 
+#  twitch: yourname
+#  yelp: yourname
+#  telegram: yourname
+#  calendly: yourname
+#  mastodon: instance.url/@username
+#  bluesky: yourname
+#  ORCID: your ORCID ID
+#  google-scholar: your google scholar
+#  discord: "invite_code" or "users/userid" or "invite/invite_code"
+#  kaggle: yourname
+#  hackerrank: yourname
+#  gitlab: yourname
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -37,45 +114,14 @@ remote_theme: hydecorp/hydejack@v9.1.6
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - vendor/
-  - README.md
-
-plugins:
-  - jekyll-include-cache
-  - jekyll-redirect-from
-
-whitelist:
-  - jekyll-redirect-from
-
-# Hydejack config: https://hydejack.com/docs/config/
-
-author:
-  name:  Spencer Bliven
-  email: spencer.bliven@psi.ch
-  social:
-    github:  SwissOpenEM
-    email: spencer.bliven@psi.ch
-
-logo: /assets/img/logo-512x512.png
-accent_image: /assets/img/orientation-map.jpg
-#accent_color: rgb(79,177,186)
-sidebar_footer: |-
-  OpenEM is supported by the [Open Research Data Program](https://open-research-data-portal.ch/)
-  of the [ETH Board](https://ethrat.ch/en/measure-1-calls-for-field-specific-actions/).
-  
-  [Image Credits](/news/2023/06/14/logo.html)"
-
-favicon: /assets/icons/favicon.ico
-apple_touch_icon: /assets/icons/apple-touch-icon.png
-
-menu:
-  - title: Overview
-    url:   /overview/
-  - title: Members
-    url:   /members/
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

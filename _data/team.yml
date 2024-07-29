@@ -1,0 +1,38 @@
+- name: OpenEM Core Team
+  description:
+    responsibility: Design and development of core components
+  members:
+    - name: Spencer Bliven
+      position: Project Coordinator & SciCat
+      affiliation: PSI
+      page: https://www.psi.ch/
+      image: Spencer_Bliven.jpg
+    - name: Attila Nacsa
+      position: Ingestor
+      affiliation: UNIGE
+      page: https://www.unige.ch/
+      image: Attila_Nacsa.jpg
+    - name: Despina Adamopoulou
+      position: Metadata Standards
+      affiliation: EMPA
+      page: https://www.empa.ch/
+      image: Despina_Adamopoulou.jpg
+    - name: Philipp Wissmann
+      position: Metadata Standards
+      affiliation: ETHZ
+      page: https://www.ethz.ch/
+      image: Philipp_Wissmann.jpg
+    - name: Yves Tittes
+      position: Metadata Standards
+      affiliation: UNIBA
+      page: https://www.uniba.ch/
+      image: Yves_Tittes.jpg
+    - name: David Wiessner
+      position: Outreach
+      affiliation: UNIBE
+      page: https://www.unibe.ch/
+      image: David_Wiessner.jpg
+- name: Steering Board
+  description:
+    responsibility: Design and development of core components
+  members:

@@ -1,0 +1,12 @@
+- id: 1
+  description: "Establish the Open Standards Community for EM (https://github.com/osc-em)"
+  status: "Done"
+  table: "org"
+- id: 2
+  description: "Ensure streamlined and automatic metadata harvesting at all ETH / SU sites"
+  status: "In Progress"
+  table: "org"
+- id: 3
+  description: "Development of a SciCat Dataset Ingestor"
+  status: "In Progress"
+  table: "tec"
