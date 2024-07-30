@@ -5,9 +5,9 @@ permalink: /roadmap/
 subtitle: The time schedule for our project
 ---
 
-You can find a complete overview of everything this project delivers on the Deliverables page. Sub-goals have been defined in the roadmap in order to visualise the course of the project over time.
+You can find a complete overview of everything this project delivers on the <a href="/deliverables">Deliverables</a> page. Sub-goals have been defined in the roadmap in order to visualise the course of the project over time.
 
-The description of the individual components and their function can be found here.
+The description of the individual components and their function can be found <a href="/software">here</a>.
 
 ### Timeline ###
 

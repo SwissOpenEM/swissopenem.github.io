@@ -5,7 +5,7 @@ permalink: /deliverables/
 subtitle: What to expect from the project
 ---
 
-All delivery results of the project are described here. The schedule and dependencies are described on the Roadmap page. 
+All delivery results of the project are described here. The schedule and dependencies are described on the <a href="/roadmap">Roadmap page</a>. 
 
 Different components or organisational topics are being worked on within each work package.
 

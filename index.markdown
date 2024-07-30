@@ -17,5 +17,16 @@ layout: page
   <a href="/roadmap" class="button">How does OpenEM do it?</a>
 </div>
 
+<br>
 </body>
 </html>
+
+{% assign latest_post = site.posts | sort: 'date' | last %}
+
+{% if latest_post %}
+## Last published post: ##
+### [{{ latest_post.title }}]({{ latest_post.url }}) ###
+**Date:** {{ latest_post.date | date: "%Y-%m-%d" }}
+
+{{ latest_post.excerpt }}
+{% endif %}

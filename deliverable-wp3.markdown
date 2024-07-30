@@ -8,8 +8,9 @@ permalink: /deliverable-wp3/
 
 The Deposition in International Repositories work package contains the following tasks and components.
 
+{% assign org_items = site.data.deliverables-wp.wp3 | where: "table", "org" %}
+{% if org_items.size > 0 %}
 #### Organisational tasks ####
-
 <html>
     <div class="wp-bar">
         <div class="wp-header-row">
@@ -17,20 +18,20 @@ The Deposition in International Repositories work package contains the following
             <div class="wp-header-col">Description</div>
             <div class="wp-header-col">Status</div>
         </div>
-        {% for item in site.data.deliverables-wp.wp3 %}
-            {% if item.table == "org" %}
+        {% for item in org_items %}
             <div class="wp-row">
                 <div class="wp-col">{{ item.id }}</div>
                 <div class="wp-col">{{ item.description }}</div>
                 <div class="wp-col wp-status {{ item.status | downcase | replace: ' ', '-' }}">{{ item.status }}</div>
             </div>
-            {% endif %}
         {% endfor %}
     </div>
 </html>
+{% endif %}
 
+{% assign tec_items = site.data.deliverables-wp.wp3 | where: "table", "tec" %}
+{% if tec_items.size > 0 %}
 #### Technical tasks ####
-
 <html>
     <div class="wp-bar">
         <div class="wp-header-row">
@@ -38,17 +39,16 @@ The Deposition in International Repositories work package contains the following
             <div class="wp-header-col">Description</div>
             <div class="wp-header-col">Status</div>
         </div>
-        {% for item in site.data.deliverables-wp.wp3 %}
-            {% if item.table == "tec" %}
+        {% for item in tec_items %}
             <div class="wp-row">
                 <div class="wp-col">{{ item.id }}</div>
                 <div class="wp-col">{{ item.description }}</div>
                 <div class="wp-col wp-status {{ item.status | downcase | replace: ' ', '-' }}">{{ item.status }}</div>
             </div>
-            {% endif %}
         {% endfor %}
     </div>
 </html>
+{% endif %}
 
 ### Tasks ### 
 

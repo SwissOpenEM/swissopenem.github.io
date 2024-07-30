@@ -17,7 +17,7 @@ subtitle: What we develop
 | Repository Integration | Integrates with international repositories for data deposition. | Deposition in International Repositories |
 | Education | Provides user training, outreach, and sustainability efforts. | User Training, Outreach and Sustainability |
 
-### Software projects ###
+### Github projects ###
 
 | Projekt | Link |
 |---------|------|

@@ -4,4 +4,4 @@ title: Outreach
 permalink: /outreach/
 ---
 
-## Outreach stuff ##
+## Outreach ##

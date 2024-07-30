@@ -1,0 +1,55 @@
+- id: 1
+  title: PREMISE
+  image: /assets/img/references/premise.svg
+  link: https://ord-premise.org/
+
+- id: 2
+  title: instruct ERIC
+  image: /assets/img/references/instructeric.png
+  link: https://instruct-eric.org/
+
+- id: 3
+  title: Swissuniversities
+  image: /assets/img/references/su.png
+  link: https://www.swissuniversities.ch/
+
+- id: 4
+  title: ETH Board
+  image: /assets/img/references/eth_board.png
+  link: https://ethrat.ch/en/
+
+- id: 5
+  title: OSC-EM
+  image: /assets/img/references/osc-em.png
+  link: https://github.com/osc-em
+
+- id: 6
+  title: FAIRmat
+  image: /assets/img/references/FAIRmat.png
+  link: https://www.fairmat-nfdi.eu/fairmat
+
+- id: 7
+  title: Nexus
+  image: /assets/img/references/nexus.png
+  link: http://lns00.psi.ch/NeXus/
+
+- id: 8
+  title: EMGlossary
+  image: /assets/img/references/emglossary.png
+  link: https://owl.emglossary.helmholtz-metadaten.de/
+
+- id: 9
+  title: PDB
+  image: /assets/img/references/pdb.png
+  link: https://www.wwpdb.org/
+
+- id: 10
+  title: SciCat
+  image: /assets/img/references/scicat.png
+  link: https://scicatproject.github.io/
+
+- id: 11
+  title: OneDep
+  image: /assets/img/references/onedep.png
+  link: https://deposit-1.wwpdb.org/deposition/
+

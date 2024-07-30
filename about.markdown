@@ -16,9 +16,11 @@ The Open EM Data Network (OpenEM) is a consortium of Swiss electron microscopy f
 
 OpenEM will target both researchers producing EM data and consumers of open data for additional science. Data producers benefit from more streamlined data collection, standardized facilities, easier deposition for publication, and adherence to data management policies. The wider availability of open EM data brings numerous benefits, including reproducing results, applying new techniques to old data, training AI & other new methods, and mining data for new insights.
 
-### Our goals
+### Our Goal
 
-tbd
+Our primary goal is to strengthen co-operation and innovation in the field of electron microscopy. 
+
+OpenEM enables collaboration and data exchange in specific groups by providing a platform for data exchange and streamlining data collection processes. OpenEM ensures integration with globally recognised platforms and closes gaps in functionality and application.
 
 ### Partners & Collaborations
 
