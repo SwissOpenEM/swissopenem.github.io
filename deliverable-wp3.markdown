@@ -49,12 +49,15 @@ The Deposition in International Repositories work package contains the following
         {% endfor %}
     </div>
 </html>
-Task 3.1: Developing automated deposition tools for cryo-EM
+
+### Tasks ### 
+
+#### Deposition-1: Developing automated deposition tools for cryo-EM ####
 
 Early access to wwPDB’s OneDep API, which provides a method for depositing life science datasets to EMDB and PDB.
 OSC-EM to mmCIF format converter developed for metadata interoperability: https://github.com/osc-em/converter-JSON-to-mmCIF
 
-Task 3.2: Expanding automated deposition tools for other EM disciplines
+#### Deposition-2: Expanding automated deposition tools for other EM disciplines ####
 
 Material Science support in OSC-EM
 Exploring possible repositories (NOMAD, Material Science Cloud)

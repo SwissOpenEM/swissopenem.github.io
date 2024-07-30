@@ -2,7 +2,7 @@
     task_name: "Project Initialization"
     resource: "Initialisation"
     start_date: 2023-06-01
-    end_date: 2023-06-30
+    end_date: 2023-08-31
     duration: null
     percent_complete: 100
     dependencies: null
@@ -37,8 +37,8 @@
   - task_id: "2024-11"
     task_name: "MS-II - Data transfer from first facility"
     resource: "Concept & Realisation"
-    start_date: 2024-08-01
-    end_date: 2024-09-30
+    start_date: 2024-10-01
+    end_date: 2024-11-30
     duration: null
     percent_complete: 0
     dependencies: null
@@ -46,7 +46,7 @@
   - task_id: "2025-03"
     task_name: "MS-III - Data transfer from all facilities"
     resource: "Concept & Realisation"
-    start_date: 2024-10-01
+    start_date: 2024-12-01
     end_date: 2025-03-31
     duration: null
     percent_complete: 0

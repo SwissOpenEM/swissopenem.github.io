@@ -1,8 +1,7 @@
 ---
 layout: page
-title: Tutorials
-permalink: /tutorials/
-subtitle: How to get started
+title: Outreach
+permalink: /outreach/
 ---
 
-## You will find a manual here ##
+## Outreach stuff ##

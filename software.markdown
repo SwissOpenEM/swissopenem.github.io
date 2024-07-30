@@ -7,15 +7,15 @@ subtitle: What we develop
 
 ### Core software projects ###
 
-| Core Software components | Description |
-|---------|------|
-| Metadata Extractor | |
-| Ingestor | |
-| Archival and Retrieval | |
-| SciCat | |
-| Authentication Infrastructure | |
-| Repository Integration | |
-| Education | |
+| Core Software components | Description | Part of |
+|---------|------|---------|
+| Metadata Extractor | Performs automatic metadata extraction directly on the instrument. This means that it is no longer necessary for end users to analyse and enter metadata manually. | Metadata Standards |
+| Ingestor | Software that handles the transfer between faculties and SciCat and the LTS. The end user can select the data set to be transferred via a web interface and the rest is carried out automatically in the background. | Metadata Standards |
+| Archival and Retrieval | The infrastructure that enables the archiving and retrieval of EM data. As things stand at present, this is provided by PSI and ETHZ. | Scicat Metadata Catalog |
+| SciCat | SciCat is the public catalogue for managing, uploading and obtaining EM data. It is open source software hosted by PSI. | Scicat Metadata Catalog |
+| Authentication Infrastructure | The authentication infrastructure enables log-in with university users. In addition, a separate role administration is planned to enable cross-faculty collaboration. | Scicat Metadata Catalog |
+| Repository Integration | Integrates with international repositories for data deposition. | Deposition in International Repositories |
+| Education | Provides user training, outreach, and sustainability efforts. | User Training, Outreach and Sustainability |
 
 ### Software projects ###
 

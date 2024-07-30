@@ -50,9 +50,9 @@ The Metadata Standards work package contains the following tasks and components.
     </div>
 </html>
 
-#### Tasks #### 
+### Tasks ### 
 
-Task WP1.1: Community consensus and commitment to data collection standards
+#### Metadata-Standards-1: Community consensus and commitment to data collection standards ####
 
 Established the Open Standards Community for EM (https://github.com/osc-em)
 Workshop 22-23 Feb 2024 with participants from facilities, software, and repositories
@@ -61,11 +61,11 @@ Schema terms are defined by existing ontologies where available: CryoEM ontology
 Conversion tools under development for major instrument manufacturers and formats
 Coordinate with PREMISE project regarding terms and ontologies
 
-Task WP1.2: Ensure streamlined and automatic metadata harvesting at all ETH sites  
+#### Metadata-Standards-2: Ensure streamlined and automatic metadata harvesting at all ETH sites ####
 
 Metadata extraction tools for life sciences (https://github.com/SwissOpenEM/LS_Metadata_reader) and material science (https://github.com/SwissOpenEM/metadata-extractor)
 
-Task WP1.3: SciCat Dataset Ingestor
+#### Metadata-Standards-3: SciCat Dataset Ingestor ####
 
 SciCat CLI: https://github.com/paulscherrerinstitute/scicat-cli
 Web-based front-end planned

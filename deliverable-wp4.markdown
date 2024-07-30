@@ -50,11 +50,13 @@ The User Training, Outreach and Sustainability work package contains the followi
     </div>
 </html>
 
-Task 4.1: User Training
+### Tasks ###
 
-Task 4.2: Outreach and Dissemination
+#### Education-1: User Training ####
 
-Task 4.3: Establishing Sustainability
+#### Education-2: Outreach and Dissemination ####
+
+#### Education-3: Establishing Sustainability ####
 
 Organized OSC-EM workshop
 Participation in 6 conferences & workshops
