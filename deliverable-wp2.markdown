@@ -55,9 +55,9 @@ The Scicat Metadata Catalog work package contains the following tasks and compon
 #### SciCat-Metadata-Catalog-1: Establish Open EM data hub. ####
 
 SciCat Data Catalog is hosted at PSI and provides storage, archiving, and publishing for large-scale facilities (SLS, SwissFEL, etc).
-Data repository: https://discovery.psi.ch
-Published datasets: https://doi.psi.ch/
-(Coming) Authenticate using federated identities 
+- <a href="https://discovery.psi.ch">Data repository</a> 
+- <a href="https://doi.psi.ch/">Published datasets</a> 
+- (Coming) Authenticate using federated identities 
 
 ![SciCat Metadata catalog](/assets/img/scicatwp2.png)
 

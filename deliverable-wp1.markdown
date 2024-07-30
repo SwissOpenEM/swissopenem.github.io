@@ -63,10 +63,10 @@ Coordinate with PREMISE project regarding terms and ontologies
 
 #### Metadata-Standards-2: Ensure streamlined and automatic metadata harvesting at all ETH sites ####
 
-Metadata extraction tools for life sciences (https://github.com/SwissOpenEM/LS_Metadata_reader) and material science (https://github.com/SwissOpenEM/metadata-extractor)
+Metadata extraction tools for life sciences <a href="https://github.com/SwissOpenEM/LS_Metadata_reader">(LS-Metadata Reader)</a> and material science <a href="https://github.com/SwissOpenEM/metadata-extractor">(Metadata-Extractor)</a>
 
 #### Metadata-Standards-3: SciCat Dataset Ingestor ####
 
-SciCat CLI: https://github.com/paulscherrerinstitute/scicat-cli
-Web-based front-end planned
-Fast data transfer using Globus
+- <a href="https://github.com/paulscherrerinstitute/scicat-cli">SciCat CLI</a>
+- Web-based front-end planned
+- Fast data transfer using Globus
