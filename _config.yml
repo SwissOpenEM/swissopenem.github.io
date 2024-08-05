@@ -22,8 +22,7 @@ title: OpenEM
 email: spencer.bliven@psi.ch
 description: >- # this means to ignore newlines until "baseurl:"
   The Swiss Open EM Data Network
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
