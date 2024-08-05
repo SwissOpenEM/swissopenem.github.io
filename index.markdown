@@ -5,8 +5,6 @@
 layout: home
 ---
 
-## Open Electron Microscope Data
-
 <html>
 <br>
 <body>
