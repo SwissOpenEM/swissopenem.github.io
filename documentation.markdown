@@ -5,4 +5,8 @@ permalink: /documentation/
 subtitle: Operation and development
 ---
 
-## You will find the technical documentation here at a later date. ##
+<div align="center">
+    <img src="/assets/img/work.svg" alt="Documentation">
+</div>
+
+### We are currently working on the documentation page! ###
