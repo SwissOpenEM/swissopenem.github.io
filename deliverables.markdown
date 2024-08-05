@@ -31,7 +31,7 @@ Different components or organisational topics are being worked on within each wo
         <img src="/assets/img/wp/WP3.svg" alt="Deposition in International Repositories Image">
     </div>
     <div class="deliverable-box" id="box-4" onclick="showContent(4, false)">
-        <p>User Training, Outreach and Sustainability</p>
+        <p>Education</p>
         <img src="/assets/img/wp/WP4.svg" alt="User Training, Outreach and Sustainability Image">
     </div>
 </div>

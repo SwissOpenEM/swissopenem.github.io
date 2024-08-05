@@ -2,37 +2,54 @@
   description:
     responsibility: Design and development of core components
   members:
-    - name: Spencer Bliven
-      position: Project Coordinator & SciCat
-      affiliation: PSI
-      page: https://www.psi.ch/
-      image: Spencer_Bliven.jpg
-    - name: Attila Nacsa
-      position: Ingestor
-      affiliation: UNIGE
-      page: https://www.unige.ch/
-      image: Attila_Nacsa.jpg
-    - name: Despina Adamopoulou
-      position: Metadata Standards
-      affiliation: EMPA
-      page: https://www.empa.ch/
-      image: Despina_Adamopoulou.jpg
-    - name: Philipp Wissmann
-      position: Metadata Standards
-      affiliation: ETHZ
-      page: https://www.ethz.ch/
-      image: Philipp_Wissmann.jpg
-    - name: Yves Tittes
-      position: Metadata Standards
-      affiliation: UNIBA
-      page: https://www.uniba.ch/
-      image: Yves_Tittes.jpg
-    - name: David Wiessner
-      position: Outreach
-      affiliation: UNIBE
-      page: https://www.unibe.ch/
-      image: David_Wiessner.jpg
+  - name: Despina Adamopoulou
+    position: Metadata Standards
+    affiliation: EMPA
+    page: https://www.empa.ch/
+    image: Despina_Adamopoulou.jpg
+  - name: Attila Nacsa
+    position: Metadata Standards
+    affiliation: UNIGE
+    page: https://www.unige.ch/
+    image: Attila_Nacsa.jpg
+  - name: Sofya Laskina
+    position: Deposition in International Repositories
+    affiliation: UNILA
+    page: https://www.unibe.ch/
+    image: Sofya_Laskina.jpg
+  - name: David Wiessner
+    position: Education
+    affiliation: UNIBE
+    page: https://www.unibe.ch/
+    image: David_Wiessner.jpg
+  - name: Philipp Wissmann
+    position: Metadata Standards
+    affiliation: ETHZ
+    page: https://www.ethz.ch/
+    image: Philipp_Wissmann.jpg
+  - name: Spencer Bliven
+    position: Project Coordinator & Scicat Metadata Catalog
+    affiliation: PSI
+    page: https://www.psi.ch/
+    image: Spencer_Bliven.jpg
+  - name: Yves Tittes
+    position: Metadata Standards
+    affiliation: UNIBA
+    page: https://www.uniba.ch/
+    image: Yves_Tittes.jpg
 - name: Steering Board
   description:
     responsibility: Design and development of core components
   members:
+    - name: Benoit Zuber
+      image: unknown.svg
+    - name: Henning Stahlberg
+      image: unknown.svg
+    - name: Nicolas Blanc
+      image: unknown.svg
+    - name: Rolf Erni
+      image: unknown.svg
+    - name: Robbie Loewith
+      image: unknown.svg
+    - name: Timm Maier
+      image: unknown.svg
