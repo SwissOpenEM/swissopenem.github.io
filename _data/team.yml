@@ -15,7 +15,7 @@
   - name: Sofya Laskina
     position: Deposition in International Repositories
     affiliation: UNILA
-    page: https://www.unibe.ch/
+    page: https://www.unil.ch/
     image: Sofya_Laskina.jpg
   - name: David Wiessner
     position: Education
@@ -35,7 +35,7 @@
   - name: Yves Tittes
     position: Metadata Standards
     affiliation: UNIBA
-    page: https://www.uniba.ch/
+    page: https://www.unibas.ch/
     image: Yves_Tittes.jpg
 - name: Steering Board
   description:
@@ -43,13 +43,25 @@
   members:
     - name: Benoit Zuber
       image: unknown.svg
+      affiliation: UNIBE
+      page: https://www.anatomie.unibe.ch/ueber_uns/leitung/detail/index_ger.php?id=329
     - name: Henning Stahlberg
       image: unknown.svg
+      affiliation: EPFL
+      page: https://www.epfl.ch/labs/lbem/prof-henning-stahlberg/
     - name: Nicolas Blanc
       image: unknown.svg
+      affiliation: ETHZ
+      page: https://scopem.ethz.ch/center/people/person-detail.MjA5OTAz.TGlzdC81MzIsOTkxMzExMjcy.html
     - name: Rolf Erni
       image: unknown.svg
+      affiliation: EMPA
+      page: https://www.empa.ch/web/s299/rolf-erni
     - name: Robbie Loewith
       image: unknown.svg
+      affiliation: UNIGE
+      page: https://mocel.unige.ch/research-groups/robbie-loewith/overview
     - name: Timm Maier
       image: unknown.svg
+      affiliation: UNIBAS
+      page: https://www.biozentrum.unibas.ch/research/research-groups/research-groups-a-z/overview/unit/research-group-timm-maier
