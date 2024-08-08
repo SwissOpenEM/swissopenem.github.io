@@ -146,22 +146,19 @@ h1,h2,h3,h4,h5,h6 {
 
 /* --- Team --- */
 
-.team {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding: 0;
+.team-round-image {
+  width: 25%;
 }
-.team li {
-  flex: 1 1 50%;
-  box-sizing: border-box;
-  padding: 10px;
-}
+
 .team-round-image img {
   width: 150px; /* Einheitliche Breite */
   height: 150px; /* Einheitliche Höhe */
   border-radius: 10px;
   object-fit: cover; /* Stellt sicher, dass das Bild innerhalb der Grenzen bleibt */
+}
+
+.team-top-aligned {
+  vertical-align: top;
 }
 
 .institutes-content-container {

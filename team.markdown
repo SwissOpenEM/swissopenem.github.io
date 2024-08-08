@@ -35,23 +35,31 @@ subtitle: Who works on OpenEM?
         </div>
         <ul class="team">
             {% for person in team.members %}
-                <li>
-                    <div class="team-round-image">
-                        <img
-                            src="/assets/img/team/{{ person.image }}"
-                            alt="{{ person.name }}"
-                        />
-                    </div>
-                    <div class="name">
-                        {% if person.page %}
-                        <a href="{{ person.page }}">{{ person.name }}</a>
-                        {% else %}
-                        {{ person.name }}
-                        {% endif %}
-                    </div>
-                    <div class="position">{{ person.affiliation }}</div>
-                    <div class="position">{{ person.position }}</div>
-                </li>
+                <table>
+                    <tr>
+                        <td class="team-round-image">
+                                <img
+                                    src="/assets/img/team/{{ person.image }}"
+                                    alt="{{ person.name }}"
+                                />
+                        </td>
+                        <td class="team-top-aligned">
+                            <b>
+                                {% if person.page %}
+                                <a href="{{ person.page }}">{{ person.name }}</a>
+                                {% else %}
+                                {{ person.name }}
+                                {% endif %}
+                            </b>
+                            <div>{{ person.affiliation }}</div>
+                            {% if person.position %}
+                            <div>{{ person.position }}</div>
+                            {% endif %}
+                            <div>{{ person.wp }}</div>
+                            <div><i>{{person.components}}</i></div>
+                        </td>
+                    </tr>
+                </table>
             {% endfor %}
         </ul>
     {% endfor %}

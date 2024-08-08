@@ -3,33 +3,41 @@
     responsibility: Design and development of core components
   members:
   - name: Despina Adamopoulou
-    position: Metadata Standards
-    affiliation: EMPA
     image: Despina_Adamopoulou.jpg
+    affiliation: EMPA
+    wp: Focus WP - Metadata Standards
+    components: Metadata Extractor - Material Sciences, SciCat Extensions
   - name: Attila Nacsa
-    position: Metadata Standards
-    affiliation: UNIGE
     image: Attila_Nacsa.jpg
+    components: Ingestor - Backend, SciCat CI
+    affiliation: UNIGE
+    wp: Focus WP - Metadata Standards
   - name: Sofya Laskina
-    position: Deposition in International Repositories
-    affiliation: UNILA
     image: Sofya_Laskina.jpg
+    affiliation: UNILA
+    wp: Focus WP - Deposition in International Repositories
+    components: OneDep-Converter, SciCat Extensions
   - name: David Wiessner
-    position: Education
-    affiliation: UNIBE
     image: David_Wiessner.jpg
+    affiliation: UNIBE
+    wp: Focus WP - Education
+    components: Project Website, Ingestor - Frontend
   - name: Philipp Wissmann
-    position: Metadata Standards
-    affiliation: ETHZ
     image: Philipp_Wissmann.jpg
+    affiliation: ETHZ
+    wp: Focus WP - Metadata Standards
+    components: Ingestor - Backend, Archival & Retrieval ETHZ
   - name: Spencer Bliven
-    position: Project Coordinator & Scicat Metadata Catalog
-    affiliation: PSI
     image: Spencer_Bliven.jpg
+    position: Project Coordinator
+    affiliation: PSI
+    components: SciCat Extensions, Archival & Retrieval PSI, Authentication Infrastructure
+    wp: Focus WP - Scicat Metadata Catalog
   - name: Yves Tittes
-    position: Metadata Standards
-    affiliation: UNIBA
     image: Yves_Tittes.jpg
+    affiliation: UNIBA
+    wp: Focus WP - Metadata Standards
+    components: Metadata Extractor - Life Sciences, SciCat Extensions
 - name: Steering Board
   description:
     responsibility: Design and development of core components
