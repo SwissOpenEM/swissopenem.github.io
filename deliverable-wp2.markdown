@@ -52,7 +52,7 @@ The Scicat Metadata Catalog work package contains the following tasks and compon
 
 ### Tasks ### 
 
-#### SciCat-Metadata-Catalog-1: Establish Open EM data hub. ####
+#### SciCat-Metadata-Catalog-1: Establish Open EM data hub ####
 
 SciCat Data Catalog is hosted at PSI and provides storage, archiving, and publishing for large-scale facilities (SLS, SwissFEL, etc).
 - <a href="https://discovery.psi.ch">Data repository</a> 
@@ -61,6 +61,6 @@ SciCat Data Catalog is hosted at PSI and provides storage, archiving, and publis
 
 ![SciCat Metadata catalog](/assets/img/scicatwp2.png)
 
-#### SciCat-Metadata-Catalog-2 Integrate institute storage options ####
+#### SciCat-Metadata-Catalog-2: Integrate institute storage options ####
 
 ETHZ ScopeM users will archive data to the ETHZ Long-term Storage (LTS).
