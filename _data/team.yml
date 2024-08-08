@@ -40,7 +40,7 @@
     components: Metadata Extractor - Life Sciences, SciCat Extensions
 - name: Steering Board
   description:
-    responsibility: Design and development of core components
+    responsibility: Steering committee of the project
   members:
     - name: Benoit Zuber
       image: unknown.svg

@@ -32,6 +32,7 @@ subtitle: Who works on OpenEM?
             <div>{{ team.description.role }}</div>
             <div>{{ team.description.responsibility }}</div>
             <div>{{ team.description.affiliation }}</div>
+            <br>
         </div>
         <ul class="team">
             {% for person in team.members %}
