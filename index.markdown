@@ -3,8 +3,13 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Open Electron Microscope Data
+title: Open Electron Microscopy Data
 ---
+
+
+Welcome to the OpenEM project website. Our goal is to simplify the work with electron microscopy data and to support research. Here you will find current information on the project and its progress. Technical documentation and information on project participation will also be made available here in the future.
+
+If you are interested or have any feedback, please contact us. 
 
 <html>
 <br>
@@ -12,7 +17,7 @@ title: Open Electron Microscope Data
 
 <div class="button-container">
   <a href="/about" class="button">What is OpenEM?</a>
-  <a href="/deliverables" class="button">What does OpenEM do?</a>
+  <a href="/deliverables" class="button">What does OpenEM deliver?</a>
   <a href="/roadmap" class="button">How does OpenEM do it?</a>
 </div>
 
@@ -20,12 +25,5 @@ title: Open Electron Microscope Data
 </body>
 </html>
 
-{% assign latest_post = site.posts | sort: 'date' | last %}
-
-{% if latest_post %}
-## Last published post: ##
-### [{{ latest_post.title }}]({{ latest_post.url }}) ###
-**Date:** {{ latest_post.date | date: "%Y-%m-%d" }}
-
-{{ latest_post.excerpt }}
-{% endif %}
+### Project News ###
+News and posts about the project can be found <a href="/news/">here</a>.

@@ -2,33 +2,12 @@
 layout: page
 title: Team
 permalink: /team/
-subtitle: Who is OpenEM?
+subtitle: Who works on OpenEM?
 ---
 
 ### Participating Institutes
 
-<style>
-    .content-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .content-container img {
-        max-width: 45%; /* Maximale Breite des Bildes */
-        height: auto; /* Beibehaltung des Seitenverhältnisses */
-    }
-    .institutes-container {
-        max-width: 45%; /* Maximale Breite der Liste */
-        list-style-type: none; /* Entfernt die Bulletpoints */
-        padding: 0;
-    }
-    .institutes-container li {
-        margin: 10px 0; /* Abstand zwischen den Listenelementen */
-    }
-</style>
-
-<div class="content-container">
+<div class="institutes-content-container">
     <img src="/assets/img/opem_map.svg" alt="Map of participating institutions">
     <ul class="institutes-container">
         <li><a href="https://www.psi.ch">Paul Scherrer Institute (PSI)</a></li>
@@ -46,26 +25,6 @@ subtitle: Who is OpenEM?
 
 ### Teams
 
-<style>
-    .team {
-        display: flex;
-        flex-wrap: wrap;
-        list-style-type: none;
-        padding: 0;
-    }
-    .team li {
-        flex: 1 1 50%;
-        box-sizing: border-box;
-        padding: 10px;
-    }
-    .round-image img {
-        width: 150px; /* Einheitliche Breite */
-        height: 150px; /* Einheitliche Höhe */
-        border-radius: 10px;
-        object-fit: cover; /* Stellt sicher, dass das Bild innerhalb der Grenzen bleibt */
-    }
-</style>
-
 <div class="text-center">
     {% for team in site.data.team %}
         <h2>{{ team.name }}</h2>
@@ -77,17 +36,21 @@ subtitle: Who is OpenEM?
         <ul class="team">
             {% for person in team.members %}
                 <li>
-                    <div class="round-image">
+                    <div class="team-round-image">
                         <img
                             src="/assets/img/team/{{ person.image }}"
                             alt="{{ person.name }}"
                         />
                     </div>
                     <div class="name">
+                        {% if person.page %}
                         <a href="{{ person.page }}">{{ person.name }}</a>
+                        {% else %}
+                        {{ person.name }}
+                        {% endif %}
                     </div>
-                    <div class="position">{{ person.position }}</div>
                     <div class="position">{{ person.affiliation }}</div>
+                    <div class="position">{{ person.position }}</div>
                 </li>
             {% endfor %}
         </ul>

@@ -144,6 +144,45 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 1em;
 }
 
+/* --- Team --- */
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+.team li {
+  flex: 1 1 50%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.team-round-image img {
+  width: 150px; /* Einheitliche Breite */
+  height: 150px; /* Einheitliche Höhe */
+  border-radius: 10px;
+  object-fit: cover; /* Stellt sicher, dass das Bild innerhalb der Grenzen bleibt */
+}
+
+.institutes-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.institutes-content-container img {
+  max-width: 45%; /* Maximale Breite des Bildes */
+  height: auto; /* Beibehaltung des Seitenverhältnisses */
+}
+.institutes-container {
+  max-width: 45%; /* Maximale Breite der Liste */
+  list-style-type: none; /* Entfernt die Bulletpoints */
+  padding: 0;
+}
+.institutes-container li {
+  margin: 10px 0; /* Abstand zwischen den Listenelementen */
+}
+
 /* --- News --- */
 
 .timeline {
