@@ -187,74 +187,49 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0;
     padding: 0;
     list-style: none;
-  }
-  
-  .timeline::before {
+}
+
+.timeline::before {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 50%;
+    left: 0;
     width: 2px;
     background: #ccc;
-  }
-  
-  .timeline-item {
+}
+
+.timeline-item {
     position: relative;
     margin: 1em 0;
-  }
-  
-  .timeline-item.left::before {
+}
+
+.timeline-item::before {
     content: '';
     position: absolute;
     top: 1em;
-    left: 50%;
+    left: 0;
     width: 12px;
     height: 12px;
     background: #fff;
     border: 2px solid #ccc;
     border-radius: 50%;
     transform: translateX(-50%);
-  }
-  
-  .timeline-item.right::before {
-    content: '';
-    position: absolute;
-    top: 1em;
-    right: 50%;
-    width: 12px;
-    height: 12px;
-    background: #fff;
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    transform: translateX(50%);
-  }
-  
-  .timeline-content {
-    width: 45%;
+}
+
+.timeline-content {
     padding: 1em;
     background: #f9f9f9;
     border-radius: 4px;
     font-weight: normal;
-  }
-  
-  .timeline-item.left .timeline-content {
-    float: left;
-    clear: left;
-    margin-right: 55%;
-  }
-  
-  .timeline-item.right .timeline-content {
-    float: right;
-    clear: right;
-    margin-left: 55%;
-  }
-  
-  .timeline-item::after {
+    margin-left: 2em; /* Abstand vom Zeitstrahl */
+}
+
+.timeline-item::after {
     content: '';
     display: table;
     clear: both;
-  }
+}
 
   /* --- Deliverables --- */
 
