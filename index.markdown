@@ -1,6 +1,12 @@
 ---
 layout: home
 title: Open Electron Microscopy Data Network
+tags: 
+  - OpenEM
+  - Electron microscopy
+  - Research data
+  - Project updates
+  - Scientific collaboration
 ---
 
 

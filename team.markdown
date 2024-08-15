@@ -3,6 +3,12 @@ layout: page
 title: Team
 permalink: /team/
 subtitle: Who works on OpenEM?
+tags: 
+  - OpenEM team
+  - Participating institutes
+  - Swiss electron microscopy
+  - Scientific collaboration
+  - Research institutions
 ---
 
 ### Participating Institutes
@@ -63,5 +69,21 @@ subtitle: Who works on OpenEM?
                 </table>
             {% endfor %}
         </ul>
+    {% endfor %}
+</div>
+
+<div class="text-center">
+    {% for team in site.data.team-supporters %}
+        <h2>{{ team.name }}</h2>
+        <div class="subtitle">
+            <div>{{ team.description.role }}</div>
+            <div>{{ team.description.responsibility }}</div>
+            <div>{{ team.description.affiliation }}</div>
+            <br>
+        </div>
+        {% assign member_count = team.members | size %}
+        {% for person in team.members %}
+            {{ person.name }}{% if forloop.index < member_count %}, {% endif %}
+        {% endfor %}
     {% endfor %}
 </div>

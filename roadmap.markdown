@@ -3,6 +3,12 @@ layout: page
 title: Roadmap
 permalink: /roadmap/
 subtitle: The time schedule for our project
+tags: 
+  - Project roadmap
+  - Time schedule
+  - Project timeline
+  - Project details
+  - Project milestones
 ---
 
 You can find a complete overview of everything this project delivers on the <a href="/deliverables">Deliverables</a> page. Sub-goals have been defined in the roadmap in order to visualise the course of the project over time.

@@ -2,6 +2,17 @@
 layout: page
 title: About
 permalink: /about/
+tags: 
+  - Open EM Data Network
+  - OpenEM
+  - Swiss electron microscopy
+  - Open Research Data
+  - FAIR data principles
+  - EM data repository
+  - EM metadata standardization
+  - Data lifecycle
+  - EM data publication
+  - Scientific collaboration
 ---
 
 ### Summary
@@ -25,7 +36,7 @@ OpenEM enables collaboration and data exchange in specific groups by providing a
 ### Partners & Collaborations
 
 All major academic electron microscopy facilities in Switzerland participate in
-the network. For details see the [team page](/team/).
+the network. For details see the [team page](/team/) and [partners page](/partners/).
 
 ![Project Collaborations](/assets/img/collaborations.png)
 

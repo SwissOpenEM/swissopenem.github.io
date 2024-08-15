@@ -3,6 +3,12 @@ layout: page
 title: Technical Documentation
 permalink: /documentation/
 subtitle: Operation and development
+tags: 
+  - Technical documentation
+  - Operation
+  - Development
+  - User guides
+  - API references
 ---
 
 <div align="center">

@@ -3,6 +3,12 @@ layout: page
 title: Deliverables
 permalink: /deliverables/
 subtitle: What to expect from the project
+tags: 
+  - Project deliverables
+  - Metadata standards
+  - Metadata catalog
+  - International repositories
+  - Work packages
 ---
 
 All delivery results of the project are described here. The schedule and dependencies are described on the <a href="/roadmap">Roadmap page</a>. 

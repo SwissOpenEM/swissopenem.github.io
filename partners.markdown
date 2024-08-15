@@ -2,6 +2,12 @@
 layout: page
 title: Partners
 permalink: /partners/
+tags: 
+  - Project partners
+  - Collaborations
+  - Research institutions
+  - Academic partners
+  - Industry partners
 ---
 
 <div class="image-grid">

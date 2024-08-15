@@ -3,6 +3,12 @@ layout: page
 title: Software
 permalink: /software/
 subtitle: What we develop
+tags: 
+  - Software development
+  - Core software projects
+  - Metadata standards
+  - Data transfer
+  - Metadata extraction
 ---
 
 ### Core software projects ###

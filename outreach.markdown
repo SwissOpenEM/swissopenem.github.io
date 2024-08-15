@@ -2,6 +2,12 @@
 layout: page
 title: Outreach
 permalink: /outreach/
+tags: 
+  - Presentations
+  - Conferences
+  - Workshops
+  - Publications
+  - Scientific events
 ---
 
 ### Presentations ###
