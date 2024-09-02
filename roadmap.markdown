@@ -90,7 +90,7 @@ A workshop on EM standards was held as part of this process. With the founding o
 
 Inspections were carried out at the participating faculties.
 
-### Planning and Preparation ###
+### Planning and Prototyping ###
 
 The project methodology and project tools were defined. Furthermore, all administrative issues were clarified so that the implementation of the project could begin. The task packages were assigned to the team and responsibilities were clarified.
 

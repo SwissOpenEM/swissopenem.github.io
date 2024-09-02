@@ -17,9 +17,9 @@
     dependencies: null
 
   - task_id: "2024-04"
-    task_name: "Planning and Preperation"
+    task_name: "Planning and Prototyping"
     resource: "Preparation"
-    start_date: 2024-01-01
+    start_date: 2023-09-01
     end_date: 2024-04-30
     duration: null
     percent_complete: 100
