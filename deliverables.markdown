@@ -11,7 +11,7 @@ tags:
   - Work packages
 ---
 
-All delivery results of the project are described here. The schedule and dependencies are described on the <a href="/roadmap">Roadmap page</a>. 
+All delivery results of the project are described here. The schedule and dependencies are described on the <a href="/timeline">Timeline page</a>. 
 
 Different components or organisational topics are being worked on within each work package.
 

@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Current Roadmap
-permalink: /roadmap/
+title: Current Timeline
+permalink: /timeline/
 subtitle: The time schedule for our project
 tags: 
-  - Project roadmap
+  - Project timeline
   - Time schedule
   - Project timeline
   - Project details
   - Project milestones
 ---
 
-You can find a complete overview of everything this project delivers on the <a href="/deliverables">Deliverables</a> page. Sub-goals have been defined in the roadmap in order to visualise the course of the project over time.
+You can find a complete overview of everything this project delivers on the <a href="/deliverables">Deliverables</a> page. Sub-goals have been defined in the timeline in order to visualise the course of the project over time.
 
 The description of the individual components and their function can be found <a href="/software">here</a>.
 
@@ -26,10 +26,10 @@ The description of the individual components and their function can be found <a 
       google.charts.setOnLoadCallback(drawChart);
 
       function loadYMLData() {
-        {% assign roadmap = site.data.roadmap %}
+        {% assign timeline = site.data.timeline %}
         var rows = [];
 
-        {% for task in roadmap %}
+        {% for task in timeline %}
           rows.push([
             '{{ task.task_id }}',
             '{{ task.task_name }}',

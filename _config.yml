@@ -51,7 +51,7 @@ navbar-links:
   The Project:
     - About: "about"
     - Deliverables: "deliverables"
-    - Roadmap: "roadmap"
+    - Timeline: "timeline"
     - Software: "software"
     - Partners: "partners"
   Team: "team"

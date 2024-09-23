@@ -21,7 +21,7 @@ If you are interested or have any feedback, please contact us.
 <div class="button-container">
   <a href="/about" class="button">What is OpenEM?</a>
   <a href="/deliverables" class="button">What does OpenEM deliver?</a>
-  <a href="/roadmap" class="button">How does OpenEM do it?</a>
+  <a href="/timeline" class="button">How does OpenEM do it?</a>
 </div>
 
 <br>
