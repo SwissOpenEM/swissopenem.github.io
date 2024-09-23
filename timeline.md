@@ -2,8 +2,10 @@
 layout: page
 title: Current Timeline
 permalink: /timeline/
+redirect_from:
+  - /roadmap/
 subtitle: The time schedule for our project
-tags: 
+tags:
   - Project timeline
   - Time schedule
   - Project timeline
