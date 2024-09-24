@@ -86,19 +86,19 @@ The description of the individual components and their function can be found <a 
 
 ### Initialization ###
 
-The project was initiated and the recruitment process started. Dependencies were identified and contact was made with dependent projects and organisations. Project organisational issues are being clarified.
+The project was initiated and the recruitment process started. Dependencies were identified and contact was made with dependent projects and organisations. Project organisational issues are being clarified. Inspections were carried out at the participating faculties.
+
+#### Milestone I (Metadata Standards) ####
 
 A workshop on EM standards was held as part of this process. With the founding of the OSC-EM "Open Standards Community for EM", a working group for the standardisation of metadata was set up. Within the working group, requirements are collected and defined to which the OpenEM project is orientated.
 
-Inspections were carried out at the participating faculties.
+#### Milestone II (Conceptual Plan) ####
 
-### Planning and Prototyping ###
+The project methodology, tools and technologies were defined. All architectural decisions were finalized. Furthermore, all administrative issues were clarified so that the implementation of the project could begin. The task packages were assigned to the team and responsibilities were clarified.
 
-The project methodology and project tools were defined. Furthermore, all administrative issues were clarified so that the implementation of the project could begin. The task packages were assigned to the team and responsibilities were clarified.
+### Realisation ###
 
-### Concept & Realisation ###
-
-#### Milestone I ####
+#### Milestone III (Proof of Concept) ####
 
 | Component                | Goal                                                                                      |
 |-------------------------|--------------------------------------------------------------------------------------------------------|
@@ -110,7 +110,7 @@ The project methodology and project tools were defined. Furthermore, all adminis
 | Archival and Retrieval   | A dataset can be reliably archived and retrieved from ETHZs long term storage. PSI already supports this.             |
 | SciCat                  | Deploy SciCat V4 at PSI with configuration to integrate with the archival system (RedML).                |
 
-#### Milestone II (beta-Release) ####
+#### Milestone IV (Alpha Release) ####
 
 | Component      | Goal       |
 | ------------- | -------------- |
@@ -120,7 +120,7 @@ The project methodology and project tools were defined. Furthermore, all adminis
 | Archival and Retrieval   | PSI archiver can fully access Globus.     |
 | SciCat   | SciCat V4 is in production. Sustainability model is discussed by steering committee.     |
 
-#### Milestone III (Development completed) ####
+#### Milestone V (Beta Release) ####
 
 | Component      | Goal       |
 | ------------- | -------------- |
@@ -134,7 +134,7 @@ The project methodology and project tools were defined. Furthermore, all adminis
 
 ### Introduction ###
 
-#### Milestone IV (Roll-out completed) ####
+#### Milestone VI (Official Release) ####
 
 | Component      | Goal       |
 | ------------- | -------------- |
@@ -142,7 +142,7 @@ The project methodology and project tools were defined. Furthermore, all adminis
 | Education - Website    | User manual is finished.     |
 | Repository Integration   | Enable upload to EMPIAR.    |
 
-#### Milestone V (Reworks ETH) ####
+#### Milestone VII (Handover to Facilities) ####
 
 | Component      | Goal       |
 | ------------- | -------------- |
