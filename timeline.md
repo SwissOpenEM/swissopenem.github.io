@@ -19,71 +19,7 @@ The description of the individual components and their function can be found <a 
 
 ### Timeline ###
 
-<html>
-  <head>
-    <title>Gantt Chart</title>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['gantt']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function loadYMLData() {
-        {% assign timeline = site.data.timeline %}
-        var rows = [];
-
-        {% for task in timeline %}
-          rows.push([
-            '{{ task.task_id }}',
-            '{{ task.task_name }}',
-            '{{ task.resource }}',
-            new Date({{ task.start_date | date: '%Y, %m, %d' }}),
-            new Date({{ task.end_date | date: '%Y, %m, %d' }}),
-            null,
-            {{ task.percent_complete }},
-            {% if task.dependencies %}'{{ task.dependencies }}'{% else %}null{% endif %}
-          ]);
-        {% endfor %}
-
-        return rows;
-      }
-
-      function drawChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Task ID');
-        data.addColumn('string', 'Task Name');
-        data.addColumn('string', 'Resource');
-        data.addColumn('date', 'Start Date');
-        data.addColumn('date', 'End Date');
-        data.addColumn('number', 'Duration');
-        data.addColumn('number', 'Percent Complete');
-        data.addColumn('string', 'Dependencies');
-
-        var rows = loadYMLData();
-        data.addRows(rows);
-
-        var options = {
-          height: 400,
-          gantt: {
-            labelMaxWidth: 450,
-            criticalPathEnabled: false,
-            arrow: {
-              angle: 100,
-              width: 5,
-              color: 'green',
-              radius: 0
-            }
-          }
-        };
-
-        var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <div id="chart_div"></div>
-  </body>
-</html>
+{% include gantt.html data=site.data.timeline %}
 
 ### Initialization ###
 

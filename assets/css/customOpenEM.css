@@ -63,11 +63,11 @@ p {
       }
   }
 
-  footer { 
+  footer {
     border-top: 5px solid transparent; /* Set the border width to 5px */
     border-image-source: url('/assets/img/orientation-map.jpg'); /* Set the image as the border */
-    border-image-slice: 5; 
-    border-image-repeat: repeat; 
+    border-image-slice: 5;
+    border-image-repeat: repeat;
     background-color: white;
   }
 
@@ -260,7 +260,7 @@ p {
       justify-content: space-between;
       flex-wrap: wrap;
   }
-  
+
   .deliverable-box {
       flex: 1;
       margin: 0 10px;
@@ -273,12 +273,12 @@ p {
       flex-direction: column;
       justify-content: space-between;
   }
-  
+
   .deliverable-box.active {
       background-color: #f0f0f0;
       border-color: #000;
   }
-  
+
   .deliverable-box-text {
     text-align: center !important;
   }
@@ -287,13 +287,13 @@ p {
       margin-top: 20px;
       font-size: 16px;
   }
-  
+
   @media (max-width: 768px) {
       .deliverable-container {
           flex-wrap: wrap;
           justify-content: center;
       }
-  
+
       .deliverable-box {
           margin: 10px;
           width: 35%; /* Passt zwei Boxen nebeneinander */
@@ -369,4 +369,12 @@ p {
 
 .wp-status.done {
   background-color: #2ecc71; /* Grün */
+}
+
+.spinner {
+  background-image: url('/assets/img/spinner.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1lh;
+  height: 1lh;
 }
