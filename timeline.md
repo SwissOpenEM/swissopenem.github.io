@@ -64,6 +64,7 @@ The description of the individual components and their function can be found <a 
         var options = {
           height: 400,
           gantt: {
+            labelMaxWidth: 450,
             criticalPathEnabled: false,
             arrow: {
               angle: 100,

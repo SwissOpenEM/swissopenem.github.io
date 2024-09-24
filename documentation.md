@@ -13,6 +13,5 @@ tags:
 
 <div align="center">
     <img src="/assets/img/work.svg" alt="Documentation">
+    <b>We are currently working on the documentation page.</b>
 </div>
-
-### We are currently working on the documentation page! ###

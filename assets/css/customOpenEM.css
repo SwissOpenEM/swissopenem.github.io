@@ -19,6 +19,23 @@ h1,h2,h3,h4,h5,h6 {
   table {
     border-collapse: collapse; /* Entfernt Abstände zwischen den Zellen */
     width: 100% !important; /* Setzt die Breite der Tabelle auf maximalen Inhalt */
+    margin-bottom: 5%;
+}
+
+p {
+  text-align: justify;
+}
+
+@media (min-width: 1200px) {
+  .offset-xl-2 {
+    margin: auto !important;
+  }
+
+  .col-xl-8 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .navbar-custom {
@@ -146,8 +163,13 @@ h1,h2,h3,h4,h5,h6 {
 
 /* --- Team --- */
 
+.team {
+  width: 80%;
+  margin: auto;
+}
+
 .team-round-image {
-  width: 25%;
+  width: 21%;
 }
 
 .team-round-image img {
@@ -257,6 +279,10 @@ h1,h2,h3,h4,h5,h6 {
       border-color: #000;
   }
   
+  .deliverable-box-text {
+    text-align: center !important;
+  }
+
   .deliverable-content {
       margin-top: 20px;
       font-size: 16px;

@@ -29,8 +29,6 @@ tags:
     </ul>
 </div>
 
-### Teams
-
 <div class="text-center">
     {% for team in site.data.team %}
         <h2>{{ team.name }}</h2>

@@ -25,19 +25,19 @@ Different components or organisational topics are being worked on within each wo
 
 <div class="deliverable-container">
     <div class="deliverable-box" id="box-1" onclick="showContent(1, false)">
-        <p>Metadata Standards</p>
+        <p class="deliverable-box-text">Metadata Standards</p>
         <img src="/assets/img/wp/WP1.svg" alt="Metadata Standards Image">
     </div>
     <div class="deliverable-box" id="box-2" onclick="showContent(2, false)">
-        <p>Scicat Metadata Catalog</p>
+        <p class="deliverable-box-text">Scicat Metadata Catalog</p>
         <img src="/assets/img/wp/WP2.svg" alt="Scicat Metadata Catalog Image">
     </div>
     <div class="deliverable-box" id="box-3" onclick="showContent(3, false)">
-        <p>Deposition in International Repositories</p>
+        <p class="deliverable-box-text">Deposition in International Repositories</p>
         <img src="/assets/img/wp/WP3.svg" alt="Deposition in International Repositories Image">
     </div>
     <div class="deliverable-box" id="box-4" onclick="showContent(4, false)">
-        <p>Education</p>
+        <p class="deliverable-box-text">Education</p>
         <img src="/assets/img/wp/WP4.svg" alt="User Training, Outreach and Sustainability Image">
     </div>
 </div>
