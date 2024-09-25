@@ -54,7 +54,6 @@ function drawAllCharts() {
     const encoded = parent.getAttribute('data-gantt');
     const decoded = decodeURIComponent(encoded);
     const data = JSON.parse(decoded);
-    parent.classList.remove("spinner")
     drawChart(parent, data);
   });
 }

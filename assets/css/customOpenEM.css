@@ -370,11 +370,3 @@ p {
 .wp-status.done {
   background-color: #2ecc71; /* Grün */
 }
-
-.spinner {
-  background-image: url('/assets/img/spinner.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 1lh;
-  height: 1lh;
-}

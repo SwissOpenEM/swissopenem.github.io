@@ -10,7 +10,11 @@ all but one instance to avoid multiple inclusion.
 Usage: {% include gantt.html data="{{site.data.timeline}}" %}
 
 {% endcomment -%}
-<div class="spinner" data-gantt="{{- include.data | jsonify | escape -}}"></div>
+<div data-gantt="{{- include.data | jsonify | escape -}}">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
 <noscript><em>Javascript required for interactive timeline</em></noscript>
 {% unless include.skip_scripts -%}
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js" ></script>
