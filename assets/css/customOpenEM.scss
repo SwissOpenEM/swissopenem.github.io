@@ -84,14 +84,14 @@ footer {
   border-image-slice: 5;
   border-image-repeat: repeat;
   background-color: white;
-}
 
-footer .copyright {
-  font-family: Arial, Helvetica, sans-serif;
-}
+  .copyright {
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-footer .footer-custom-content {
-  font-family: Arial, Helvetica, sans-serif;
+  .footer-custom-content {
+    font-family: Arial, Helvetica, sans-serif;
+  }
 }
 
 .post-preview a {
@@ -139,10 +139,10 @@ footer .footer-custom-content {
   cursor: pointer;
   border-radius: 8px;
   transition: background-color 0.3s;
-}
 
-.button:hover {
-  background-color: #f9f9f9;
+  &:hover {
+    background-color: #f9f9f9;
+  }
 }
 
 /* --- Cards --- */
@@ -162,21 +162,21 @@ footer .footer-custom-content {
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s;
-}
 
-.grid-item:hover {
-  transform: scale(1.05);
-}
+  &:hover {
+    transform: scale(1.05);
+  }
 
-.grid-item img {
-  width: 100px;
-  object-fit: cover;
-  margin: 15px;
-}
+  img {
+    width: 100px;
+    object-fit: cover;
+    margin: 15px;
+  }
 
-.grid-item h3 {
-  margin: 15px 0;
-  font-size: 1em;
+  h3 {
+    margin: 15px 0;
+    font-size: 1em;
+  }
 }
 
 /* --- Team --- */
@@ -190,7 +190,7 @@ footer .footer-custom-content {
   width: 21%;
 }
 
-.team-round-image img {
+img {
   width: 150px;
   /* Einheitliche Breite */
   height: 150px;
@@ -198,6 +198,7 @@ footer .footer-custom-content {
   border-radius: 10px;
   object-fit: cover;
   /* Stellt sicher, dass das Bild innerhalb der Grenzen bleibt */
+}
 }
 
 .team-top-aligned {
@@ -209,13 +210,13 @@ footer .footer-custom-content {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-}
 
-.institutes-content-container img {
-  max-width: 45%;
-  /* Maximale Breite des Bildes */
-  height: auto;
-  /* Beibehaltung des Seitenverhältnisses */
+  img {
+    max-width: 45%;
+    /* Maximale Breite des Bildes */
+    height: auto;
+    /* Beibehaltung des Seitenverhältnisses */
+  }
 }
 
 .institutes-container {
@@ -224,11 +225,11 @@ footer .footer-custom-content {
   list-style-type: none;
   /* Entfernt die Bulletpoints */
   padding: 0;
-}
 
-.institutes-container li {
-  margin: 10px 0;
-  /* Abstand zwischen den Listenelementen */
+  li {
+    margin: 10px 0;
+    /* Abstand zwischen den Listenelementen */
+  }
 }
 
 /* --- News --- */
@@ -238,34 +239,40 @@ footer .footer-custom-content {
   margin: 0;
   padding: 0;
   list-style: none;
-}
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 2px;
-  background: #ccc;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    background: #ccc;
+  }
 }
 
 .timeline-item {
   position: relative;
   margin: 1em 0;
-}
 
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  top: 1em;
-  left: 0;
-  width: 12px;
-  height: 12px;
-  background: #fff;
-  border: 2px solid #ccc;
-  border-radius: 50%;
-  transform: translateX(-50%);
+  &::before {
+    content: '';
+    position: absolute;
+    top: 1em;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }
 
 .timeline-content {
@@ -277,11 +284,6 @@ footer .footer-custom-content {
   /* Abstand vom Zeitstrahl */
 }
 
-.timeline-item::after {
-  content: '';
-  display: table;
-  clear: both;
-}
 
 /* --- Deliverables --- */
 
@@ -302,11 +304,11 @@ footer .footer-custom-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
 
-.deliverable-box.active {
-  background-color: #f0f0f0;
-  border-color: #000;
+  &.active {
+    background-color: #f0f0f0;
+    border-color: #000;
+  }
 }
 
 .deliverable-box-text {
@@ -382,11 +384,11 @@ footer .footer-custom-content {
   /* Flex-Container für die Datenzeile */
   justify-content: space-between;
   border-bottom: 1px solid #e0e0e0;
-}
 
-.wp-row:last-child {
-  border-bottom: none;
-  /* Entfernt den untersten Rand für die letzte Zeile */
+  &:last-child {
+    border-bottom: none;
+    /* Entfernt den untersten Rand für die letzte Zeile */
+  }
 }
 
 .wp-status {
@@ -394,19 +396,19 @@ footer .footer-custom-content {
   border-radius: 4px;
   color: white;
   font-weight: bold;
-}
 
-.wp-status.open {
-  background-color: #e74c3c;
-  /* Rot */
-}
+  &s.open {
+    background-color: #e74c3c;
+    /* Rot */
+  }
 
-.wp-status.in-progress {
-  background-color: #f39c12;
-  /* Orange */
-}
+  &.in-progress {
+    background-color: #f39c12;
+    /* Orange */
+  }
 
-.wp-status.done {
-  background-color: #2ecc71;
-  /* Grün */
+  &.done {
+    background-color: #2ecc71;
+    /* Grün */
+  }
 }
