@@ -188,16 +188,16 @@ footer {
 
 .team-round-image {
   width: 21%;
-}
 
-img {
-  width: 150px;
-  /* Einheitliche Breite */
-  height: 150px;
-  /* Einheitliche Höhe */
-  border-radius: 10px;
-  object-fit: cover;
-  /* Stellt sicher, dass das Bild innerhalb der Grenzen bleibt */
+  img {
+    width: 150px;
+    /* Einheitliche Breite */
+    height: 150px;
+    /* Einheitliche Höhe */
+    border-radius: 10px;
+    object-fit: cover;
+    /* Stellt sicher, dass das Bild innerhalb der Grenzen bleibt */
+  }
 }
 
 .team-top-aligned {
