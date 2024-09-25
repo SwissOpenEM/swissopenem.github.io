@@ -72,7 +72,7 @@ interoperable EM metadata.
 
 OpenEM integrates many existing services from the ETH domain and Swiss universities:
 SciCat, the PSI archive system, SWITCH authentication services, the CSCS Petabyte
-archive, the ETHZ Long-term Storage, not to mention the seven participating facilities.
+archive, the ETHZ Long-term Storage, and of course the seven participating facilities.
 With the completion of this milestone, OpenEM finalized the overall architecture for
 integrating these services as well as prototypes of new microservices needed for
 interoperability.
@@ -111,7 +111,7 @@ This milestone included basic functionality from all components. This allowed th
 **Planned: November 2024**
 
 This milestone begins the roll-out process of OpenEM software, starting at one facility.
-The ingestion of datasets becomes more automated and routine use. Users have the
+The ingestion of datasets becomes more automated and routine based. Users have the
 opportunity to test the software and provide feedback.
 
 | Component              | Goal                                                                                                                  |
