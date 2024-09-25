@@ -1,89 +1,89 @@
-  - task_id: "2023-06"
-    task_name: "Project Initialization"
-    resource: "Initialization"
-    start_date: 2023-06-01
-    end_date: 2023-08-31
-    duration: null
-    percent_complete: 100
-    dependencies: null
+- task_id: "2023-06"
+  task_name: "Project Initialization"
+  resource: "Initialization"
+  start_date: 2023-06-01
+  end_date: 2023-08-31
+  duration: null
+  percent_complete: 100
+  dependencies: null
 
-  - task_id: "2023-12"
-    task_name: "Hiring"
-    resource: "Initialization"
-    start_date: 2023-07-01
-    end_date: 2024-03-31
-    duration: null
-    percent_complete: 100
-    dependencies: null
+- task_id: "2023-12"
+  task_name: "Hiring"
+  resource: "Initialization"
+  start_date: 2023-07-01
+  end_date: 2024-03-31
+  duration: null
+  percent_complete: 100
+  dependencies: null
 
-  # - task_id: "2024-04"
-  #   task_name: "Planning and Prototyping"
-  #   resource: "Preparation"
-  #   start_date: 2023-09-01
-  #   end_date: 2024-04-30
-  #   duration: null
-  #   percent_complete: 100
-  #   dependencies: null
+# - task_id: "2024-04"
+#   task_name: "Planning and Prototyping"
+#   resource: "Preparation"
+#   start_date: 2023-09-01
+#   end_date: 2024-04-30
+#   duration: null
+#   percent_complete: 100
+#   dependencies: null
 
-  - task_id: "MS1"
-    task_name: "MS-I: Metadata Standards - Community Workshop"
-    resource: "Preparation"
-    start_date: 2024-01-01
-    end_date: 2024-02-23
-    duration: null
-    percent_complete: 100
-    dependencies: null
+- task_id: "MS1"
+  task_name: "MS-I: Metadata Standards"
+  resource: "Planning and Prototyping"
+  start_date: 2024-01-01
+  end_date: 2024-02-23
+  duration: null
+  percent_complete: 100
+  dependencies: null
 
-  - task_id: "MS2"
-    task_name: "MS-II: Conceptual Plan - software architecture and design decisions"
-    resource: "Preparation"
-    start_date: 2024-02-24
-    end_date: 2024-04-28
-    duration: null
-    percent_complete: 100
-    dependencies: null
+- task_id: "MS2"
+  task_name: "MS-II: Conceptual Plan"
+  resource: "Planning and Prototyping"
+  start_date: 2024-02-24
+  end_date: 2024-04-28
+  duration: null
+  percent_complete: 100
+  dependencies: null
 
-  - task_id: "MS3"
-    task_name: "MS-III: Proof of Concept - First dataset collected and transferred"
-    resource: "Concept & Realization"
-    start_date: 2024-05-01
-    end_date: 2024-09-20
-    duration: null
-    percent_complete: 100
-    dependencies: null
+- task_id: "MS3"
+  task_name: "MS-III: Proof of Concept"
+  resource: "Concept & Realization"
+  start_date: 2024-05-01
+  end_date: 2024-09-20
+  duration: null
+  percent_complete: 100
+  dependencies: null
 
-  - task_id: "MS4"
-    task_name: "MS-IV: Alpha - Deployed at a single facility"
-    resource: "Concept & Realization"
-    start_date: 2024-09-21
-    end_date: 2024-11-30
-    duration: null
-    percent_complete: 0
-    dependencies: null
+- task_id: "MS4"
+  task_name: "MS-IV: Alpha Release"
+  resource: "Concept & Realization"
+  start_date: 2024-09-21
+  end_date: 2024-11-30
+  duration: null
+  percent_complete: 0
+  dependencies: null
 
-  - task_id: "MS5"
-    task_name: "MS-V: Beta - Deployed at all facilities"
-    resource: "Concept & Realization"
-    start_date: 2024-12-01
-    end_date: 2025-03-31
-    duration: null
-    percent_complete: 0
-    dependencies: null
+- task_id: "MS5"
+  task_name: "MS-V: Beta Release"
+  resource: "Concept & Realization"
+  start_date: 2024-12-01
+  end_date: 2025-03-31
+  duration: null
+  percent_complete: 0
+  dependencies: null
 
-  - task_id: "MS6"
-    task_name: "MS-VI: Official Release - v1.0"
-    resource: "Introduction"
-    start_date: 2025-04-01
-    end_date: 2025-06-30
-    duration: null
-    percent_complete: 0
-    dependencies: null
+- task_id: "MS6"
+  task_name: "MS-VI: Official Release"
+  resource: "Introduction"
+  start_date: 2025-04-01
+  end_date: 2025-06-30
+  duration: null
+  percent_complete: 0
+  dependencies: null
 
-  - task_id: "MS7"
-    task_name: "MS-VII: Handover to facilities - training and iteration"
-    resource: "Introduction"
-    start_date: 2025-07-01
-    end_date: 2025-12-31
-    duration: null
-    percent_complete: 0
-    dependencies: null
+- task_id: "MS7"
+  task_name: "MS-VII: Handover to facilities"
+  resource: "Introduction"
+  start_date: 2025-07-01
+  end_date: 2025-12-31
+  duration: null
+  percent_complete: 0
+  dependencies: null
