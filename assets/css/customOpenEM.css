@@ -1,25 +1,36 @@
 /* --- Beautiful Jekyll Modifications --- */
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  h1 {
-    font-size: 2.25rem !important;
-  }
-  h2 {
-    font-size: 1.875rem !important;
-  }
-  h3 {
-    font-size: 1.5rem !important;
-  }
-  h4 {
-    font-size: 1.125rem !important;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  table {
-    border-collapse: collapse; /* Entfernt Abstände zwischen den Zellen */
-    width: 100% !important; /* Setzt die Breite der Tabelle auf maximalen Inhalt */
-    margin-bottom: 5%;
+h1 {
+  font-size: 2.25rem !important;
+}
+
+h2 {
+  font-size: 1.875rem !important;
+}
+
+h3 {
+  font-size: 1.5rem !important;
+}
+
+h4 {
+  font-size: 1.125rem !important;
+}
+
+table {
+  border-collapse: collapse;
+  /* Entfernt Abstände zwischen den Zellen */
+  width: 100% !important;
+  /* Setzt die Breite der Tabelle auf maximalen Inhalt */
+  margin-bottom: 5%;
 }
 
 p {
@@ -39,10 +50,10 @@ p {
 }
 
 .navbar-custom {
-    background-color: white;
-    border-bottom: 1px solid #DDDDDD;
-    font-family: Arial, Helvetica, sans-serif;
-    justify-content: center;
+  background-color: white;
+  border-bottom: 1px solid #DDDDDD;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
 }
 
 .nav-item.dropdown:hover:not(.show) {
@@ -50,58 +61,60 @@ p {
 }
 
 .navbar-custom .navbar-nav .nav-item {
-    letter-spacing: normal;
+  letter-spacing: normal;
 }
 
 .navbar-nav {
-    margin: auto !important;
-  }
+  margin: auto !important;
+}
 
-  @media (min-width: 1200px) {
-    #main-navbar {
-        flex: 0;
-      }
+@media (min-width: 1200px) {
+  #main-navbar {
+    flex: 0;
   }
+}
 
-  footer {
-    border-top: 5px solid transparent; /* Set the border width to 5px */
-    border-image-source: url('/assets/img/orientation-map.jpg'); /* Set the image as the border */
-    border-image-slice: 5;
-    border-image-repeat: repeat;
-    background-color: white;
-  }
+footer {
+  border-top: 5px solid transparent;
+  /* Set the border width to 5px */
+  border-image-source: url('/assets/img/orientation-map.jpg');
+  /* Set the image as the border */
+  border-image-slice: 5;
+  border-image-repeat: repeat;
+  background-color: white;
+}
 
-  footer .copyright {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+footer .copyright {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  footer .footer-custom-content {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+footer .footer-custom-content {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  .post-preview a {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+.post-preview a {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  .blog-tags {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+.blog-tags {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  #full-tags-list {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+#full-tags-list {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  .intro-header .post-heading .post-subheading {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+.intro-header .post-heading .post-subheading {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  .intro-header.big-img .img-desc {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+.intro-header.big-img .img-desc {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  .pagination .page-item .page-link {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+.pagination .page-item .page-link {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 /* --- Buttons --- */
 .button-container {
@@ -109,8 +122,10 @@ p {
   justify-content: center;
   gap: 10px;
 }
+
 .button {
-  background-color: #419ba3; /* Green */
+  background-color: #419ba3;
+  /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -123,6 +138,7 @@ p {
   border-radius: 8px;
   transition: background-color 0.3s;
 }
+
 .button:hover {
   background-color: #f9f9f9;
 }
@@ -173,10 +189,13 @@ p {
 }
 
 .team-round-image img {
-  width: 150px; /* Einheitliche Breite */
-  height: 150px; /* Einheitliche Höhe */
+  width: 150px;
+  /* Einheitliche Breite */
+  height: 150px;
+  /* Einheitliche Höhe */
   border-radius: 10px;
-  object-fit: cover; /* Stellt sicher, dass das Bild innerhalb der Grenzen bleibt */
+  object-fit: cover;
+  /* Stellt sicher, dass das Bild innerhalb der Grenzen bleibt */
 }
 
 .team-top-aligned {
@@ -189,116 +208,126 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+
 .institutes-content-container img {
-  max-width: 45%; /* Maximale Breite des Bildes */
-  height: auto; /* Beibehaltung des Seitenverhältnisses */
+  max-width: 45%;
+  /* Maximale Breite des Bildes */
+  height: auto;
+  /* Beibehaltung des Seitenverhältnisses */
 }
+
 .institutes-container {
-  max-width: 45%; /* Maximale Breite der Liste */
-  list-style-type: none; /* Entfernt die Bulletpoints */
+  max-width: 45%;
+  /* Maximale Breite der Liste */
+  list-style-type: none;
+  /* Entfernt die Bulletpoints */
   padding: 0;
 }
+
 .institutes-container li {
-  margin: 10px 0; /* Abstand zwischen den Listenelementen */
+  margin: 10px 0;
+  /* Abstand zwischen den Listenelementen */
 }
 
 /* --- News --- */
 
 .timeline {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 2px;
-    background: #ccc;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background: #ccc;
 }
 
 .timeline-item {
-    position: relative;
-    margin: 1em 0;
+  position: relative;
+  margin: 1em 0;
 }
 
 .timeline-item::before {
-    content: '';
-    position: absolute;
-    top: 1em;
-    left: 0;
-    width: 12px;
-    height: 12px;
-    background: #fff;
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    transform: translateX(-50%);
+  content: '';
+  position: absolute;
+  top: 1em;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  transform: translateX(-50%);
 }
 
 .timeline-content {
-    padding: 1em;
-    background: #f9f9f9;
-    border-radius: 4px;
-    font-weight: normal;
-    margin-left: 2em; /* Abstand vom Zeitstrahl */
+  padding: 1em;
+  background: #f9f9f9;
+  border-radius: 4px;
+  font-weight: normal;
+  margin-left: 2em;
+  /* Abstand vom Zeitstrahl */
 }
 
 .timeline-item::after {
-    content: '';
-    display: table;
-    clear: both;
+  content: '';
+  display: table;
+  clear: both;
 }
 
-  /* --- Deliverables --- */
+/* --- Deliverables --- */
 
+.deliverable-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.deliverable-box {
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.deliverable-box.active {
+  background-color: #f0f0f0;
+  border-color: #000;
+}
+
+.deliverable-box-text {
+  text-align: center !important;
+}
+
+.deliverable-content {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
   .deliverable-container {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .deliverable-box {
-      flex: 1;
-      margin: 0 10px;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      text-align: center;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    margin: 10px;
+    width: 35%;
+    /* Passt zwei Boxen nebeneinander */
   }
-
-  .deliverable-box.active {
-      background-color: #f0f0f0;
-      border-color: #000;
-  }
-
-  .deliverable-box-text {
-    text-align: center !important;
-  }
-
-  .deliverable-content {
-      margin-top: 20px;
-      font-size: 16px;
-  }
-
-  @media (max-width: 768px) {
-      .deliverable-container {
-          flex-wrap: wrap;
-          justify-content: center;
-      }
-
-      .deliverable-box {
-          margin: 10px;
-          width: 35%; /* Passt zwei Boxen nebeneinander */
-      }
-  }
+}
 
 /* --- Work Package Tasks --- */
 
@@ -311,7 +340,8 @@ p {
 }
 
 .wp-header-row {
-  display: flex; /* Flex-Container für die Header-Zeile */
+  display: flex;
+  /* Flex-Container für die Header-Zeile */
   background-color: #f5f5f5;
   font-weight: bold;
 }
@@ -329,27 +359,32 @@ p {
 /* Flexeigenschaften für die Spalten */
 .wp-header-col:first-child,
 .wp-col:first-child {
-  flex: 0 0 80px; /* Feste Breite für die erste Spalte */
+  flex: 0 0 80px;
+  /* Feste Breite für die erste Spalte */
 }
 
 .wp-header-col:last-child,
 .wp-col:last-child {
-  flex: 0 0 80px; /* Feste Breite für die dritte Spalte */
+  flex: 0 0 80px;
+  /* Feste Breite für die dritte Spalte */
 }
 
 .wp-header-col:nth-child(2),
 .wp-col:nth-child(2) {
-  flex: 1; /* Zweite Spalte nimmt den verbleibenden Raum ein */
+  flex: 1;
+  /* Zweite Spalte nimmt den verbleibenden Raum ein */
 }
 
 .wp-row {
-  display: flex; /* Flex-Container für die Datenzeile */
+  display: flex;
+  /* Flex-Container für die Datenzeile */
   justify-content: space-between;
   border-bottom: 1px solid #e0e0e0;
 }
 
 .wp-row:last-child {
-  border-bottom: none; /* Entfernt den untersten Rand für die letzte Zeile */
+  border-bottom: none;
+  /* Entfernt den untersten Rand für die letzte Zeile */
 }
 
 .wp-status {
@@ -360,13 +395,16 @@ p {
 }
 
 .wp-status.open {
-  background-color: #e74c3c; /* Rot */
+  background-color: #e74c3c;
+  /* Rot */
 }
 
 .wp-status.in-progress {
-  background-color: #f39c12; /* Orange */
+  background-color: #f39c12;
+  /* Orange */
 }
 
 .wp-status.done {
-  background-color: #2ecc71; /* Grün */
+  background-color: #2ecc71;
+  /* Grün */
 }
