@@ -1,0 +1,22 @@
+{% comment %}
+
+Add a gantt chart to the current page.
+
+The `data` parameter must include gantt data, eg decoded from a yaml file.
+
+If multiple charts are included on one page, `skip_scripts=true` should be passed to
+all but one instance to avoid multiple inclusion.
+
+Usage: {% include gantt.html data="{{site.data.timeline}}" %}
+
+{% endcomment -%}
+<div data-gantt="{{- include.data | jsonify | escape -}}">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<noscript><em>Javascript required for interactive timeline</em></noscript>
+{% unless include.skip_scripts -%}
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js" ></script>
+<script type="text/javascript" src="{{ "/assets/js/gantt.js" | relative_url }}" ></script>
+{% endunless -%}

@@ -3,7 +3,7 @@ layout: page
 title: Deliverables
 permalink: /deliverables/
 subtitle: What to expect from the project
-tags: 
+tags:
   - Project deliverables
   - Metadata standards
   - Metadata catalog
@@ -11,7 +11,7 @@ tags:
   - Work packages
 ---
 
-All delivery results of the project are described here. The schedule and dependencies are described on the <a href="/timeline">Timeline page</a>. 
+All delivery results of the project are described here. The schedule and dependencies are described on the <a href="/timeline">Timeline page</a>.
 
 Different components or organisational topics are being worked on within each work package.
 
@@ -84,7 +84,7 @@ Different components or organisational topics are being worked on within each wo
                     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
                     window.scrollTo({ top: y, behavior: 'smooth' });
                 }
-                
+
             })
             .catch(error => {
                 document.getElementById('deliverable-content').innerHTML = 'The content could not be found.';
