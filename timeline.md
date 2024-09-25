@@ -22,11 +22,11 @@ EM infrastructure.
 More details regarding the the software components and their integration into the OpenEM
 ecosystem can be found [here]({{ "/software/" | relative_url }}).
 
-### Timeline ###
+## Timeline
 
 {% include gantt.html data=site.data.timeline %}
 
-### Initialization ###
+## Initialization
 
 The project started in June 2023 and the recruitment process began. During this phase,
 PSI communicated their experience using the SciCat Data Catalog for archiving and
@@ -40,9 +40,9 @@ Site visits were also carried out at all participating OpenEM faculties. Project
 requirements were updated based on use cases from each facility, as well as estimates of
 data volumes and local infrastructure.
 
-### Planning and Prototyping ###
+## Planning and Prototyping
 
-#### Milestone I (Metadata Standards) ####
+### Milestone I: Metadata Standards
 
 **Completed: Feb 2024**
 
@@ -66,7 +66,7 @@ interoperable EM metadata.
 | Archival and Retrieval        | Storage on [CSCS](https://cscs.ch) through the PSI SciCat Data Catalog            |
 | SciCat                        | SciCat v3 in operation, with development of v4 underway.                          |
 
-#### Milestone II (Conceptual Plan) ####
+### Milestone II: Conceptual Plan
 
 **Completed: May 2024**
 
@@ -88,9 +88,9 @@ interoperability.
 | Archival and Retrieval        | Architecture planned the ETHZ Archive System, as well as prototypes for integrating ETHZ LTS                                          |
 | SciCat                        | New Jobs customization system started in SciCat v4. Plan for multi-facility support.                                                  |
 
-### Concept & Realization ###
+## Concept & Realization
 
-#### Milestone III (Proof of Concept) ####
+### Milestone III: Proof of Concept
 
 **Completed: September 2024**
 
@@ -106,7 +106,7 @@ This milestone included basic functionality from all components. This allowed th
 | Archival and Retrieval        | Reliably archive and retrieve datasets from ETHZ Long Term Storage (PSI archive and retrieval previously established)                                   |
 | SciCat                        | Deploy SciCat V4 with new features (ie new customizable job API)                                                                                        |
 
-#### Milestone IV (Alpha Release) ####
+### Milestone IV: Alpha Release
 
 **Planned: November 2024**
 
@@ -123,7 +123,7 @@ opportunity to test the software and provide feedback.
 | Archival and Retrieval | Integrate Globus into PSI archiver system                                                                             |
 | SciCat                 | SciCat V4 is in production                                                                                            |
 
-#### Milestone V (Beta Release) ####
+### Milestone V: Beta Release
 
 **Planned: March 2025**
 
@@ -141,9 +141,9 @@ During this phase software will be rolled out to all facilities.
 | SciCat                        | Integrate both PSI and ETHZ archiver systems. Provide schema validation.                                                                                                                 |
 
 
-### Introduction ###
+## Introduction
 
-#### Milestone VI (Official Release) ####
+### Milestone VI: Official Release
 
 By this point the software is considered fully in production. Datasets will be collected
 from all facilities routinely. Features for easily deploying updates and easy
@@ -158,7 +158,7 @@ maintenance of the services will also be implemented.
 | Repository Integration | Enable upload to EMPIAR.                                                                       |
 
 
-#### Milestone VII (Handover to Facilities) ####
+### Milestone VII: Handover to Facilities
 
 **Planned: December 2025**
 
