@@ -33,7 +33,7 @@ function drawChart(parent, ymldata) {
   data.addRows(rows);
 
   var options = {
-    height: 400,
+    height: 42*rows.length+42,
     gantt: {
       criticalPathEnabled: false,
       arrow: {

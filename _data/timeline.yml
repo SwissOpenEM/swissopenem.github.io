@@ -10,20 +10,20 @@
 - task_id: "2023-12"
   task_name: "Hiring"
   resource: "Initialization"
-  start_date: 2023-07-01
+  start_date: 2023-06-01
   end_date: 2024-03-31
   duration: null
   percent_complete: 100
   dependencies: null
 
-# - task_id: "2024-04"
-#   task_name: "Planning and Prototyping"
-#   resource: "Preparation"
-#   start_date: 2023-09-01
-#   end_date: 2024-04-30
-#   duration: null
-#   percent_complete: 100
-#   dependencies: null
+- task_id: "2024-04"
+  task_name: "Planning and Prototyping"
+  resource: "Initialization"
+  start_date: 2023-07-01
+  end_date: 2023-12-31
+  duration: null
+  percent_complete: 100
+  dependencies: null
 
 - task_id: "MS1"
   task_name: "MS-I: Metadata Standards"
