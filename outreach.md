@@ -19,7 +19,7 @@ tags:
 | CCPEM Doppio Workshop | 16-18 Jan 2024, Oxford, UK ||
 | Machine actionable data for chemical sciences (MADICES) workshop | 22-25 Apr 2024, Berlin |
 | SciCatCon User Meeting | 2-4 Jul 2024 | 
-| New Opportunities for Better User Group Software (NOBUGS) | 23-27 Sept 2024 (planned) |
+| New Opportunities for Better User Group Software (NOBUGS) | 23-27 Sept 2024 | Poster: [Link](https://zenodo.org/records/13798727) |
 
 ### Conferences & workshops ###
 
