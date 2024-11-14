@@ -1,0 +1,157 @@
+<div id="stepper">
+  <span style="position: relative;">
+    <a href="#" onclick="toggleDropdown('documentation-dropdown')">Documentation ▼</a>
+    <ul id="documentation-dropdown" class="stepper-dropdown-content" style="display:none;">
+      <li onclick="updateStepper('User Manual', 'OVERVIEW', '/documentation/user/overview', true); closeDropdowns()">
+        User Manual</li>
+      <li
+        onclick="updateStepper('Operation Manual', 'OVERVIEW', '/documentation/admin/overview', true); closeDropdowns()">
+        Operation Manual</li>
+      <li
+        onclick="updateStepper('Development Manual', 'OVERVIEW', '/documentation/dev/overview', true); closeDropdowns()">
+        Development Manual</li>
+    </ul>
+  </span>
+  <span id="user-manual-stepper" style="display:none; position: relative;"> / <a href="#"
+      onclick="toggleDropdown('user-manual-dropdown')">User Manual ▼</a>
+    <ul id="user-manual-dropdown" class="stepper-dropdown-content" style="display:none;">
+      {% for item in site.data.documentation-user %}
+      <li onclick="updateStepper('User Manual', '{{ item.title }}', '{{ item.path }}', true); closeDropdowns()">{{
+        item.title }}</li>
+      {% endfor %}
+    </ul>
+  </span>
+  <span id="operation-manual-stepper" style="display:none; position: relative;"> / <a href="#"
+      onclick="toggleDropdown('operation-manual-dropdown')">Operation Manual ▼</a>
+    <ul id="operation-manual-dropdown" class="stepper-dropdown-content" style="display:none;">
+      {% for item in site.data.documentation-op %}
+      <li onclick="updateStepper('Operation Manual', '{{ item.title }}', '{{ item.path }}', true); closeDropdowns()">{{
+        item.title }}</li>
+      {% endfor %}
+    </ul>
+  </span>
+  <span id="development-manual-stepper" style="display:none; position: relative;"> / <a href="#"
+      onclick="toggleDropdown('development-manual-dropdown')">Development Manual ▼</a>
+    <ul id="development-manual-dropdown" class="stepper-dropdown-content" style="display:none;">
+      {% for item in site.data.documentation-dev %}
+      <li onclick="updateStepper('Development Manual', '{{ item.title }}', '{{ item.path }}', true); closeDropdowns()">
+        {{
+        item.title }}</li>
+      {% endfor %}
+    </ul>
+  </span>
+  <span id="page-stepper"></span>
+</div>
+
+<script>
+  function updateStepper(category, page, path, click) {
+    let stepper = document.getElementById('stepper');
+    let userManualStepper = document.getElementById('user-manual-stepper');
+    let operationManualStepper = document.getElementById('operation-manual-stepper');
+    let developmentManualStepper = document.getElementById('development-manual-stepper');
+    let pageStepper = document.getElementById('page-stepper');
+
+    if (category === 'Documentation') {
+      userManualStepper.style.display = 'none';
+      operationManualStepper.style.display = 'none';
+      developmentManualStepper.style.display = 'none';
+      pageStepper.innerText = '';
+    } else if (category === 'User Manual') {
+      userManualStepper.style.display = 'inline';
+      operationManualStepper.style.display = 'none';
+      developmentManualStepper.style.display = 'none';
+      pageStepper.innerText = page ? ` / ${page}` : '';
+    } else if (category === 'Operation Manual') {
+      userManualStepper.style.display = 'none';
+      operationManualStepper.style.display = 'inline';
+      developmentManualStepper.style.display = 'none';
+      pageStepper.innerText = page ? ` / ${page}` : '';
+    } else if (category === 'Development Manual') {
+      userManualStepper.style.display = 'none';
+      operationManualStepper.style.display = 'none';
+      developmentManualStepper.style.display = 'inline';
+      pageStepper.innerText = page ? ` / ${page}` : '';
+    }
+
+    // Wechsel auf den Link bei Klick
+    console.log(click)
+    if (click) {
+      if (!path) {
+        window.location.href = '/documentation/' + category + '/overview';
+      }
+      else {
+        window.location.href = path;
+      }
+    }
+  }
+
+  function toggleDropdown(id) {
+    let dropdown = document.getElementById(id);
+    if (dropdown.style.display === 'none') {
+      closeDropdowns();
+      dropdown.style.display = 'block';
+    } else {
+      dropdown.style.display = 'none';
+    }
+  }
+
+  function closeDropdowns() {
+    document.getElementById('documentation-dropdown').style.display = 'none';
+    document.getElementById('user-manual-dropdown').style.display = 'none';
+    document.getElementById('operation-manual-dropdown').style.display = 'none';
+    document.getElementById('development-manual-dropdown').style.display = 'none';
+  }
+
+  function initializeStepperFromUrl() {
+    const pathParts = window.location.pathname.split('/').filter(part => part);
+
+    let category, page, title = 'UNKNOWN';
+
+    if (pathParts.length >= 2 && pathParts[0] === 'documentation') {
+      if (pathParts[1] === 'user') {
+        category = 'User Manual';
+        const data = JSON.parse(`{{ site.data.documentation-user | jsonify }}`);
+        const item = data.find(item => item.path === window.location.pathname);
+        if (item) {
+          title = item.title;
+        }
+      } else if (pathParts[1] === 'admin') {
+        category = 'Operation Manual';
+        const data = JSON.parse(`{{ site.data.documentation-op | jsonify }}`);
+        const item = data.find(item => item.path === window.location.pathname);
+        if (item) {
+          title = item.title;
+        }
+      }
+      else if (pathParts[1] === 'dev') {
+        category = 'Development Manual';
+        const data = JSON.parse(`{{ site.data.documentation-dev | jsonify }}`);
+        const item = data.find(item => item.path === window.location.pathname);
+        if (item) {
+          title = item.title;
+        }
+      }
+
+      if (pathParts.length >= 3) {
+        page = title;
+      }
+
+      if (category) {
+        updateStepper(category, page);
+      }
+    }
+
+    document.addEventListener('click', function (event) {
+      let documentationDropdown = document.getElementById('documentation-dropdown');
+      let userManualDropdown = document.getElementById('user-manual-dropdown');
+      let operationManualDropdown = document.getElementById('operation-manual-dropdown');
+      let developmentManualDropdown = document.getElementById('development-manual-dropdown');
+      if (!event.target.matches('span, span *, #stepper, #stepper *')) {
+        closeDropdowns();
+      }
+    });
+  }
+
+  // Initialisiere den Stepper basierend auf der URL
+  initializeStepperFromUrl();
+</script>

@@ -1,0 +1,35 @@
+<script>
+    function navigate(direction) {
+        const currentUrl = window.location.pathname;
+        const opData = JSON.parse(`{{ site.data.documentation-op | jsonify }}`);
+        const userData = JSON.parse(`{{ site.data.documentation-user | jsonify }}`);
+        const combinedData = [...opData, ...userData];
+        const currentIndex = combinedData.findIndex(entry => entry.path === currentUrl);
+        if (currentIndex !== -1) {
+            let targetIndex;
+            if (direction === 'back') {
+                targetIndex = currentIndex > 0 ? currentIndex - 1 : null;
+            } else if (direction === 'next') {
+                targetIndex = currentIndex < combinedData.length - 1 ? currentIndex + 1 : null;
+            }
+            if (targetIndex !== null) {
+                window.location.href = combinedData[targetIndex].path;
+            } else {
+                console.log('No more pages in the selected direction.');
+            }
+        } else {
+            console.log('Current path not found in YAML files.');
+        }
+    }
+</script>
+
+<div style="display: flex; justify-content: space-between;">
+    {% if include.showBack %}
+        <a href="#" onclick="navigate('back')">&lt; Back</a>
+    {% else %}
+        <span></span>
+    {% endif %}
+    {% if include.showNext %}
+        <a href="#" onclick="navigate('next')">Next &gt;</a>
+    {% endif %}
+</div>

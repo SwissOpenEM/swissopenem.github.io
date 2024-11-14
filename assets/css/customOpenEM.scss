@@ -287,6 +287,8 @@ footer {
 /* --- Deliverables --- */
 
 .deliverable-container {
+  margin: auto;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -410,4 +412,43 @@ footer {
     background-color: #2ecc71;
     /* Grün */
   }
+}
+
+/* --- Documentation Stepper --- */
+.stepper-dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 100%; /* Position the dropdown below the stepper */
+  left: 0;
+  padding-left: 0;
+}
+
+.stepper-dropdown-content li {
+  padding: 8px 16px 8px 36px; /* Increase left padding to create space for the bar */
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  position: relative; /* Add this to position the pseudo-element */
+}
+
+.stepper-dropdown-content li:hover {
+  background-color: #f1f1f1;
+}
+
+.stepper-dropdown-content li:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 20px; /* Match the padding-left of the parent */
+  background-color: rgb(65, 155, 163); /* Dark gray color */
+}
+
+#stepper {
+  margin-bottom: 16px;
 }

@@ -1,0 +1,29 @@
+- id: 1
+  title: OVERVIEW
+  description: Overview
+  path: /documentation/admin/overview
+
+- id: 2
+  title: GENERAL INFORMATION
+  description: 1. General Information about the Ingestor
+  path: /documentation/admin/general
+
+- id: 3
+  title: REQUIREMENTS
+  description: 2. Requirements & Infrastructure
+  path: /documentation/admin/req-infrastructure
+
+- id: 4
+  title: INSTALLATION
+  description: 3. Installation
+  path: /documentation/admin/installation
+
+- id: 5
+  title: ADMINISTRATION
+  description: 4. Administration & Maintenance
+  path: /documentation/admin/admin-maintenance
+
+- id: 6
+  title: SUPPORT
+  description: 5. Support
+  path: /documentation/admin/support
