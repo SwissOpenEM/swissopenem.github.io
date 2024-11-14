@@ -58,7 +58,7 @@
   start_date: 2024-09-21
   end_date: 2024-11-30
   duration: null
-  percent_complete: 0
+  percent_complete: 90
   dependencies: null
 
 - task_id: "MS5"
