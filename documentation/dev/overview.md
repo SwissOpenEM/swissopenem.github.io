@@ -11,7 +11,28 @@ permalink: /documentation/dev/overview
 
 In this section of the website you will find the documentation for the development of the OpenEM components.
 
-The projects are available open-source. You will find a list here: <a href="/outreach#opensourceprojects">List of open source projects</a>
+### External links
+
+<table>
+  <thead>
+    <tr>
+      <th>Source</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SwissOpenEm Projects</td>
+      <td><a href="/outreach#opensourceprojects">Click</a></td>
+    </tr>
+    <tr>
+      <td>SciCat Development Guide</td>
+      <td><a href="https://scicatproject.github.io/documentation/Development/">Click</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### Documentation
 
 {% assign docs = site.data.documentation-dev %}
 <table>
