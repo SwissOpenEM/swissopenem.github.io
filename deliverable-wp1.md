@@ -54,12 +54,12 @@ The Metadata Standards work package contains the following tasks and components.
 
 #### Metadata-Standards-1: Community consensus and commitment to data collection standards ####
 
-Established the <a href="https://github.com/osc-em">Open Standards Community for EM</a>
-Workshop 22-23 Feb 2024 with participants from facilities, software, and repositories
-Draft schema available for EM metadata. The goal is to include metadata required for future processing and deposition.
-Schema terms are defined by existing ontologies where available: CryoEM ontology, PDBx/mmCIF dictionary, Helmholz EM Glossary, NeXus-FAIRmat NXem format
-Conversion tools under development for major instrument manufacturers and formats
-Coordinate with PREMISE project regarding terms and ontologies
+- Established the <a href="https://github.com/osc-em">Open Standards Community for EM</a>
+Workshop 22-23 Feb 2024 with participants from facilities, software developers and repositories curators.
+- Schema is now <a href="https://osc-em.github.io/OSCEM_Schemas/">available</a> for EM metadata. During next milestones, metadata required for processing will be included by our collaborators and support for Material Sciences will be extended. 
+- Schema terms are defined with respect to existing ontologies where available: CryoEM ontology, PDBx/mmCIF dictionary, Helmholz EM Glossary, NeXus-FAIRmat NXem format.
+<!-- Conversion tools under development for major instrument manufacturers and formats -->
+- Ontologies are also coordinated with the PREMISE project 
 
 #### Metadata-Standards-2: Ensure streamlined and automatic metadata harvesting at all ETH sites ####
 
