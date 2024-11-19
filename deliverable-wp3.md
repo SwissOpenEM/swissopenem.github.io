@@ -58,4 +58,5 @@ To deposit biological specimen data, the European Bioinformatics Institute (EMBL
 #### Deposition-2: Expanding automated deposition tools for other EM disciplines ####
 Compared to task 1 of this deliverable, there are no central repositories as those offered by EBI. We are exploring possible repositories for depositions and considering the following projects:
 - The <a href="https://nomad-lab.eu/nomad-lab/">NOMAD project</a> lists data from EELS experiments and offers an API to interact with
-- <a href="https://www.materialscloud.org/home">Material Science Cloud</a> offers an archiving solution in any format and enables integration with other services, such as built-in visualizations and workflow managers.
+- <a href="https://www.materialscloud.org/home">Material Science Cloud</a> offers an archiving solution in any format and enables integration with other services, such as built-in visualizations and workflow managers.  
+During the next milestones, we will work on integrating deposition from SciCat to these repositories. 
