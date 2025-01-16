@@ -18,9 +18,6 @@ permalink: /documentation/admin/installation/ingestor
 ## Create a base configuration for the ingestor
 
 {: .box-note}
-**Note:** This section will be replaced by a Docker based method.
-
-{: .box-note}
 **Note:** Additional information can be found [here](https://github.com/SwissOpenEM/Ingestor/blob/main/configs/ReadMe.md)
 
 Run the following command: 
