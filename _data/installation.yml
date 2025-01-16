@@ -1,0 +1,4 @@
+- id: 1
+  title: Ingestor
+  description: How to install and configure the Ingestor-Backend
+  path: /documentation/admin/installation/ingestor
