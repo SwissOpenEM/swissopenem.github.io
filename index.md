@@ -1,18 +1,20 @@
 ---
 layout: home
 title: Open Electron Microscopy Data Network
-tags: 
+tags:
   - OpenEM
   - Electron microscopy
   - Research data
   - Project updates
   - Scientific collaboration
+share-description: |-
+  The Open EM Data Network (OpenEM) is a consortium of Swiss electron microscopy facilities working together to implement FAIR and open research data.
 ---
 
 
 Welcome to the OpenEM project website. Our goal is to simplify the work with electron microscopy data and to support research. Here you will find current information on the project and its progress. Technical documentation and information on project participation will also be made available here in the future.
 
-If you are interested or have any feedback, please contact us. 
+If you are interested or have any feedback, please contact us.
 
 <html>
 <br>
