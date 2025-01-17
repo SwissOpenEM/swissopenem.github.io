@@ -2,7 +2,7 @@
 layout: post
 title:  "Updated project page"
 date:   2024-07-29 12:00:00 +0100
-categories: media
+categories: news
 
 ---
 
