@@ -283,6 +283,10 @@ footer {
   /* Abstand vom Zeitstrahl */
 }
 
+.news-thumbnail {
+  max-width: 100px;
+  margin-left: 1em;
+}
 
 /* --- Deliverables --- */
 
@@ -452,4 +456,8 @@ footer {
 
 #stepper {
   margin-bottom: 16px;
+}
+
+.post-excerpt p {
+  margin: 0;
 }
