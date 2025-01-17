@@ -30,5 +30,17 @@ If you are interested or have any feedback, please contact us.
 </body>
 </html>
 
-### Project News ###
-News and posts about the project can be found <a href="/news/">here</a>.
+### Latest News ###
+
+{% assign posts = site.posts | sort: "date" | reverse -%}
+<ul class="timeline">
+  {% for post in posts limit: 1 -%}
+  <li class="xtimeline-item right">
+    <div class="timeline-content">
+      {% include news_item.html post=post %}
+    </div>
+  </li>
+{%- endfor %}
+</ul>
+
+<i class="fas fa-caret-right" aria-hidden="true"></i> <a href="/news">More project news</a>

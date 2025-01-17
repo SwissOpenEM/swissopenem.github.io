@@ -1,0 +1,19 @@
+{% comment %}
+
+Add a news item.
+
+Usage: {% include news_item.html data="{{site.data.timeline}}" %}
+
+{% endcomment -%}
+<strong class="post-date">{{ post.date | date: "%B %d, %Y" }}</strong>
+<h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+<div class="media" >
+  <div class="media-body">
+    <div class="post-excerpt">
+      {{- post.excerpt | markdownify -}}
+    </div>
+  </div>
+  {% if post.thumbnail-img -%}
+  <img src="{{ post.thumbnail-img | relative_url }}" class="mr-3 float-right d-none d-sm-block news-thumbnail" alt="thumbnail"/>
+  {%- endif %}
+</div>
