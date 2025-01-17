@@ -56,18 +56,18 @@
   task_name: "MS-IV: Alpha Release"
   resource: "Concept & Realization"
   start_date: 2024-09-21
-  end_date: 2024-11-30
+  end_date: 2024-12-30
   duration: null
-  percent_complete: 90
+  percent_complete: 100
   dependencies: null
 
 - task_id: "MS5"
   task_name: "MS-V: Beta Release"
   resource: "Concept & Realization"
-  start_date: 2024-12-01
+  start_date: 2024-01-01
   end_date: 2025-03-31
   duration: null
-  percent_complete: 0
+  percent_complete: 10
   dependencies: null
 
 - task_id: "MS6"

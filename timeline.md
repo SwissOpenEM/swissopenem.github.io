@@ -108,11 +108,10 @@ This milestone included basic functionality from all components. This allowed th
 
 ### Milestone IV: Alpha Release
 
-**Planned: November 2024**
+**Completed: December 2024**
 
-This milestone begins the roll-out process of OpenEM software, starting at one facility.
-The ingestion of datasets becomes more automated and routine based. Users have the
-opportunity to test the software and provide feedback.
+This milestone began the roll-out process of OpenEM software, starting at one facility.
+Additional features were added to improve the usability and make ingestion of datasets more automated.
 
 | Component              | Goal                                                                                                                  |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -121,13 +120,15 @@ opportunity to test the software and provide feedback.
 | Education - Website    | Add operator and user documentation sections                                                                          |
 | Repository Integration | Increase EMDB compatibility and provide a tool for adding electron density maps and other derived data                |
 | Archival and Retrieval | Integrate Globus into PSI archiver system                                                                             |
-| SciCat                 | SciCat V4 is in production                                                                                            |
+| SciCat                 | SciCat V4 is deployed                                                                                                 |
 
 ### Milestone V: Beta Release
 
 **Planned: March 2025**
 
-During this phase software will be rolled out to all facilities.
+During this phase software will be rolled out to all facilities. This includes making
+the system available to more user, improving our deployment procedures, and finishing
+documentation.
 
 
 | Component                     | Goal                                                                                                                                                                                     |
