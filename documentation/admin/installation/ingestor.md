@@ -2,6 +2,7 @@
 layout: page
 title: Ingestor Installation
 permalink: /documentation/admin/installation/ingestor
+share-description: Instructions for installing the ingestor for OpenEM
 ---
 
 ## Download and build the ingestor
@@ -20,7 +21,7 @@ permalink: /documentation/admin/installation/ingestor
 {: .box-note}
 **Note:** Additional information can be found [here](https://github.com/SwissOpenEM/Ingestor/blob/main/configs/ReadMe.md)
 
-Run the following command: 
+Run the following command:
 
 ```bash
 cp [REPO_DIR]/configs/openem-ingestor-config.yaml [REPO_DIR]/cmd/openem-ingestor-service/build/openem-ingestor-config.yaml
@@ -68,8 +69,8 @@ Transfer:
 
 Important options to customize:
  - **Transfer.Globus.ClientID**: this should be set to the same client-id as the one you'll use in the next paragraph. You need to create a new client on `app.globus.org`, please check out the [following page]() for more information
- - **Transfer.Globus.RefreshToken**: this a refresh token that you get from Globus by requesting offline access. 
- It is a temporary solution. You can use the tool [here](https://github.com/SwissOpenEM/globus) to obtain one. 
+ - **Transfer.Globus.RefreshToken**: this a refresh token that you get from Globus by requesting offline access.
+ It is a temporary solution. You can use the tool [here](https://github.com/SwissOpenEM/globus) to obtain one.
  First compile the go application under `cmd/` by running `go build . -o globus`, then use the following command:
  ```bash
  ./globus getRefreshToken --client-id "client-id-here" --auth-code-grant=true --redirect-url="https://auth.globus.org/v2/web/auth-code" --src-endpoint "(optional) source-collection-id" --dest-endpoint "(optional) dest-collection-id"
@@ -137,6 +138,7 @@ WebServer:
 
 ### Metadata Extractors
 Example config:
+
 ```yaml
 ...
 MetadataExtractors:
@@ -150,9 +152,9 @@ MetadataExtractors:
     GithubProject: LS_Metadata_reader
     Version: v0.2.8
     Executable: LS_Metadata_reader
-    Checksum: e8a2abc7a0d8759edf4559e27879b7977000a868a2f7d39b7804ff5e5c0d1559 
+    Checksum: e8a2abc7a0d8759edf4559e27879b7977000a868a2f7d39b7804ff5e5c0d1559
     ChecksumAlg: sha256
-    CommandLineTemplate: "-i '{{.SourceFolder}}' -o '{{.OutputFile}}'"
+    {% raw -%}CommandLineTemplate: "-i '{{.SourceFolder}}' -o '{{.OutputFile}}'"{% endraw %}
     Methods:
       - Name: Single Particle
         Schema: oscem_schemas.schema.json
@@ -164,6 +166,7 @@ MetadataExtractors:
         Schema: oscem_env_tomo.json
 ...
 ```
+
  - **InstallationPath** determines where the extractors should be downloaded/installed.
  - **SchemasLocation** determines where the schemas for extractors reside.
  - **DownloadMissingExtractors** sets whether to download extractors automatically from github
