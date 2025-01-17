@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Happy Holidays from OpenEM
+author: Spencer Bliven
 date:   2024-12-20 12:00:00 +0100
 categories: news
 tags: [newsletter]
