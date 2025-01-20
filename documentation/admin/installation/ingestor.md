@@ -75,6 +75,10 @@ Important options to customize:
  ```bash
  ./globus getRefreshToken --client-id "client-id-here" --auth-code-grant=true --redirect-url="https://auth.globus.org/v2/web/auth-code" --src-endpoint "(optional) source-collection-id" --dest-endpoint "(optional) dest-collection-id"
  ```
+
+{: .box-warning}
+**Warning:** The source and destination endpoint parameters are only intended for Globus Connect Server endpoints. For Globus Connect Personal (GCP), just skip specifying its `collection-id` in the command, otherwise the token request will fail. You have to make sure that the GCP collection is owned by the token's user.
+
 When prompted, login with a trusted account. **Never share your refresh token publically.** Copy the gotten refresh token into the config.
 
 ### Auth
