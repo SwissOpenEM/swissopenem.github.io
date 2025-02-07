@@ -11,7 +11,7 @@ cover-img:
 thumbnail-img: https://raw.githubusercontent.com/osc-em/.github/refs/heads/main/profile/assets/img/oscem_logo_236x300.png
 ---
 
-_OpenEM is happy to be a contributor to the Open Science Community for Electron Microscopy (OSC-EM). The following newsletter was sent out to OSC-EM members, but I wanted to reshare it with the OpenEM community and invited interested parties to join us._
+_OpenEM is happy to be a contributor to the Open Science Community for Electron Microscopy (OSC-EM). The following newsletter was sent out to OSC-EM members, but we wanted to reshare it with the OpenEM community and invited interested parties to join us._
 
 Dear OSC-EM members,
 
