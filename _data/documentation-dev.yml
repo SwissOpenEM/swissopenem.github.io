@@ -2,3 +2,8 @@
   title: OVERVIEW
   description: Overview
   path: /documentation/dev/overview
+
+- id: 2
+  title: OPENAPI MODEL GENERATION
+  description: OpenAPI Model Generation (E.g. for accessing Ingestor API)
+  path: /documentation/dev/openapigen
