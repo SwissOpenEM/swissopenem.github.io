@@ -14,7 +14,7 @@ share-description: Instructions for installing the ingestor for OpenEM
 2. Create a VM or setup a bare-metal server for the ingestor. You can also run it on your own computer.
 3. `git clone git@github.com:SwissOpenEM/Ingestor.git`
 4. `cd [REPO_DIR]/cmd/openem-ingestor-service`
-5. `go build . -o build/ingestor`
+5. `go build -o build/ingestor .`
 
 ## Create a base configuration for the ingestor
 
@@ -71,7 +71,7 @@ Important options to customize:
  - **Transfer.Globus.ClientID**: this should be set to the same client-id as the one you'll use in the next paragraph. You need to create a new client on `app.globus.org`, please check out the [following page]() for more information
  - **Transfer.Globus.RefreshToken**: this a refresh token that you get from Globus by requesting offline access.
  It is a temporary solution. You can use the tool [here](https://github.com/SwissOpenEM/globus) to obtain one.
- First compile the go application under `cmd/` by running `go build . -o globus`, then use the following command:
+ First compile the go application under `cmd/` by running `go build -o globus .`, then use the following command:
  ```bash
  ./globus getRefreshToken --client-id "client-id-here" --auth-code-grant=true --redirect-url="https://auth.globus.org/v2/web/auth-code" --src-endpoint "(optional) source-collection-id" --dest-endpoint "(optional) dest-collection-id"
  ```
