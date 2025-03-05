@@ -9,6 +9,12 @@ cover-img:
   - https://raw.githubusercontent.com/osc-em/.github/refs/heads/main/profile/assets/img/conversion.png: |-
       OSC-EM workflow
 thumbnail-img: https://raw.githubusercontent.com/osc-em/.github/refs/heads/main/profile/assets/img/oscem_logo_236x300.png
+excerpt: |-
+  Happy 2025! It has now been nearly a year since the EM standards workshop established
+  the _Open Science Community for Electron Microscopy_ (OSC-EM). The technical group has
+  been hard at work in that time. One of my new year’s resolutions is to provide more
+  regular updates to all of you on our progress, as well as invite more people to review
+  and contribute to the burgeoning standard.
 ---
 
 _OpenEM is happy to be a contributor to the Open Science Community for Electron Microscopy (OSC-EM). The following newsletter was sent out to OSC-EM members, but we wanted to reshare it with the OpenEM community and invited interested parties to join us._
