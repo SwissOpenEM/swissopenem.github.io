@@ -5,16 +5,27 @@ permalink: /documentation/admin/installation/ingestor
 share-description: Instructions for installing the ingestor for OpenEM
 ---
 
-## Download and build the ingestor
+## Installing the ingestor
 
 {: .box-note}
-**Note:** This section will be replaced by a Docker based method.
+**Note:** This is just an example of installing and running the service. You should adapt this method to your facility's needs.
 
+### Running throuhg docker
+1. Make sure that docker is up and running
+2. Check that you have docker compose
+3. Modify the config in the `docker-compose.yaml` file under the `configs.openem-ingestor-config.yaml` section according to your needs (see below).
+4. Modify the environment variables according to your needs (remove service user parameters if you are using `ExtGlobus`).
+5. Run `docker compose up` when you're done.
+
+### Running without docker containerization
 1. Install go
 2. Create a VM or setup a bare-metal server for the ingestor. You can also run it on your own computer.
 3. `git clone git@github.com:SwissOpenEM/Ingestor.git`
 4. `cd [REPO_DIR]/cmd/openem-ingestor-service`
 5. `go build -o build/ingestor .`
+6. setup a config under `build/openem-ingestor-config.yaml` or `~/.config/openem-ingestor/openem-ingestor-config.yaml`
+7. set environment variables, if necessary, here
+8. `./build/ingestor` launches the ingestor.
 
 ## Create a base configuration for the ingestor
 
@@ -35,14 +46,25 @@ The relevant section of the config for Scicat is:
 ...
 Scicat:
   Host: "https://scicat.backend/api/v3/"
-  AccessToken: "scicat_access_token"
 ...
 ```
 
-{: .box-note}
-**Note:** The access token option *will* be removed as it's a temporary solution.
+### Transfer: PSI Globus Transfer Request Service - Recommended
 
-### Transfer (Globus)
+```yaml
+Transfer:
+  Method: ExtGlobus
+  ExtGlobus:
+    TransferServiceUrl: "https://url.at.psi/globus/service"
+    SrcFacility: "EXAMPLE-FACILITY-1" # "FAC-1" if you're using the default scicatlive setup 
+    DstFacility: "EXAMPLE-FACILITY-2" # "FAC-2" if you're using the default scicatlive setup
+    CollectionRootPath: "/some/path" # the path at which the Source Globus Collection is mounted (eg. '/home')
+```
+
+{: .box-note}
+**Disable service account check**: using this mode, the `webserver.other.DisableServiceAccountCheck` should be set to `true`, as there's no need for any service account in the Ingestor in this mode.
+
+### Transfer: Direct Globus Requests - Back-Up Option, not recommended
 
 ```yaml
 ...
@@ -56,30 +78,24 @@ Transfer:
       - scope1
       - scope2
       ...
-    SourceCollection: "uuid-of-source-collection"
-    SourcePrefixPath: "/insert/optional/path/here"
-    DestinationCollection: "uuid-of-destination-collection"
-    DestinationPrefixPath: "/insert/optional/path/here"
-    RefreshToken: "insert-globus-refresh-token"
+    SourceCollectionID: "uuid-of-source-collection"
+    CollectionRootPath: "/insert/path/here"
+    DestinationCollectionID: "uuid-of-destination-collection"
+    DestinationTemplate: "/nacsa/{{ .Username }}/{{ replace .Pid \".\" \"_\" }}/{{ .DatasetFolder }}"
 ...
 ```
 
 {: .box-note}
-**Note:** The refresh token option *will* be removed as it's a temporary solution.
+**Transfer.Globus.ClientID**: this should be set to the same client-id as the one you'll use in the next paragraph. You need to create a new client on `app.globus.org`, please check out the [following page]() for more information
 
-Important options to customize:
- - **Transfer.Globus.ClientID**: this should be set to the same client-id as the one you'll use in the next paragraph. You need to create a new client on `app.globus.org`, please check out the [following page]() for more information
- - **Transfer.Globus.RefreshToken**: this a refresh token that you get from Globus by requesting offline access.
- It is a temporary solution. You can use the tool [here](https://github.com/SwissOpenEM/globus) to obtain one.
- First compile the go application under `cmd/` by running `go build -o globus .`, then use the following command:
- ```bash
- ./globus getRefreshToken --client-id "client-id-here" --auth-code-grant=true --redirect-url="https://auth.globus.org/v2/web/auth-code" --src-endpoint "(optional) source-collection-id" --dest-endpoint "(optional) dest-collection-id"
- ```
+{: .box-note}
+**Scopes**: These will include scopes for accessing the Globus Connect Server endpoints you want to interact with in the name of the user. Usually, you're only required to specify the following scope for each endpoint: `"urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/[ENDPOINT ID HERE]/data_access]"` where you replace `[ENDPOINT ID HERE]` with the endpoint's UUID.
 
 {: .box-warning}
-**Warning:** The source and destination endpoint parameters are only intended for Globus Connect Server endpoints. For Globus Connect Personal (GCP), just skip specifying its `collection-id` in the command, otherwise the token request will fail. You have to make sure that the GCP collection is owned by the token's user.
+**Warning:** The source and destination endpoint scopes are only intended for Globus Connect Server endpoints. For Globus Connect Personal (GCP), just skip specifying the scope made from its `collection-id`. You have to make sure that the GCP collection is owned by the token's user.
 
-When prompted, login with a trusted account. **Never share your refresh token publically.** Copy the gotten refresh token into the config.
+{: .box-note}
+**Service account**: using this mode, the `webserver.other.DisableServiceAccountCheck` should be set to `false`, and a service account must be set using the `INGESTOR_SERVICE_USER_NAME` and `INGESTOR_SERVICE_USER_PASS` environment variables. These are the credentials for an internal SciCat user, which has the right to update any dataset. It is needed in order to safely mark any dataset as archivable in this mode.
 
 ### Auth
 
@@ -122,7 +138,10 @@ Please make sure the following fields are properly set:
       KeySignMethod: "[set the key signature method here]"
 ...
 ```
-- **WebServer.Auth.RBAC.[X]Role**: this is where you set your expected roles. It's a way to customize role names, but you can leave them as is. If facilities use shared OAuth2 client-id's (shouldn't be the case) then these roles should contain the name of each facility to make. You should also customize these if your IdP of choice can't separate what roles to map to users based on clientid.
+- **WebServer.Auth.RBAC.[X]Role**: this is where you set your expected role names. It's a way to customize role names, but you can leave them as is. If facilities use shared OAuth2 client-id's (shouldn't be the case) then these roles should contain the name of each facility to make. You should also customize these if your IdP of choice can't separate what roles to map to users based on clientid. These roles specifically give permission to interact with the ingestor endpoints, and nothing else. Accessing datasets is determined by the `AccessGroups` of the user on SciCat.
+
+{: .box-note}
+If you're using the supplied example scicatlive config for testing, the roles are named `FAC_ingestor_[function]` where `[function]` can be "admin", "write" or "read".
 
 {: .box-note}
 **Note:** If your IdP isn't keycloak you have to make sure that the roles are mapped to OAuth2 claims in the same way as Keycloak: `[access_token_jwt].resource_access[(client_id)].roles`
@@ -133,12 +152,15 @@ Please make sure the following fields are properly set:
 ...
 WebServer:
   Paths:
-    CollectionLocation: "/location/of/datasets"
+    CollectionLocations: 
+      location1: "/some/path/location1"
+      Projects: "/some/other/path/location2"
     ExtractorOutputLocation: "(optional)/location/to/output/temp/files"
 ...
 ```
  - It's important configure `CollectionLocation` as that is where the ingestor will look for to find datasets.
  - The ExtractorOutputLocation sets a custom path for the temporary extractor files. Normally they're outputted to /tmp.
+ - Due to the way the config library works, all location keys will be lowercased.
 
 ### Metadata Extractors
 Example config:
@@ -162,12 +184,16 @@ MetadataExtractors:
     Methods:
       - Name: Single Particle
         Schema: oscem_schemas.schema.json
+        Url: "http://some.url/"
       - Name: Cellular Tomography
         Schema: oscem_cellular_tomo.json
+        Url: "http://some.url/"
       - Name: Tomography
         Schema: oscem_tomo.json
+        Url: "http://some.url/"
       - Name: EnvironmentalTomography
         Schema: oscem_env_tomo.json
+        Url: "http://some.url/"
 ...
 ```
 
@@ -185,16 +211,17 @@ MetadataExtractors:
    - **Methods** is where you can define a list of methods that can be used with a particular extractor.
      - **Name** is the name of the method
      - **Schema** is the metadata schema to use for this method (must exist in **SchemasLocation**)
+     - **Url** is the url for the schema, it will be used when the schema is not found locally to download it.
 
 ### Metadata Extractor Jobs
 This section is for configuring the metadata extractor job system. It is a system to process extraction requests in parallel and in order of requests.
 ```yaml
 WebServer:
   MetadataExtJobs:
-    NoWorkers: 4
+    ConcurrencyLimit: 4
     QueueSize: 200
 ```
-Where the **NoWorkers** is the max. number of extractions to be executed in parallel, and **QueueSize** is the max queue size which has FIFO order.
+Where the **ConcurrencyLimit** is the max. number of extractions to be executed in parallel, and **QueueSize** is the max queue size which has FIFO order.
 If there are more pending requests than **QueueSize** then those requests will be processed randomly.
 
 ## Adding the Ingestor to Keycloak
@@ -204,6 +231,8 @@ If there are more pending requests than **QueueSize** then those requests will b
 Replace all instances of `http://localhost:8888/` if you've deployed it in some other way.
 
 ### Keycloak Setup
+
+You can use the patch file [here](/assets/files/ext_transfer.patch) on the `scicatlive` project's main branch ([this commit](https://github.com/SciCatProject/scicatlive/tree/296eb79e548b0345a6516e6e95f2b144b5a408e6), if the patch became incompatible with the up-to-date main branch), which will do the following steps automatically with default values.
 
 1. Setup keycloak, preferably with Docker
 2. [OPTIONAL] Add another realm where you'll have your ingestor client added.
@@ -225,13 +254,16 @@ Replace all instances of `http://localhost:8888/` if you've deployed it in some 
     </table>
 4. Edit your client and add client-specific roles that match the ones from your Ingestor config
 ![adding client roles](/assets/img/documentation/admin/installation/ingestor/img5.png){: style="margin-top: 2em; margin-bottom: 2em;"}
+5. Under the client's "Client Scopes" tab, click on `ingestor-dedicated`
+6. `Add mapper` button -> "By configuration" -> Group Membership
+7. The `token claim name` should be "accessGroups" and `Full group path` should be *turned off*
 
 {: .box-note}
 **Note:** In most cases you will be using some external source of users in Keycloak, in which case, you need to map some claim of the incoming user to the roles that were setup in Step 4. This is not covered in this Install guide as it is highly specific to your own setup. If by any chance you're setting up users directly in Keycloak, you can assign them the roles directly within the Keycloak admin menu.
 
 The next section is useful for developers only.
 
-### Testing authentication (Developers only)
+### Testing with authentication enabled locally (Developers only)
 
 1. Add a new test user. Don't forget to set a password.
     <table>
