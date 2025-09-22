@@ -31,7 +31,6 @@ We are happy to announce that the website can now be reached at [https://www.ope
 
 In order to keep you continuously informed about the project status, we will be sending out regular newsletters in future. Please invite any colleagues who you think might be interested to [subscribe](https://psilists.ethz.ch/sympa/subscribe/openem-members?previous_action=info) to the mailing list.
 
-
 ### Completed Milestones
 
 We have now completed four of our seven [milestones](/timeline/), with major deliverables achieved from all [workpackages](/deliverables/). We published the first [dataset](https://doi.psi.ch/detail/10.16907%2Fa2ab7849-5de7-4e7f-8286-72ec73089ca8) in September as part of *MS-III: Proof of Concept*, and with the recently completed *MS-IV: Alpha Release* the service is running at Uni Basel for initial testing.

@@ -7,7 +7,6 @@ permalink: /documentation/admin/req-infrastructure
 <!-- Show the current active documentation page -->
 {% include documentationStepper/stepper.html %}
 
-
 ## Hardware Requirements
 
 Hardware requirements for server components.
@@ -103,6 +102,7 @@ All OpenEM traffic is encrypted with HTTPS. Modern browsers will refuse session 
 and cross-origin resource sharing without valid HTTPS certificates.
 
 Each facility should register two domains:
+
 1. Globus (`em-globus.facility.ch` in examples)
 2. Ingestor (`em-ingestor.facility.ch` in examples)
 

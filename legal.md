@@ -6,6 +6,6 @@ permalink: /legal/
 
 **Project Name**: OpenEM Data Network
 
-**Contact Email**: spencer.bliven@psi.ch
+**Contact Email**: [Spencer Bliven](mailto:spencer.bliven@psi.ch)
 
-This project is a collaboration between <a href="/team">universities and research institutions in Switzerland</a>.
+This project is a collaboration between [universities and research institutions in Switzerland](/team).

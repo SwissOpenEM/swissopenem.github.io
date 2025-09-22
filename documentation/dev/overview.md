@@ -18,7 +18,6 @@ In this section of the website you will find the documentation for the developme
 
 ## Chapters
 
-
 {% include toc_table.md docs=site.data.documentation-dev %}
 
 <!-- Jump to next page -->

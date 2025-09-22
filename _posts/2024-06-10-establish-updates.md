@@ -11,6 +11,7 @@ Join us for updates on OpenEM and our sister project, PREMISE! This follows the 
 ---
 
 On 13 June 2024, the two establish projects financed by the ETH Domain ORD programme will be presented:
+
 - 9.00-9.30: Open and Reproducible Materials Science Research led by Giovanni Pizzi
 - 9.30-10.00: Open EM Data Network led by Henning Stahlberg
 - 10.00-10.30: Discussion – “open science in these two projects”, best practices, exchanges, etc.

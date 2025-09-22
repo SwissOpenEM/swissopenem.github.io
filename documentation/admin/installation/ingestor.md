@@ -11,6 +11,7 @@ share-description: Instructions for installing the ingestor for OpenEM
 **Note:** This is just an example of installing and running the service. You should adapt this method to your facility's needs.
 
 ### Running throuhg docker
+
 1. Make sure that docker is up and running
 2. Check that you have docker compose
 3. Modify the config in the `docker-compose.yaml` file under the `configs.openem-ingestor-config.yaml` section according to your needs (see below).
@@ -18,6 +19,7 @@ share-description: Instructions for installing the ingestor for OpenEM
 5. Run `docker compose up` when you're done.
 
 ### Running without docker containerization
+
 1. Install go
 2. Create a VM or setup a bare-metal server for the ingestor. You can also run it on your own computer.
 3. `git clone git@github.com:SwissOpenEM/Ingestor.git`
@@ -39,9 +41,11 @@ cp [REPO_DIR]/configs/openem-ingestor-config.yaml [REPO_DIR]/cmd/openem-ingestor
 ```
 
 ## Configuring the ingestor
+
 ### SciCat
 
 The relevant section of the config for Scicat is:
+
 ```yaml
 ...
 Scicat:
@@ -125,11 +129,14 @@ WebServer:
       ViewTasksRole: "ingestor-read"
 ...
 ```
+
 Please make sure the following fields are properly set:
+
 - **WebServer.Auth.ClientID**: this is the client id of the ingestor. It should be added to the IdP that you want to use with the ingestor. This id shouldn't be shared with other ingestor instances. Look up your IdP's docs for adding a new client.
 - **WebServer.Auth.OAuth2.RedirectURL**: The url at which the ingestor would be deployed. This should be known by you.
 - **WebServer.Auth.OIDC.IssuerURL**: the url to the OIDC provider. It should conform to the Discovery spec. In case of Keycloak, it usually looks like `http://[KEYCLOAK_URL]/realms/[REALM_NAME]`.
 - **WebServer.Auth.JWT.JwksURL**: It is the JwksURL of the OIDC provider. It is used to provide the client with the current set of public keys. It should have the same base url, but the rest of the path depends on the OIDC provider. In case of Keycloak, it should have the following format: `http://[KEYCLOAK_URL]/realms/[REALM_NAME]/protocol/openid-connect/certs`. If your provider does not support Jwks, then you can set the keys manually as follows:
+
 ```yaml
 ...
     JWT:
@@ -138,6 +145,7 @@ Please make sure the following fields are properly set:
       KeySignMethod: "[set the key signature method here]"
 ...
 ```
+
 - **WebServer.Auth.RBAC.[X]Role**: this is where you set your expected role names. It's a way to customize role names, but you can leave them as is. If facilities use shared OAuth2 client-id's (shouldn't be the case) then these roles should contain the name of each facility to make. You should also customize these if your IdP of choice can't separate what roles to map to users based on clientid. These roles specifically give permission to interact with the ingestor endpoints, and nothing else. Accessing datasets is determined by the `AccessGroups` of the user on SciCat.
 
 {: .box-note}
@@ -158,11 +166,13 @@ WebServer:
     ExtractorOutputLocation: "(optional)/location/to/output/temp/files"
 ...
 ```
- - It's important configure `CollectionLocation` as that is where the ingestor will look for to find datasets.
- - The ExtractorOutputLocation sets a custom path for the temporary extractor files. Normally they're outputted to /tmp.
- - Due to the way the config library works, all location keys will be lowercased.
+
+- It's important configure `CollectionLocation` as that is where the ingestor will look for to find datasets.
+- The ExtractorOutputLocation sets a custom path for the temporary extractor files. Normally they're outputted to /tmp.
+- Due to the way the config library works, all location keys will be lowercased.
 
 ### Metadata Extractors
+
 Example config:
 
 ```yaml
@@ -197,30 +207,33 @@ MetadataExtractors:
 ...
 ```
 
- - **InstallationPath** determines where the extractors should be downloaded/installed.
- - **SchemasLocation** determines where the schemas for extractors reside.
- - **DownloadMissingExtractors** sets whether to download extractors automatically from github
- - **Timeout** sets the maximal time any extractor should run before timing out
- - **Extractors** is the list of extractors.
-   - if using github for downloading, the following link is used: `https://github.com/[GithubOrg]/[GithubProject].git`
-   - **Version`** is the *release tag* that will be attempted to be used.
-   - **Executable** is the file that will be executed.
-   - **Checksum** is used to verify the integrity of the executable
-   - **ChecksumAlg** is to define the algorithm used for the checksum (only sha256 is used)
-   - **CommandLineTemplate** is the command template to use with the executable, it appends a formatted list of paramters.
-   - **Methods** is where you can define a list of methods that can be used with a particular extractor.
-     - **Name** is the name of the method
-     - **Schema** is the metadata schema to use for this method (must exist in **SchemasLocation**)
-     - **Url** is the url for the schema, it will be used when the schema is not found locally to download it.
+- **InstallationPath** determines where the extractors should be downloaded/installed.
+- **SchemasLocation** determines where the schemas for extractors reside.
+- **DownloadMissingExtractors** sets whether to download extractors automatically from github
+- **Timeout** sets the maximal time any extractor should run before timing out
+- **Extractors** is the list of extractors.
+  - if using github for downloading, the following link is used: `https://github.com/[GithubOrg]/[GithubProject].git`
+  - **Version`** is the *release tag* that will be attempted to be used.
+  - **Executable** is the file that will be executed.
+  - **Checksum** is used to verify the integrity of the executable
+  - **ChecksumAlg** is to define the algorithm used for the checksum (only sha256 is used)
+  - **CommandLineTemplate** is the command template to use with the executable, it appends a formatted list of paramters.
+  - **Methods** is where you can define a list of methods that can be used with a particular extractor.
+    - **Name** is the name of the method
+    - **Schema** is the metadata schema to use for this method (must exist in **SchemasLocation**)
+    - **Url** is the url for the schema, it will be used when the schema is not found locally to download it.
 
 ### Metadata Extractor Jobs
+
 This section is for configuring the metadata extractor job system. It is a system to process extraction requests in parallel and in order of requests.
+
 ```yaml
 WebServer:
   MetadataExtJobs:
     ConcurrencyLimit: 4
     QueueSize: 200
 ```
+
 Where the **ConcurrencyLimit** is the max. number of extractions to be executed in parallel, and **QueueSize** is the max queue size which has FIFO order.
 If there are more pending requests than **QueueSize** then those requests will be processed randomly.
 
@@ -236,7 +249,9 @@ You can use the patch file [here](/assets/files/ext_transfer.patch) on the `scic
 
 1. Setup keycloak, preferably with Docker
 2. [OPTIONAL] Add another realm where you'll have your ingestor client added.
-  - ![adding a realm](/assets/img/documentation/admin/installation/ingestor/img0.png){: style="margin-top: 2em; margin-bottom: 2em;"}
+
+- ![adding a realm](/assets/img/documentation/admin/installation/ingestor/img0.png){: style="margin-top: 2em; margin-bottom: 2em;"}
+
 3. Add a new client with the following parameters
     <table>
       <caption>
@@ -299,7 +314,9 @@ The next section is useful for developers only.
 5. If everything went well, you should be redirected to `RedirectURL`, and you should see a "user" cookie associated to the `localhost` domain in your browser's debugger. If you also have a valid `FrontendUrl` your browser will get redirected to your Ingestor frontend, where you should be able to interact with the ingestor backend using the cookie.
 ![browser debugger with cookie](/assets/img/documentation/admin/installation/ingestor/img13.png)
 6. [OPTIONAL] To test the ingestor's auth directly, copy the cookie value from the browser, then you can use the following curl command:
+
 ```bash
 curl -v --cookie "user=[INSERT COOKIE VALUE HERE]" "localhost:8888/transfer?page=1"
 ```
+
 If the auth is successful, you should get an empty list as a reply.

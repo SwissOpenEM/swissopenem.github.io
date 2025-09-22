@@ -21,6 +21,5 @@ on the website.
 
 {% include toc_table.md docs=site.data.documentation-op %}
 
-
 <!-- Jump to next page -->
 {% include documentationStepper/forwardBackward.html showBack=false showNext=true %}

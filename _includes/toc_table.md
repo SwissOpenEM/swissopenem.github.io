@@ -3,6 +3,7 @@ Table-of-contents styled as a table.
 Used in overview pages
 
 Arguments:
+
 - docs: list of documents
 {% endcomment %}
 

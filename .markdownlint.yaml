@@ -1,0 +1,14 @@
+default: true
+line-length: false
+#  line_length: 88
+#  tables: false
+no-trailing-punctuation: true
+heading-style:
+  style: atx
+no-missing-space-atx: true
+single-title: false
+fenced-code-language: true
+code-block-style:
+  style: fenced
+no-duplicate-heading:
+  siblings_only: true

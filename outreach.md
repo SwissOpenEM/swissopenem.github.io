@@ -2,7 +2,7 @@
 layout: page
 title: Outreach
 permalink: /outreach/
-tags: 
+tags:
   - Presentations
   - Conferences
   - Workshops
@@ -18,7 +18,7 @@ tags:
 | Agreeing community standards for cryoET data preservation and reuse: data structure, metadata, ontologies etc. | 17-19 Apr 2024, EMBL-EBI, Hinxton, UK |
 | CCPEM Doppio Workshop | 16-18 Jan 2024, Oxford, UK ||
 | Machine actionable data for chemical sciences (MADICES) workshop | 22-25 Apr 2024, Berlin |
-| SciCatCon User Meeting | 2-4 Jul 2024 | 
+| SciCatCon User Meeting | 2-4 Jul 2024 |
 | New Opportunities for Better User Group Software (NOBUGS) | 23-27 Sept 2024 | Poster: [Link](https://zenodo.org/records/13798727) |
 | EnhanceR Symposium 2024 | 07 Nov 2024 | [Link](https://symposium.enhancer.ch/) |
 
@@ -50,5 +50,5 @@ tags:
 ### Further Publications ###
 
 | About | Description | Date |
-|---------|------|---------|
-|||
+| ----- | ----------- | ---- |
+|       |             |      |
