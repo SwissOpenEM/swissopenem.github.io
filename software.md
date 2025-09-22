@@ -67,6 +67,7 @@ tags:
 </table>
 
 ### Github projects ###
+
 <html>
     <a href="/outreach#opensourceprojects">List of open source projects</a>
 </html>

@@ -10,7 +10,9 @@ The User Training, Outreach and Sustainability work package contains the followi
 
 {% assign org_items = site.data.deliverables-wp.wp4 | where: "table", "org" %}
 {% if org_items.size > 0 %}
+
 #### Organisational tasks ####
+
 <html>
     <div class="wp-bar">
         <div class="wp-header-row">
@@ -31,7 +33,9 @@ The User Training, Outreach and Sustainability work package contains the followi
 
 {% assign tec_items = site.data.deliverables-wp.wp4 | where: "table", "tec" %}
 {% if tec_items.size > 0 %}
+
 #### Technical tasks ####
+
 <html>
     <div class="wp-bar">
         <div class="wp-header-row">
@@ -54,7 +58,7 @@ The User Training, Outreach and Sustainability work package contains the followi
 
 #### Education-1: User Training ####
 
-Extend the project website so that operators and end users can set up and operate the project components. 
+Extend the project website so that operators and end users can set up and operate the project components.
 
 Plan and provide user training and content.
 
@@ -63,8 +67,8 @@ Plan and provide user training and content.
 Promote awareness of the project and emphasise the benefits and results delivered. This includes organising and participating in workshops, publishing project documents and supporting our partners.
 
 #### Education-3: Establishing Sustainability ####
- 
-Ensure sustainability in terms of maintenance, care and financing. 
+
+Ensure sustainability in terms of maintenance, care and financing.
 
 #### Education-4: Project website ####
 

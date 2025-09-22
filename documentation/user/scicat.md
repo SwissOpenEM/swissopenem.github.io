@@ -17,5 +17,4 @@ In SciCat it will be possible to log in using your eduID. This means that explic
 
 <i>This section is still under development and will be delivered soon.</i>
 
-
 {% include documentationStepper/forwardBackward.html showBack=true showNext=true %}

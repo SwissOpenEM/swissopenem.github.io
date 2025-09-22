@@ -15,7 +15,7 @@ All actions can be started and the datasets managed via the web interface. SciCa
 
 ### OpenEM from the user's point of view
 
-The user does not have to worry about which components are used by which different institutions. SciCat and the university's own ingestor are particularly relevant for them. 
+The user does not have to worry about which components are used by which different institutions. SciCat and the university's own ingestor are particularly relevant for them.
 
 The ingestor is selected directly via the web frontend. When transferring data, however, it must be ensured that the ingestor is accessible.
 
@@ -23,6 +23,5 @@ The ingestor is selected directly via the web frontend. When transferring data, 
     <br>
     <img src="/assets/img/documentation/user/user_manual_overview.png" alt="Components Overview" style="width: 60%;">
 </div>
-
 
 {% include documentationStepper/forwardBackward.html showBack=true showNext=true %}

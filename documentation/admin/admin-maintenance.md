@@ -9,9 +9,9 @@ permalink: /documentation/admin/admin-maintenance
 
 ## Administration & Maintenance
 
-In this chapter you will find an explanation of the relationships between Ingestor, Metadata Extractor and Scicat. The explanation is the basis for the configuration options of the Ingestor. 
+In this chapter you will find an explanation of the relationships between Ingestor, Metadata Extractor and Scicat. The explanation is the basis for the configuration options of the Ingestor.
 
-It is generally possible to customise Ingestor via an admin UI or config files. 
+It is generally possible to customise Ingestor via an admin UI or config files.
 
 ### Interaction between Ingestor, metadata extractor and SciCat
 
@@ -35,7 +35,6 @@ It is generally possible to customise Ingestor via an admin UI or config files.
 ### Customise basic configuration
 
 <i>This section is still under development and will be delivered soon.</i>
-
 
 <!-- Jump to next page -->
 {% include documentationStepper/forwardBackward.html showBack=true showNext=true %}

@@ -77,7 +77,6 @@ With the completion of this milestone, OpenEM finalized the overall architecture
 integrating these services as well as prototypes of new microservices needed for
 interoperability.
 
-
 | Component                     | Goal                                                                                                                                  |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Metadata Extractor            | Early draft of OSC-EM schema. Prototype parsers for cryoEM and EELS metadata.                                                         |
@@ -130,7 +129,6 @@ During this phase software will be rolled out to all facilities. This includes m
 the system available to more user, improving our deployment procedures, and finishing
 documentation.
 
-
 | Component                     | Goal                                                                                                                                                                                     |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Metadata Extractor            | Material science use cases are completed (TEM, STEM, EELS, HD) and at least one microscope at each facility is supported.                                                                |
@@ -140,7 +138,6 @@ documentation.
 | Repository Integration        | Interface for uploading processed files and downloading annotated mmCIF.                                                                                                                 |
 | Archival and Retrieval        | ETHZ archiver system hardware is completed.                                                                                                                                              |
 | SciCat                        | Integrate both PSI and ETHZ archiver systems. Provide schema validation.                                                                                                                 |
-
 
 ## Introduction
 
@@ -157,7 +154,6 @@ maintenance of the services will also be implemented.
 | Ingestor               | Include user feedback in the design and provide a plugin based system for metadata extractors. |
 | Education - Website    | User manual is finished.                                                                       |
 | Repository Integration | Enable upload to EMPIAR.                                                                       |
-
 
 ### Milestone VII: Handover to Facilities
 

@@ -21,7 +21,6 @@ Dear OpenEM members,
 the coming months, we’ll keep you updated on the project’s status and introduce key
 components in more detail. This month’s focus: the Depositor Service!
 
-
 ## The project status
 
 We're in the [Milestone V](https://www.openem.ch/timeline/), which means OpenEM is now

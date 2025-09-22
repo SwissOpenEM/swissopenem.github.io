@@ -29,7 +29,7 @@ OpenEM will target both researchers producing EM data and consumers of open data
 
 ### Our Goal
 
-Our primary goal is to strengthen co-operation and innovation in the field of electron microscopy. 
+Our primary goal is to strengthen co-operation and innovation in the field of electron microscopy.
 
 OpenEM enables collaboration and data exchange in specific groups by providing a platform for data exchange and streamlining data collection processes. OpenEM ensures integration with globally recognised platforms and closes gaps in functionality and application.
 

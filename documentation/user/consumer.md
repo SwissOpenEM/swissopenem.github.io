@@ -13,7 +13,7 @@ This chapter explains how to request and download a dataset from SciCat.
 
 ### Login to Scicat
 
-Log in to <a href="https://discovery.psi.ch/login">SciCat</a> with your organisation user. 
+Log in to <a href="https://discovery.psi.ch/login">SciCat</a> with your organisation user.
 
 <div align="center">
     <br>

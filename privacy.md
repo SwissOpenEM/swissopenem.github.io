@@ -11,10 +11,12 @@ This Privacy Policy outlines how OpenEM (referred to as "we", "us", or "our") co
 
 **2. Data Collection**  
 We may collect the following types of personal data:  
+
 - Contact information (e.g., name, email address)
 
 **3. Purpose of Data Use**  
 We use the collected data for the following purposes:  
+
 - To provide and maintain our service  
 - To notify you about changes to our service  
 - To analyze usage for improving the project and user experience  

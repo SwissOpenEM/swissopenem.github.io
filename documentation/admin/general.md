@@ -13,9 +13,9 @@ OpenEM provides an infrastructure with which research data can be managed, catal
 
 ### Responsibilities
 
-Basically, the OpenEM infrastructure can be divided into three responsibility groups. 
+Basically, the OpenEM infrastructure can be divided into three responsibility groups.
 
-The storage infrastructure and the Ingestor component are hosted at the university or research institution. The latter must ensure that the transfer server and the storage system on which raw data is stored are functional. The ingestor component, which runs on the transfer server, is the core component for data transfer. 
+The storage infrastructure and the Ingestor component are hosted at the university or research institution. The latter must ensure that the transfer server and the storage system on which raw data is stored are functional. The ingestor component, which runs on the transfer server, is the core component for data transfer.
 
 SciCat and the target server for file transfer are the responsibility of PSI and ETHZ. This also includes the Ingestor frontend, which is integrated into the SciCat environment.
 
