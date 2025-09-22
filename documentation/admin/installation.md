@@ -7,8 +7,6 @@ permalink: /documentation/admin/installation
 <!-- Show the current active documentation page -->
 {% include documentationStepper/stepper.html %}
 
-<i>The installation process is still in the development phase. For now, it is not fully complete.</i>
-
 {% assign docs = site.data.installation %}
 <table>
   <thead>

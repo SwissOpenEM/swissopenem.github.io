@@ -1,4 +1,9 @@
+# Navigation for the installation section
 - id: 1
+  title: Globus
+  description: Set up Globus for data transfer
+  path: /documentation/admin/installation/globus
+- id: 2
   title: Ingestor
   description: How to install and configure the Ingestor-Backend
   path: /documentation/admin/installation/ingestor

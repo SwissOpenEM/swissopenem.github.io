@@ -1,3 +1,4 @@
+# Navigation for the user manual
 - id: 1
   title: OVERVIEW
   description: Overview
@@ -5,25 +6,30 @@
 
 - id: 2
   title: INTRODUCTION
-  description: 1. General Information about OpenEM and SciCat
+  description: General Information about OpenEM and SciCat
   path: /documentation/user/general
 
 - id: 3
+  title: FACILITIES
+  description: OpenEM facilities information
+  path: /documentation/user/facilities
+
+- id: 3
   title: DATASETS
-  description: 2. How to use SciCat
+  description: How to use SciCat
   path: /documentation/user/scicat
 
 - id: 4
   title: UPLOAD A DATASET
-  description: 3. Data Producer - Upload a dataset to SciCat
+  description: Data Producer - Upload a dataset to SciCat
   path: /documentation/user/producer
 
 - id: 5
   title: DOWNLOAD A DATASET
-  description: 4. Data Consumer - Find and download a dataset from SciCat
+  description: Data Consumer - Find and download a dataset from SciCat
   path: /documentation/user/consumer
 
 - id: 6
   title: SUPPORT
-  description: 5. User Support
+  description: User Support
   path: /documentation/user/support
