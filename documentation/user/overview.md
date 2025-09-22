@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Overview
+title: User Manual
 permalink: /documentation/user/overview
 ---
 
@@ -9,26 +9,13 @@ permalink: /documentation/user/overview
 
 ## Overview
 
-In this section of the website you will find the documentation for use by an end user. 
+In this section of the website you will find the documentation for use by an end user.
 
 The instructions are aimed at users who wish to transfer or download data within the framework of OpenEM. If you have any questions or problems, please get in touch with the contact person at your university.
 
-{% assign docs = site.data.documentation-user %}
-<table>
-  <thead>
-    <tr>
-      <th>Chapter</th>
-      <th>Link</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for doc in docs %}
-    <tr>
-      <td>{{ doc.description }}</td>
-      <td><a href="{{ doc.path }}">Click</a></td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+
+## Chapters
+
+{% include toc_table.md docs=site.data.documentation-user %}
 
 {% include documentationStepper/forwardBackward.html showBack=false showNext=true %}

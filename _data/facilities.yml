@@ -1,0 +1,68 @@
+# Facility information. Used by documentation/user/facilities.md
+- name: BioEM and Nanoimaging Lab
+  abbreviation: UNIBAS
+  institute: University of Basel
+  urls:
+    - name: BioEM Lab
+      url: https://www.biozentrum.unibas.ch/facilities/technology-platforms/technology-platforms-a-z/overview/unit/bioem-lab
+    - name: Nano Imaging Lab
+      url: https://nanoscience.unibas.ch/de/services/nano-imaging-lab/
+  contacts:
+    - name: Carlos Fernandez Rodriguez
+      #email: cf.rodriguez@unibas.ch
+    - name: Moritz Hunkeler
+      #email: moritz.hunkeler@unibas.ch
+    - name: Yves Tittes
+  storageLocation: PSI
+  facilityBackend: https://openem-ingestor.id.unibe.ch
+
+- name: PSI Electron Microscopy Facility
+  abbreviation: PSI
+  institute: Paul Scherrer Iinstitute
+  urls:
+    - name: PSI EM Facility
+      url: https://www.psi.ch/en/emf
+  contacts:
+    - name: Data Catalog Admins
+      email: scicat-help@l.psi.ch
+  facilityBackend: https://emf-ingestor.psi.ch/
+
+- name: Dubochet Center for Imaging Lausanne
+  abbreviation: DCI-L
+  institute: University of Laussanne / École Polytechnique Fédérale de Lausanne
+  urls:
+    - name: DCI-Lausanne
+      url: https://dci-lausanne.ch/
+  facilityBackend: https://dci-ingestor.unil.ch:8443
+
+- name: ScopeM
+  abbreviation: ETHZ
+  institute: ETH Zurich
+  urls:
+    - name: ScopeM
+      url: https://scopem.ethz.ch/
+  facilityBackend: http://localhost:8888
+
+- name: DCI Geneva
+  abbreviation: DCI-G
+  institute: University of Geneva
+  urls:
+    - name: DCI-Geneva
+      url: https://cryoem.unige.ch/
+  facilityBackend: ""
+
+- name: DCI Bern
+  abbreviation: UNIBE
+  institute: University of Bern
+  urls:
+    - name: DCI-Bern
+      url: https://dci-bern.ch/
+  facilityBackend: https://openem-ingestor.id.unibe.ch
+
+- name: EMPA
+  abbreviation: EMPA
+  institute: Swiss Federal Laboratories for Materials Science and Technology
+  urls:
+    - name: Electron Microscopy Center
+      url: https://www.empa.ch/web/s299
+  facilityBackend: ""
