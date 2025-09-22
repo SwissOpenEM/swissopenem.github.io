@@ -10,7 +10,7 @@ share-description: Instructions for installing the ingestor for OpenEM
 {: .box-note}
 **Note:** This is just an example of installing and running the service. You should adapt this method to your facility's needs.
 
-### Running throuhg docker
+### Running through docker
 
 1. Make sure that docker is up and running
 2. Check that you have docker compose
@@ -60,7 +60,7 @@ Transfer:
   Method: ExtGlobus
   ExtGlobus:
     TransferServiceUrl: "https://url.at.psi/globus/service"
-    SrcFacility: "EXAMPLE-FACILITY-1" # "FAC-1" if you're using the default scicatlive setup 
+    SrcFacility: "EXAMPLE-FACILITY-1" # "FAC-1" if you're using the default scicatlive setup
     DstFacility: "EXAMPLE-FACILITY-2" # "FAC-2" if you're using the default scicatlive setup
     CollectionRootPath: "/some/path" # the path at which the Source Globus Collection is mounted (eg. '/home')
 ```
@@ -71,6 +71,7 @@ Transfer:
 ### Transfer: Direct Globus Requests - Back-Up Option, not recommended
 
 ```yaml
+{%- raw -%}
 ...
 Transfer:
   Method: Globus
@@ -87,6 +88,7 @@ Transfer:
     DestinationCollectionID: "uuid-of-destination-collection"
     DestinationTemplate: "/nacsa/{{ .Username }}/{{ replace .Pid \".\" \"_\" }}/{{ .DatasetFolder }}"
 ...
+{% endraw -%}
 ```
 
 {: .box-note}
@@ -160,7 +162,7 @@ If you're using the supplied example scicatlive config for testing, the roles ar
 ...
 WebServer:
   Paths:
-    CollectionLocations: 
+    CollectionLocations:
       location1: "/some/path/location1"
       Projects: "/some/other/path/location2"
     ExtractorOutputLocation: "(optional)/location/to/output/temp/files"
