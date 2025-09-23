@@ -1,0 +1,8 @@
+{% comment %}
+Font Awesome icons
+
+Arguments:
+- icon: Icon name, e.g. "caret-right"
+- family: Icon family, e.g. "fas"
+{% endcomment %}
+<i class="{{ include.family | default: "fas" }} fa-{{include.icon}}" aria-hidden="true"></i>

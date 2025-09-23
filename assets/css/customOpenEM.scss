@@ -119,13 +119,7 @@ footer {
 }
 
 /* --- Buttons --- */
-.button-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.button {
+@mixin button-style() {
   background-color: #419ba3;
   /* Green */
   border: none;
@@ -143,6 +137,20 @@ footer {
   &:hover {
     background-color: #f9f9f9;
   }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  & > a, & > div {
+    @include button-style();
+  }
+}
+
+.button {
+  @include button-style();
 }
 
 /* --- Cards --- */
@@ -460,4 +468,36 @@ footer {
 
 .post-excerpt p {
   margin: 0;
+}
+
+/* Image box: scale images to one row */
+.image-box {
+  margin-left: -1% !important;
+  //border: solid 1px #ddd;
+  padding: .5%;
+
+  & .flex-box {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+
+    & a {
+      flex: 1 1 auto;
+      object-fit: cover;
+      max-width: 100%;
+      margin: .5%;
+
+      & img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  & .caption {
+    text-align: center;
+    margin-top: 8px;
+    clear: both;
+    color: #6c757d;
+  }
 }

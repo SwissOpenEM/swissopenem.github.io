@@ -1,0 +1,9 @@
+{% comment %}
+  Wraps multiple buttons in a horizontal row.
+
+  Arguments:
+  - contents:
+{% endcomment -%}
+<div class="button-container">
+    {{- include.content | markdownify | remove: "<p>" | remove: "</p>" -}}
+</div>

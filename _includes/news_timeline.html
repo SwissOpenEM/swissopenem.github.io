@@ -1,0 +1,15 @@
+{% comment %}
+Make a timeline of news posts
+
+Arguments:
+- posts: List of posts to show
+{% endcomment %}
+<ul class="timeline">
+  {% for post in include.posts -%}
+  <li class="timeline-item right">
+    <div class="timeline-content">
+      {% include news_item.html post=post %}
+    </div>
+  </li>
+{%- endfor %}
+</ul>

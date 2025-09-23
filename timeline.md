@@ -44,6 +44,7 @@ data volumes and local infrastructure.
 
 ### Milestone I: Metadata Standards
 
+{: .box-note}
 **Completed: Feb 2024**
 
 Standardizing EM metadata was identified as a critical dependency for many OpenEM
@@ -68,6 +69,7 @@ interoperable EM metadata.
 
 ### Milestone II: Conceptual Plan
 
+{: .box-note}
 **Completed: May 2024**
 
 OpenEM integrates many existing services from the ETH domain and Swiss universities:
@@ -91,6 +93,7 @@ interoperability.
 
 ### Milestone III: Proof of Concept
 
+{: .box-note}
 **Completed: September 2024**
 
 This milestone included basic functionality from all components. This allowed the collection and publication of the first dataset using the complete OpenEM ecosystem. The cryoEM dataset of  was collected at UNIBAS with metadata according to the OSC-EM schema. The dataset was transferred to the PSI SciCat instance from the facility and published under a new DOI.
@@ -107,6 +110,7 @@ This milestone included basic functionality from all components. This allowed th
 
 ### Milestone IV: Alpha Release
 
+{: .box-note}
 **Completed: December 2024**
 
 This milestone began the roll-out process of OpenEM software, starting at one facility.
@@ -123,10 +127,11 @@ Additional features were added to improve the usability and make ingestion of da
 
 ### Milestone V: Beta Release
 
-**Planned: March 2025**
+{: .box-note}
+**Completed: July 2025**
 
 During this phase software will be rolled out to all facilities. This includes making
-the system available to more user, improving our deployment procedures, and finishing
+the system available to more users, improving our deployment procedures, and finishing
 documentation.
 
 | Component                     | Goal                                                                                                                                                                                     |
@@ -147,7 +152,8 @@ By this point the software is considered fully in production. Datasets will be c
 from all facilities routinely. Features for easily deploying updates and easy
 maintenance of the services will also be implemented.
 
-**Planned: May 2025**
+{: .box-note}
+**Planned: October 2025**
 
 | Component              | Goal                                                                                           |
 | ---------------------- | ---------------------------------------------------------------------------------------------- |
@@ -157,6 +163,7 @@ maintenance of the services will also be implemented.
 
 ### Milestone VII: Handover to Facilities
 
+{: .box-note}
 **Planned: December 2025**
 
 The final milestone hands over operation and maintenance roles to facilities, preparing

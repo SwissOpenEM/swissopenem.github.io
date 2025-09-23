@@ -32,7 +32,7 @@ share-description: Instructions for installing the ingestor for OpenEM
 ## Create a base configuration for the ingestor
 
 {: .box-note}
-**Note:** Additional information can be found [here](https://github.com/SwissOpenEM/Ingestor/blob/main/configs/ReadMe.md)
+**Note:** Additional information can be found in the [Ingestor documentation](https://github.com/SwissOpenEM/Ingestor/blob/main/configs/ReadMe.md)
 
 Run the following command:
 
@@ -92,7 +92,7 @@ Transfer:
 ```
 
 {: .box-note}
-**Transfer.Globus.ClientID**: this should be set to the same client-id as the one you'll use in the next paragraph. You need to create a new client on `app.globus.org`, please check out the [following page]() for more information
+**Transfer.Globus.ClientID**: this should be set to the same client-id as the one you'll use in the next paragraph. You need to create a new client on `app.globus.org`, please check out the [globus page]({% link documentation/admin/installation/globus.md %}) for more information
 
 {: .box-note}
 **Scopes**: These will include scopes for accessing the Globus Connect Server endpoints you want to interact with in the name of the user. Usually, you're only required to specify the following scope for each endpoint: `"urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/[ENDPOINT ID HERE]/data_access]"` where you replace `[ENDPOINT ID HERE]` with the endpoint's UUID.
@@ -247,30 +247,20 @@ Replace all instances of `http://localhost:8888/` if you've deployed it in some 
 
 ### Keycloak Setup
 
-You can use the patch file [here](/assets/files/ext_transfer.patch) on the `scicatlive` project's main branch ([this commit](https://github.com/SciCatProject/scicatlive/tree/296eb79e548b0345a6516e6e95f2b144b5a408e6), if the patch became incompatible with the up-to-date main branch), which will do the following steps automatically with default values.
+You can use this [patch file](/assets/files/ext_transfer.patch) on the `scicatlive` project's main branch ([commit 296eb79](https://github.com/SciCatProject/scicatlive/tree/296eb79e548b0345a6516e6e95f2b144b5a408e6), if the patch became incompatible with the up-to-date main branch), which will do the following steps automatically with default values.
 
 1. Setup keycloak, preferably with Docker
 2. [OPTIONAL] Add another realm where you'll have your ingestor client added.
 
-- ![adding a realm](/assets/img/documentation/admin/installation/ingestor/img0.png){: style="margin-top: 2em; margin-bottom: 2em;"}
-
+   ![adding a realm](/assets/img/documentation/admin/installation/ingestor/img0.png){: style="margin-top: 2em; margin-bottom: 2em;"}
 3. Add a new client with the following parameters
-    <table>
-      <caption>
-        <center>Client creation steps</center>
-      </caption>
-      <tbody>
-        <tr>
-          <td><img src="/assets/img/documentation/admin/installation/ingestor/img1.png"  alt="1" width = 550em ></td>
-          <td><img src="/assets/img/documentation/admin/installation/ingestor/img2.png"  alt="1" width = 550em ></td>
-        </tr>
-        <tr>
-          <td colspan="2"><center><img src="/assets/img/documentation/admin/installation/ingestor/img3.png"  alt="1" width = 550em ></center></td>
-        </tr>
-      </tbody>
-    </table>
+    {% assign images = "/assets/img/documentation/admin/installation/ingestor/img1.png
+    /assets/img/documentation/admin/installation/ingestor/img2.png
+    /assets/img/documentation/admin/installation/ingestor/img3.png" | split: "
+    " %}
+    {%- include gallery.html images=images caption="Creating the keycloak client" %}
 4. Edit your client and add client-specific roles that match the ones from your Ingestor config
-![adding client roles](/assets/img/documentation/admin/installation/ingestor/img5.png){: style="margin-top: 2em; margin-bottom: 2em;"}
+    ![adding client roles](/assets/img/documentation/admin/installation/ingestor/img5.png){: style="margin-top: 2em; margin-bottom: 2em;"}
 5. Under the client's "Client Scopes" tab, click on `ingestor-dedicated`
 6. `Add mapper` button -> "By configuration" -> Group Membership
 7. The `token claim name` should be "accessGroups" and `Full group path` should be *turned off*
@@ -283,33 +273,17 @@ The next section is useful for developers only.
 ### Testing with authentication enabled locally (Developers only)
 
 1. Add a new test user. Don't forget to set a password.
-    <table>
-      <caption>
-        <center>User creation steps</center>
-      </caption>
-      <tbody>
-        <tr>
-          <td><img src="/assets/img/documentation/admin/installation/ingestor/img6.png"  alt="1" width = 550em ></td>
-          <td><img src="/assets/img/documentation/admin/installation/ingestor/img7.png"  alt="1" width = 550em ></td>
-        </tr>
-        <tr>
-          <td><img src="/assets/img/documentation/admin/installation/ingestor/img8.png"  alt="1" width = 550em ></td>
-          <td><img src="/assets/img/documentation/admin/installation/ingestor/img9.png"  alt="1" width = 550em ></td>
-        </tr>
-      </tbody>
-    </table>
+    {% assign images = "/assets/img/documentation/admin/installation/ingestor/img6.png
+    /assets/img/documentation/admin/installation/ingestor/img7.png
+    /assets/img/documentation/admin/installation/ingestor/img8.png
+    /assets/img/documentation/admin/installation/ingestor/img9.png" | split: "
+    " %}
+    {%- include gallery.html images=images caption="Creating a user" %}
 2. Assign the read and write roles of the ingestor to this user.
-    <table>
-      <caption>
-        <center>assigning roles</center>
-      </caption>
-      <tbody>
-        <tr>
-          <td><img src="/assets/img/documentation/admin/installation/ingestor/img10.png"  alt="1" width = 550em ></td>
-          <td><img src="/assets/img/documentation/admin/installation/ingestor/img11.png"  alt="1" width = 550em ></td>
-        </tr>
-      </tbody>
-    </table>
+    {% assign images = "/assets/img/documentation/admin/installation/ingestor/img10.png
+    /assets/img/documentation/admin/installation/ingestor/img11.png" | split: "
+    " %}
+    {%- include gallery.html images=images caption="Assigning roles"%}
 3. Go to [http://localhost:8888/login](http://localhost:8888/login)
 4. This will open up the keycloak login page. Use your test user for logging in.
 ![login page](/assets/img/documentation/admin/installation/ingestor/img12.png)
