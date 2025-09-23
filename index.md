@@ -16,31 +16,17 @@ Welcome to the OpenEM project website. Our goal is to simplify the work with ele
 
 If you are interested or have any feedback, please contact us.
 
-<html>
-<br>
-<body>
+{% capture buttons %}
+[What is OpenEM?](/about)
+[What does OpenEM deliver?](/deliverables)
+[How does OpenEM do it?](/timeline)
+{% endcapture -%}
+{% include button_row.html content=buttons %}
 
-<div class="button-container">
-  <a href="/about" class="button">What is OpenEM?</a>
-  <a href="/deliverables" class="button">What does OpenEM deliver?</a>
-  <a href="/timeline" class="button">How does OpenEM do it?</a>
-</div>
+## Latest News
 
-<br>
-</body>
-</html>
+{% assign posts = site.posts | sort: "date" | reverse | slice: 0, 1 -%}
 
-### Latest News ###
+{% include news_timeline.html posts=posts %}
 
-{% assign posts = site.posts | sort: "date" | reverse -%}
-<ul class="timeline">
-  {% for post in posts limit: 1 -%}
-  <li class="xtimeline-item right">
-    <div class="timeline-content">
-      {% include news_item.html post=post %}
-    </div>
-  </li>
-{%- endfor %}
-</ul>
-
-<i class="fas fa-caret-right" aria-hidden="true"></i> <a href="/news">More project news</a>
+{% include fa.html icon="caret-right" %} [More project news](news)

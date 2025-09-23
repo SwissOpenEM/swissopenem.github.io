@@ -1,0 +1,15 @@
+{% comment %}
+{% endcomment -%}
+
+<div class="image-box">
+    <div class="flex-box">
+    {%- for img in include.images %}
+        <a href="{{ img }}">
+            <img src="{{ img }}" />
+        </a>
+    {%- endfor %}
+    </div>
+{%- if include.caption -%}
+    <div class="caption">{{ include.caption }}</div>
+{%- endif -%}
+</div>
