@@ -251,8 +251,7 @@ You can use this [patch file](/assets/files/ext_transfer.patch) on the `scicatli
 
 1. Setup keycloak, preferably with Docker
 2. [OPTIONAL] Add another realm where you'll have your ingestor client added.
-
-   ![adding a realm](/assets/img/documentation/admin/installation/ingestor/img0.png){: style="margin-top: 2em; margin-bottom: 2em;"}
+   {% include gallery.html alt="adding a realm" image="/assets/img/documentation/admin/installation/ingestor/img0.png" width="60%" %}
 3. Add a new client with the following parameters
     {% assign images = "/assets/img/documentation/admin/installation/ingestor/img1.png
     /assets/img/documentation/admin/installation/ingestor/img2.png
@@ -278,7 +277,8 @@ The next section is useful for developers only.
     /assets/img/documentation/admin/installation/ingestor/img8.png
     /assets/img/documentation/admin/installation/ingestor/img9.png" | split: "
     " %}
-    {%- include gallery.html images=images caption="Creating a user" %}
+    {% assign alts = "Step 1,Step 2,Step 3,Step 4" | split: "," %}
+    {%- include gallery.html images=images caption="Creating a user" alts=alts%}
 2. Assign the read and write roles of the ingestor to this user.
     {% assign images = "/assets/img/documentation/admin/installation/ingestor/img10.png
     /assets/img/documentation/admin/installation/ingestor/img11.png" | split: "
@@ -286,13 +286,17 @@ The next section is useful for developers only.
     {%- include gallery.html images=images caption="Assigning roles"%}
 3. Go to [http://localhost:8888/login](http://localhost:8888/login)
 4. This will open up the keycloak login page. Use your test user for logging in.
-![login page](/assets/img/documentation/admin/installation/ingestor/img12.png)
-5. If everything went well, you should be redirected to `RedirectURL`, and you should see a "user" cookie associated to the `localhost` domain in your browser's debugger. If you also have a valid `FrontendUrl` your browser will get redirected to your Ingestor frontend, where you should be able to interact with the ingestor backend using the cookie.
-![browser debugger with cookie](/assets/img/documentation/admin/installation/ingestor/img13.png)
+   {% include gallery.html alt="login page" image="/assets/img/documentation/admin/installation/ingestor/img12.png" width="60%" %}
+5. If everything went well, you should be redirected to `RedirectURL`, and you should
+  see a "user" cookie associated to the `localhost` domain in your browser's debugger.
+  If you also have a valid `FrontendUrl` your browser will get redirected to your
+  Ingestor frontend, where you should be able to interact with the ingestor backend
+  using the cookie.
+  ![browser debugger with cookie](/assets/img/documentation/admin/installation/ingestor/img13.png)
 6. [OPTIONAL] To test the ingestor's auth directly, copy the cookie value from the browser, then you can use the following curl command:
 
-```bash
-curl -v --cookie "user=[INSERT COOKIE VALUE HERE]" "localhost:8888/transfer?page=1"
-```
+    ```bash
+    curl -v --cookie "user=[INSERT COOKIE VALUE HERE]" "localhost:8888/transfer?page=1"
+    ```
 
-If the auth is successful, you should get an empty list as a reply.
+    If the auth is successful, you should get an empty list as a reply.
