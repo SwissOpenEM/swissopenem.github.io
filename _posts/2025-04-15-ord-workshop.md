@@ -11,11 +11,11 @@ Join us for updates on OpenEM and other open research data projects:
 
 ---
 
-**"Advancing Open Research Data (ORD) Practices: collaboration and innovation in the ETH Domain"**<br/>
-12 June 2025 - 9am to 6pm (including an aperitif at the end)<br/>
+**"Advancing Open Research Data (ORD) Practices: collaboration and innovation in the ETH Domain"** \
+12 June 2025 - 9am to 6pm (including an aperitif at the end) \
 In Casino Bern, Casinoplatz 1, 3011 Bern
 
-Please register [here](https://bookwhen.com/fr/epflopenscience/e/ev-s3ef-20250612000000).<br/>
+Please [register](https://bookwhen.com/fr/epflopenscience/e/ev-s3ef-20250612000000). \
 *Travel costs will be covered for PhD or post-docs.*
 
 This event aims at showcasing the outcomes of the ETH Domain ORD programme and advocate excellence in ORD practices in Switzerland and beyond.

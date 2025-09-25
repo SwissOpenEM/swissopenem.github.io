@@ -23,7 +23,7 @@ Dear OSC-EM members,
 
 Happy 2025! It has now been nearly a year since the EM standards workshop established the _Open Science Community for Electron Microscopy_ (OSC-EM). This mailing list has been fairly quiet in that year, but the technical group has been hard at work. One of my new year’s resolutions is to provide more regular updates to all of you on our progress, as well as invite more people to review and contribute to the burgeoning standard.
 
-As a first step, the technical group will hold regular monthly meetings. These are currently planned for the first Monday of the month online, and are open to everyone. The next meeting will be Monday, 3 Feb 2025, at 16:00 CET/15:00 GMT/10:00 EST. More information is available [here](https://indico.psi.ch/e/oscem-2025).
+As a first step, the technical group will hold regular monthly meetings. These are currently planned for the first Monday of the month online, and are open to everyone. The next meeting will be Monday, 3 Feb 2025, at 16:00 CET/15:00 GMT/10:00 EST. More information is available [on indico](https://indico.psi.ch/e/oscem-2025).
 
 Work on the project is organized through our [osc-em github organization](https://github.com/osc-em). Yves Tittes, Lola Sánchez de Lara, Sofya Laskina, and others have contributed to [schemas](https://github.com/osc-em/OSCEM_Schemas) for a number of methods, including single particle cryoEM, tomography, and processing. The schemas are authored using the [LinkML](https://linkml.io) schema language, from which we automatically generate JSON Schema, JSON-LD contexts, OWL, and other formats required for validation and semantic reasoning.
 

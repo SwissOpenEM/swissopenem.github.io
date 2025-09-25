@@ -12,3 +12,6 @@ code-block-style:
   style: fenced
 no-duplicate-heading:
   siblings_only: true
+# todo reenable this
+no-inline-html: false
+first-line-heading: false

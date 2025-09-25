@@ -9,7 +9,7 @@ permalink: /documentation/admin/support
 
 ### Support
 
-<i>This section is still under development and will be delivered soon.</i>
+_This section is still under development and will be delivered soon._
 
 <!-- Jump to next page -->
 {% include documentationStepper/forwardBackward.html showBack=true showNext=false %}

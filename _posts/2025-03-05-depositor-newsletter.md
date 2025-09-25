@@ -34,8 +34,7 @@ Scipionusers, as we expect full integration with OpenEM. Stay tuned!
 
 Our recent All-Hands Workshop took place on February 13, 2025, at the University of
 Bern. The hybrid format allowed us to record the session for those who couldn’t attend.
-You can watch the recording
-[here](https://psich.zoom.us/rec/share/0ouVFIZnhm547bav5PuN71-MrHDYkTyvs-RVb43YM73YMcKdZzt4571JgEpnn8qN.1gROCU2I5PlhniB8)
+You can watch the [recording](https://psich.zoom.us/rec/share/0ouVFIZnhm547bav5PuN71-MrHDYkTyvs-RVb43YM73YMcKdZzt4571JgEpnn8qN.1gROCU2I5PlhniB8)
 (Password: .cPK005m) or read the slides on
 [zenodo](https://doi.org/10.5281/zenodo.14937442). During the workshop, we:
 
