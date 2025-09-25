@@ -1,0 +1,22 @@
+{% comment %}
+Table for workpackage tasks
+
+Arguments:
+
+- items: List of workpackage items (from site.data.deliverables-*)
+
+{% endcomment %}
+<div class="wp-bar">
+    <div class="wp-header-row">
+        <div class="wp-header-col">ID</div>
+        <div class="wp-header-col">Description</div>
+        <div class="wp-header-col">Status</div>
+    </div>
+    {% for item in include.items %}
+        <div class="wp-row">
+            <div class="wp-col">{{ item.id }}</div>
+            <div class="wp-col">{{ item.description }}</div>
+            <div class="wp-col wp-status {{ item.status | downcase | replace: ' ', '-' }}">{{ item.status }}</div>
+        </div>
+    {% endfor %}
+</div>

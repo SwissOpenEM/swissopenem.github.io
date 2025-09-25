@@ -7,11 +7,15 @@ The website is based on jekyll.
 For local compilation, you will first need to install ruby and bundler. Next install the
 required gems:
 
-    bundler install
+```sh
+bundler install
+```
 
 And serve the website:
 
-    bundle exec jekyll serve
+```sh
+bundle exec jekyll serve
+```
 
 Access the website at [http://localhost:4000](http://localhost:4000).
 
@@ -19,7 +23,9 @@ Access the website at [http://localhost:4000](http://localhost:4000).
 
 You can also run jekyll in a docker container
 
-    docker compose up -d
+```sh
+docker compose up -d
+```
 
 This is equivalent running `jekyll serve`.
 

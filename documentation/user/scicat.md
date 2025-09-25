@@ -9,12 +9,12 @@ permalink: /documentation/user/scicat
 
 ## SciCat
 
-This chapter explains how to use and register at <a href="https://discovery.psi.ch/login">SciCat</a>.
+This chapter explains how to use and register at [SciCat](https://discovery.psi.ch/login).
 
 ### Login to Scicat
 
 In SciCat it will be possible to log in using your eduID. This means that explicit registration is no longer necessary and the organisation's own users can be used.
 
-<i>This section is still under development and will be delivered soon.</i>
+_This section is still under development and will be delivered soon._
 
 {% include documentationStepper/forwardBackward.html showBack=true showNext=true %}

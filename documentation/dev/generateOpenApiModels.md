@@ -23,7 +23,7 @@ The tool works as follows:
 
 ## Installation via Docker
 
-```
+```sh
 docker pull openapitools/openapi-generator-cli
 ```
 
@@ -38,11 +38,11 @@ docker pull openapitools/openapi-generator-cli
 
 ### Using Docker
 
-```
+```sh
 docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli generate \
--i /local/openapi.yaml \
--g typescript-angular \
--o /local/out
+    -i /local/openapi.yaml \
+    -g typescript-angular \
+    -o /local/out
 ```
 
 * -i: Path of the input file (openapi.yaml)
@@ -51,17 +51,16 @@ docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli generate \
 
 ### Using the OpenAPI Generator CLI
 
-```
+```sh
 openapi-generator-cli generate \
-
--i openapi.yaml \
--g typescript-angular \
--o /local/out \
+    -i openapi.yaml \
+    -g typescript-angular \
+    -o /local/out \
 ```
 
 Optional specify angular version:
 
-```
+```sh
 --additional-properties=ngVersion=16
 ```
 

@@ -21,6 +21,8 @@ Log in to <a href="https://discovery.psi.ch/login">SciCat</a> with your organisa
     <p style="text-align: center;">Figure 1: SciCat Log In</p>
 </div>
 
+{% include }
+
 ### Select the dataset and add it to the cart
 
 After logging in, the dataset view can be opened by clicking on the SciCat logo.
