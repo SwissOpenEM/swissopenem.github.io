@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Installation
-permalink: /documentation/admin/installation
+permalink: /documentation/admin/installation/
 ---
 
 <!-- Show the current active documentation page -->

@@ -472,8 +472,9 @@ footer {
 
 /* Image box: scale images to one row */
 .image-box {
-  margin-left: -1% !important;
+  //margin-left: -1% !important;
   //border: solid 1px #ddd;
+  margin: 0 auto;
   padding: .5%;
 
   & .flex-box {
@@ -490,6 +491,7 @@ footer {
       & img {
         width: 100%;
         display: block;
+        box-shadow: 0 3px 5px #ccc;
       }
     }
   }
