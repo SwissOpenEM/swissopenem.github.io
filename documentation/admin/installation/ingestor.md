@@ -4,6 +4,8 @@ title: Ingestor Installation
 permalink: /documentation/admin/installation/ingestor
 share-description: Instructions for installing the ingestor for OpenEM
 ---
+<!-- Show the current active documentation page -->
+{% include documentationStepper/stepper.html %}
 
 ## Installing the ingestor
 
@@ -22,23 +24,23 @@ git clone https://github.com/SwissOpenEM/openem-deployment
 
 The `.env.example` file contains configuration values; some are specific to the PSI endpoints and some are facility specific values which need to be adapted.
 
-| Parameter                     | Example Value                   | Description                                                                                             | Facility Specific |
-|-------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------|-------------------|
-| `FACILITY`                    | `myfacility`                    | Facility name; used in some naming conventions                                                          | Yes               |
-| `INGESTOR_VERSION`            | `v1.0.0 or latest`              | Version of the Ingstor                                                                                  | Yes               |
-| `INGESTOR_DOMAIN`             | `https://ingestor.facility.com` | URL to the facility's ingestor                                                                          | Yes               |
-| `HOST_COLLECTION_PATH`        | `/server/data`                  | Path to the directory on the host system to the data                                                    | Yes               |
-| `HOST_COLLECTION_NAME`        | `DataServer`                    | Name of the data directory that will appear in the UI                                                   | Yes               |
-| `GLOBUS_SOURCE_FACILITY`      | `DCIL`                          | Globus source facility tag, one of DCIL, UNIBAS, UNIGE, UNIBE                                           | Yes               |
-| `GLOBUS_COLLECTION_ROOT_PATH` | `/server/data`                  | Path of the collection passed to Globus, needs to match HOST_COLLECTION_PATH                            | yes               |
-| `KEYCLOAK_CLIENT_ID`          | `openem-ingestor-DCIL`          | Keycloak client for this facility's ingestor, one of openem-ingestor-DCIL, openem-ingestor-UNIBAS, etc. | Yes               |
-| `INSTRUMENT_CS_VALUE`         | `2.7`                           | ?                                                                                                       | yes               |
-| `GLOBUS_DESTINATION_FACILITY` | `PSI`                           | Destination facility for Globus, one of PSI, PSI_QA, PS_DEV                                             | No                |
-| `SCICAT_BACKEND_URL`          | `https://dacat.psi.ch`          | URL of Scicat's backend                                                                                 | No                |
-| `SCICAT_FRONTEND_URL`         | `https://discovery.psi.ch`      | URL of Scicat's frontend                                                                                | No                |
-| `GLOBUS_TRANSFER_PROXY_URL`   | `https://globus-proxy..psi.ch`  | URL to the Globus Proxy                                                                                 | No                |
-| `KEYCLOAK_URL`                | `https://kc.psi.ch`             | URL to the Keycloak instance                                                                            | No                |
-| `KEYCLOAK_REALM`              | `awi`                           | URL to the Keycloak realm                                                                               | No                |
+| Parameter                                 | Example Value                   | Description                                                                                             | Facility Specific |
+|-------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------|-------------------|
+| `FACILITY`                                | `myfacility`                    | Facility name; used in some naming conventions                                                          | Yes               |
+| `INGESTOR_VERSION`                        | `v1.0.0 or latest`              | Version of the Ingstor                                                                                  | Yes               |
+| `INGESTOR_DOMAIN`                         | `https://ingestor.facility.com` | URL to the facility's ingestor                                                                          | Yes               |
+| `HOST_COLLECTION_PATH`                    | `/server/data`                  | Path to the directory on the host system to the data                                                    | Yes               |
+| `HOST_COLLECTION_NAME`                    | `DataServer`                    | Name of the data directory that will appear in the UI                                                   | Yes               |
+| `GLOBUS_SOURCE_FACILITY`                  | `DCIL`                          | Globus source facility tag, one of DCIL, UNIBAS, UNIGE, UNIBE                                           | Yes               |
+| `GLOBUS_COLLECTION_ROOT_PATH`             | `/server/data`                  | Path of the collection passed to Globus, needs to match HOST_COLLECTION_PATH                            | yes               |
+| `KEYCLOAK_CLIENT_ID`                      | `openem-ingestor-DCIL`          | Keycloak client for this facility's ingestor, one of openem-ingestor-DCIL, openem-ingestor-UNIBAS, etc. | Yes               |
+| `LIFESCIENCE_EXTRACTOR_ADDITIONAL_PARAMS` | `--cs 2.7`                      | Optional, additional parameters for the life scienece metadata extractor                                | yes               |
+| `GLOBUS_DESTINATION_FACILITY`             | `PSI`                           | Destination facility for Globus, one of PSI, PSI_QA, PS_DEV                                             | No                |
+| `SCICAT_BACKEND_URL`                      | `https://dacat.psi.ch`          | URL of Scicat's backend                                                                                 | No                |
+| `SCICAT_FRONTEND_URL`                     | `https://discovery.psi.ch`      | URL of Scicat's frontend                                                                                | No                |
+| `GLOBUS_TRANSFER_PROXY_URL`               | `https://globus-proxy..psi.ch`  | URL to the Globus Proxy                                                                                 | No                |
+| `KEYCLOAK_URL`                            | `https://kc.psi.ch`             | URL to the Keycloak instance                                                                            | No                |
+| `KEYCLOAK_REALM`                          | `awi`                           | URL to the Keycloak realm                                                                               | No                |
 
 The complete configuration of the ingestor can be found in the docker-compose file of the ingestor, see <https://raw.githubusercontent.com/SwissOpenEM/openem-deployment/refs/heads/main/services/ingestor/compose.yaml>.
 
@@ -78,8 +80,8 @@ Detailed information about the configuration of the ingestor can be found in its
 
 #### Caddy Reverse Proxy
 
-{: .box-warning}
-Under development
+{: .box-note}
+Installing an additional reverse proxy is not needed in general if Globus Connect Server is installed alongside.
 
 #### Metadata Extractors
 
@@ -99,3 +101,5 @@ In case the ingestor needs to run using as a specific user, add the following va
 |-----------|---------------|-------------|-------------------|
 | UID       | 1001          | User id     | yes               |
 | GID       | 1001          | Group id    | yes               |
+
+{% include documentationStepper/forwardBackward.html showBack=true showNext=true %}

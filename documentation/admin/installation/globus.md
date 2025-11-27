@@ -4,6 +4,8 @@ title: Globus Installation
 permalink: /documentation/admin/installation/globus
 share-description: Instructions for installing the globus
 ---
+<!-- Show the current active documentation page -->
+{% include documentationStepper/stepper.html %}
 
 ## Introduction
 
@@ -26,10 +28,10 @@ docs](https://docs.globus.org/globus-connect-server/v5/).
 
 The following TCP ports should be opened in the firewall (see all [firewall rules](/documentation/admin/req-infrastructure#firewall-rules)):
 
-| Port | Direction | IP range | Reason |
-|---|---|---|---|
-|tcp/443| bidirectional | 54.237.254.192/29 | Globus Control |
-|tcp/50000-51000| outgoing | 192.33.126.53 (lx-globus-01.psi.ch)<br/>192.33.126.54 (lx-globus-02.psi.ch) | Globus GridFTP Out |
+| Port            | Direction     | IP range                                                                    | Reason             |
+|-----------------|---------------|-----------------------------------------------------------------------------|--------------------|
+| tcp/443         | bidirectional | 54.237.254.192/29                                                           | Globus Control     |
+| tcp/50000-51000 | outgoing      | 192.33.126.53 (lx-globus-01.psi.ch)<br/>192.33.126.54 (lx-globus-02.psi.ch) | Globus GridFTP Out |
 
 You should assign a domain name for the server (`em-globus.facility.ch` in examples) an
 provision SSL certificates; see [requirements](/documentation/admin/req-infrastructure#domain-names)
@@ -99,3 +101,5 @@ OpenEM:
 - facility name
 
 The PSI admins will reply with the correct ingestor configuration for data transfer.
+
+{% include documentationStepper/forwardBackward.html showBack=true showNext=true %}

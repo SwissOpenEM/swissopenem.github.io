@@ -14,15 +14,16 @@
   path: /documentation/admin/req-infrastructure
 
 - id: 4
-  title: INSTALLATION
-  description: Installation
+  title: INGESTOR INSTALLATION
+  description: Ingestor Installation and Configuration
   # Note trailing slash needed since installation has subpages
-  path: /documentation/admin/installation/
+  path: /documentation/admin/installation/ingestor
 
 - id: 5
-  title: ADMINISTRATION
-  description: Administration & Maintenance
-  path: /documentation/admin/admin-maintenance
+  title: GLOBUS INSTALLATION
+  description: Globus Installation and Configuration
+  # Note trailing slash needed since installation has subpages
+  path: /documentation/admin/installation/globus
 
 - id: 6
   title: SUPPORT
