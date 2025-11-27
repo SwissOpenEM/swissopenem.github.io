@@ -16,9 +16,5 @@ In this section of the website you will find the documentation for the developme
 - [SwissOpenEm Projects](/outreach#opensourceprojects)
 - [SciCat Development Guide](https://scicatproject.github.io/documentation/Development/)
 
-## Chapters
-
-{% include toc_table.md docs=site.data.documentation-dev %}
-
 <!-- Jump to next page -->
 {% include documentationStepper/forwardBackward.html showBack=false showNext=false %}
