@@ -13,7 +13,7 @@ In this section of the website you will find the documentation for the installat
 maintenance of the facility-related components.
 
 The instructions are aimed at the administrators of the OpenEM components that are
-managed within the facilites. For questions and problems regarding the infrastructure
+managed within the facilities. For questions and problems regarding the infrastructure
 outside the university, please use the corresponding support channels which can be found
 on the website.
 

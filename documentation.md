@@ -16,10 +16,6 @@ tags:
 
 ### Documentation
 
-Here you will find a table of contents of the available documentation.
-
-Click directly on a chapter to jump to it.
-
 - [**User Manual**](/documentation/user/overview)
 {%- for item in site.data.documentation-user %}
     1. <a href="{{ item.path }}" onclick="updateStepper('User Manual', '{{ item.title }}', '{{ item.path }}')">{{ item.description }}</a>

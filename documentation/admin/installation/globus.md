@@ -1,19 +1,20 @@
 ---
 layout: page
-title: Globus Installation
+title: Globus Connect Server Installation
 permalink: /documentation/admin/installation/globus
 share-description: Instructions for installing the globus
 ---
+<!-- Show the current active documentation page -->
+{% include documentationStepper/stepper.html %}
 
 ## Introduction
 
-Globus is the preferred method for transferring data from your facility
-to PSI. If you are not transferring data (eg for ETHZ, who use the
-[ScopeMArchiver](https://github.com/SwissOpenEM/ScopeMArchiver)), then this step can be
-skipped.
+OpenEM leverages [Globus](https://www.globus.org) for transferring data from facilities to PSI.
 
-In this step you will install [Globus Connect
-Server](https://docs.globus.org/globus-connect-server/v5/) (GCS) on a system with access to
+{: .box-note}
+If you are not transferring data to PSI (e.g. for ETHZ which uses the [ETHZ Archiving Service](https://github.com/SwissOpenEM/ScopeMArchiver)), please refer to its documentation.
+
+In this step you will install [Globus Connect Server](https://docs.globus.org/globus-connect-server/v5/) (GCS) on a system with access to
 your facility data. This can be a transfer server or a VM which mounts the facility
 data. It should have a good network connection, ideally a 10Gbps connection to both the
 facility and the SWITCH internet backbone.
@@ -26,10 +27,10 @@ docs](https://docs.globus.org/globus-connect-server/v5/).
 
 The following TCP ports should be opened in the firewall (see all [firewall rules](/documentation/admin/req-infrastructure#firewall-rules)):
 
-| Port | Direction | IP range | Reason |
-|---|---|---|---|
-|tcp/443| bidirectional | 54.237.254.192/29 | Globus Control |
-|tcp/50000-51000| outgoing | 192.33.126.53 (lx-globus-01.psi.ch)<br/>192.33.126.54 (lx-globus-02.psi.ch) | Globus GridFTP Out |
+| Port            | Direction     | IP range                                                                    | Reason             |
+|-----------------|---------------|-----------------------------------------------------------------------------|--------------------|
+| tcp/443         | bidirectional | 54.237.254.192/29                                                           | Globus Control     |
+| tcp/50000-51000 | outgoing      | 192.33.126.53 (lx-globus-01.psi.ch)<br/>192.33.126.54 (lx-globus-02.psi.ch) | Globus GridFTP Out |
 
 You should assign a domain name for the server (`em-globus.facility.ch` in examples) an
 provision SSL certificates; see [requirements](/documentation/admin/req-infrastructure#domain-names)
@@ -40,8 +41,11 @@ Follow the [Globus Connect Server installation
 guide](https://docs.globus.org/globus-connect-server/v5/). This will install the Apache
 web server and the globus.
 
-No subscription features are used by OpenEM. Set up a single Mapped Collection for your
-data.
+{: .box-note}
+No subscription features are used by OpenEM.
+
+{: .box-note}
+Set up a single Mapped Collection for your data.
 
 ### Identity Mapping
 
@@ -91,7 +95,7 @@ globus-connect-server storage-gateway update posix <id> \
 
 The PSI globus proxy requires the endpoint to be registered before it will be available
 for use. Please send the following information to
-[scicat-help@l.psi.ch](mailto:scicat-help@l.psi.ch) to register the new endpoint with
+[scicat-help@list.psi.ch](mailto:scicat-help@list.psi.ch) to register the new endpoint with
 OpenEM:
 
 - domain name
@@ -99,3 +103,5 @@ OpenEM:
 - facility name
 
 The PSI admins will reply with the correct ingestor configuration for data transfer.
+
+{% include documentationStepper/forwardBackward.html showBack=true showNext=true %}

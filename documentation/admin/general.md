@@ -28,7 +28,7 @@ The long-term storage is managed by CSCS or ETHZ. The data is archived there for
 
 ### Development
 
-The maintenance and further development of the components is ensured by PSI and the open source community. Individual further development requests can be realised by the user due to the open source code.
+The maintenance and further development of the components is ensured by PSI and the open source community. Individual further development requests can be realized by the user due to the open source code.
 
 <!-- Jump to next page -->
 {% include documentationStepper/forwardBackward.html showBack=true showNext=true %}
