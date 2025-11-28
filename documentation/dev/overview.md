@@ -12,7 +12,7 @@ permalink: /documentation/dev/overview
 The following diagram shows the components involved in OpenEM and a (simplified) view of typical interactions between them.
 
 ![OpenEM Components](/assets/img/documentation/dev/components.drawio.png)
-*Green: Newly developed components; Blue: Modified existing components; Grey: Newly deployed third-party components; Orange: External components*
+_**Green**: Newly developed components; **Blue**: Modified existing components; **Grey**: Newly deployed third-party components; **Orange**: External components_
 
 {: .box-note}
 For simplicity, interactions regarding authentication flow are omitted. Please refer to the [Ingestor](https://github.com/SwissOpenEM/Ingestor) for a detailed description.

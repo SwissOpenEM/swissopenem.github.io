@@ -20,8 +20,8 @@
   path: /documentation/admin/installation/ingestor
 
 - id: 5
-  title: GLOBUS INSTALLATION
-  description: Globus Installation and Configuration
+  title: GLOBUS CONNECT SERVER INSTALLATION
+  description: Globus Connect Server Installation and Configuration
   # Note trailing slash needed since installation has subpages
   path: /documentation/admin/installation/globus
 

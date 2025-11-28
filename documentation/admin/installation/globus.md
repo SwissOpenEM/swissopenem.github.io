@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Globus Installation
+title: Globus Connect Server Installation
 permalink: /documentation/admin/installation/globus
 share-description: Instructions for installing the globus
 ---
@@ -9,13 +9,12 @@ share-description: Instructions for installing the globus
 
 ## Introduction
 
-Globus is the preferred method for transferring data from your facility
-to PSI. If you are not transferring data (eg for ETHZ, who use the
-[ScopeMArchiver](https://github.com/SwissOpenEM/ScopeMArchiver)), then this step can be
-skipped.
+OpenEM leverages [Globus](https://www.globus.org) for transferring data from facilities to PSI.
 
-In this step you will install [Globus Connect
-Server](https://docs.globus.org/globus-connect-server/v5/) (GCS) on a system with access to
+{: .box-note}
+If you are not transferring data to PSI (e.g. for ETHZ which uses the [ETHZ Archiving Service](https://github.com/SwissOpenEM/ScopeMArchiver)), please refer to its documentation.
+
+In this step you will install [Globus Connect Server](https://docs.globus.org/globus-connect-server/v5/) (GCS) on a system with access to
 your facility data. This can be a transfer server or a VM which mounts the facility
 data. It should have a good network connection, ideally a 10Gbps connection to both the
 facility and the SWITCH internet backbone.
@@ -42,8 +41,11 @@ Follow the [Globus Connect Server installation
 guide](https://docs.globus.org/globus-connect-server/v5/). This will install the Apache
 web server and the globus.
 
-No subscription features are used by OpenEM. Set up a single Mapped Collection for your
-data.
+{: .box-note}
+No subscription features are used by OpenEM.
+
+{: .box-note}
+Set up a single Mapped Collection for your data.
 
 ### Identity Mapping
 
