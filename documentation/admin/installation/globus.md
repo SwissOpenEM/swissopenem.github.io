@@ -95,7 +95,7 @@ globus-connect-server storage-gateway update posix <id> \
 
 The PSI globus proxy requires the endpoint to be registered before it will be available
 for use. Please send the following information to
-[scicat-help@l.psi.ch](mailto:scicat-help@l.psi.ch) to register the new endpoint with
+[scicat-help@list.psi.ch](mailto:scicat-help@list.psi.ch) to register the new endpoint with
 OpenEM:
 
 - domain name

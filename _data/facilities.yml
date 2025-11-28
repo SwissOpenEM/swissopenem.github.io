@@ -24,7 +24,7 @@
       url: https://www.psi.ch/en/emf
   contacts:
     - name: Data Catalog Admins
-      email: scicat-help@l.psi.ch
+      email: scicat-help@list.psi.ch
   facilityBackend: https://emf-ingestor.psi.ch/
 
 - name: Dubochet Center for Imaging Lausanne

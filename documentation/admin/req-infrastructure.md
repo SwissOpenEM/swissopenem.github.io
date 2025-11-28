@@ -18,7 +18,7 @@ research institutions. This is where the ingestor is installed and the metadata
 extractors are stored.
 
 | Component     | Minimum Requirements | Recommended Requirements |
-| ------------- | -------------------- | ------------------------ |
+|---------------|----------------------|--------------------------|
 | Memory        | 8 GB                 | 16 GB or more            |
 | CPU           | 4 cores              | 8 cores or more          |
 | Network       | 1 Gbps               | 10 Gbps or more          |
@@ -45,7 +45,7 @@ The cache storage should provide enough capacity to hold datasets until they can
 archived; typically a minimum of 30 days is recommended.
 
 | Component | Minimum Requirements | Recommended Requirements |
-| --------- | -------------------- | ------------------------ |
+|-----------|----------------------|--------------------------|
 | Storage   | 50 TB                | 100 TB or more           |
 
 ## Software Requirements
@@ -54,7 +54,15 @@ Software requirements for server components
 
 ### Operating System
 
-Linux is required for Globus Connect Server.
+One of the following Linux distributions supported by GCS is required:
+
+- Red Hat Enterprise Linux 8, 9, 10 and derivatives
+- Rocky Linux, AlmaLinux, Oracle Linux, CentOS Stream
+- Fedora 41, 42
+- Debian 11, 12, 13
+- Ubuntu 22.04 LTS, 24.04 LTS, 25.04
+- SUSE Linux Enterprise Server 15.6
+- OpenSUSE Leap 15.6
 
 The ingestor software can run on either Linux or Windows.
 
@@ -84,7 +92,7 @@ The following ports should be open for a standard configuration using globus to 
 data to PSI from the same machine that runs the ingestor.
 
 | Service  | Port            | Source                                | Destination                                                                       | Reason              |
-| -------- | --------------- | ------------------------------------- | --------------------------------------------------------------------------------- | ------------------- |
+|----------|-----------------|---------------------------------------|-----------------------------------------------------------------------------------|---------------------|
 | Globus   | tcp/443         | ingestor-server                       | 54.237.254.192/29                                                                 | Globus Control Out  |
 | Globus   | tcp/443         | 54.237.254.192/29                     | ingestor-server                                                                   | Globus Control In   |
 | Globus   | tcp/50000-51000 | ingestor-server                       | 192.33.126.53 (lx-globus-01.psi.ch)<br/>192.33.126.54 (lx-globus-02.psi.ch)       | Globus GridFTP Out  |
@@ -93,8 +101,8 @@ data to PSI from the same machine that runs the ingestor.
 | SciCat   | tcp/443         | ingestor-server<br/>User workstations | dacat.psi.ch<br/>dacat-qa.psi.ch[^2]<br/>scicat.development.psi.ch[^2]            | SciCat backend      |
 | SciCat   | tcp/443         | ingestor-server<br/>User workstations | globus-proxy.psi.ch<br/>globus-proxy.development.psi.ch[^2]                       | OpenEM globus proxy |
 
-[^1]: Configurable
-[^2]: Testing only
+[^1]: The port at the work station is configurable and independent of Globus
+[^2]: URLs for testing purposes only
 
 ### Domain names
 
@@ -115,3 +123,7 @@ See [facility overview](facilities.md) for current facility domain names.
 
 <!-- Jump to next page -->
 {% include documentationStepper/forwardBackward.html showBack=true showNext=true %}
+
+-----------
+
+#### References
