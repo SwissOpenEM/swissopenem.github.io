@@ -27,14 +27,14 @@ The `.env.example` file contains configuration values; some are specific to the 
 | Parameter                                 | Example Value                   | Description                                                                                             | Facility Specific |
 |-------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------|-------------------|
 | `FACILITY`                                | `myfacility`                    | Facility name; used in some naming conventions                                                          | Yes               |
-| `INGESTOR_VERSION`                        | `v1.0.0 or latest`              | Version of the Ingstor                                                                                  | Yes               |
+| `INGESTOR_VERSION`                        | `v1.0.0 or latest`              | Version of the Ingestor                                                                                 | Yes               |
 | `INGESTOR_DOMAIN`                         | `https://ingestor.facility.com` | URL to the facility's ingestor                                                                          | Yes               |
 | `HOST_COLLECTION_PATH`                    | `/server/data`                  | Path to the directory on the host system to the data                                                    | Yes               |
 | `HOST_COLLECTION_NAME`                    | `DataServer`                    | Name of the data directory that will appear in the UI                                                   | Yes               |
 | `GLOBUS_SOURCE_FACILITY`                  | `DCIL`                          | Globus source facility tag, one of DCIL, UNIBAS, UNIGE, UNIBE                                           | Yes               |
 | `GLOBUS_COLLECTION_ROOT_PATH`             | `/server/data`                  | Path of the collection passed to Globus, needs to match HOST_COLLECTION_PATH                            | yes               |
 | `KEYCLOAK_CLIENT_ID`                      | `openem-ingestor-DCIL`          | Keycloak client for this facility's ingestor, one of openem-ingestor-DCIL, openem-ingestor-UNIBAS, etc. | Yes               |
-| `LIFESCIENCE_EXTRACTOR_ADDITIONAL_PARAMS` | `--cs 2.7`                      | Optional, additional parameters for the life scienece metadata extractor                                | yes               |
+| `LIFESCIENCE_EXTRACTOR_ADDITIONAL_PARAMS` | `--cs 2.7`                      | Optional, additional parameters for the life science metadata extractor                                 | yes               |
 | `GLOBUS_DESTINATION_FACILITY`             | `PSI`                           | Destination facility for Globus, one of PSI, PSI_QA, PS_DEV                                             | No                |
 | `SCICAT_BACKEND_URL`                      | `https://dacat.psi.ch`          | URL of Scicat's backend                                                                                 | No                |
 | `SCICAT_FRONTEND_URL`                     | `https://discovery.psi.ch`      | URL of Scicat's frontend                                                                                | No                |
@@ -93,7 +93,7 @@ See <https://github.com/SwissOpenEM/Ingestor> for a more detailed description.
 Updating schemas can be done by restarting the ingestor if the schema URLs are pointing to `latest` and not a specific version. Otherwise, the ingestor
 needs to be stopped, the URL adapted and the ingestor started again.
 
-#### User Indentity
+#### User Identity
 
 In case the ingestor needs to run using as a specific user, add the following variables to th `.env` file
 
