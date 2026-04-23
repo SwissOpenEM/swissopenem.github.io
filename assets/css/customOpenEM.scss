@@ -376,13 +376,13 @@ footer {
 /* Flexeigenschaften für die Spalten */
 .wp-header-col:first-child,
 .wp-col:first-child {
-  flex: 0 0 80px;
+  flex: 0 0 8em;
   /* Feste Breite für die erste Spalte */
 }
 
 .wp-header-col:last-child,
 .wp-col:last-child {
-  flex: 0 0 80px;
+  flex: 0 0 8em;
   /* Feste Breite für die dritte Spalte */
 }
 
@@ -409,7 +409,7 @@ footer {
   border-radius: 4px;
   color: white;
   font-weight: bold;
-
+  background-color: #666;
 
   &.open {
     background-color: #e74c3c;

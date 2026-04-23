@@ -1,8 +1,9 @@
 - id: 1
   description: "Developing <a href=\"/software\">automated deposition tools</a> for cryo-EM"
-  status: "In Progress"
+  status: "Done"
+  status_text: "Partially Done"
   table: "tec"
 - id: 2
   description: "Expanding automated deposition tools for other EM disciplines"
-  status: "In Progress"
+  status: "Cancelled"
   table: "tec"

@@ -14,12 +14,14 @@ The Deposition in International Repositories work package contains the following
 
 #### Deposition-1: Developing automated deposition tools for cryo-EM
 
-To deposit biological specimen data, the European Bioinformatics Institute (EMBL-EBI) offers three central repositories relevant to Cryo-EM data. Early access to the testing version of OneDep API provides a method of depositing datasets to EMDB and PDB. [OSCEM to mmCIF format converter](https://github.com/osc-em/converter-OSCEM-to-mmCIF) is developed for metadata interoperability between OSCEM and OneDep PDBx/mmCIF syntax. A Web-based UI on top of SciCat allows for the upload of processed files to create OneDep depositions. Additional functionality will be added to the [depositor](https://github.com/SwissOpenEM/Depositor) to create depositions of raw datasets in EMPIAR.
+To deposit biological EM data, the European Bioinformatics Institute (EMBL-EBI) offers three central repositories relevant to Cryo-EM data.
+OpenEM makes it easy to deposit datasets in EMDB and the PDB following data processing using the [depositor service](https://github.com/SwissOpenEM/Depositor). Add electron map and (optionally) molecular models on the SciCat website to export a single mmCIF file ready to upload to wwPDB's OneDep system, using the [OSCEM to mmCIF format converter](https://github.com/osc-em/converter-OSCEM-to-mmCIF).
+EBI is also developing a method to allow services like OpenEM to automatically start depostions; this is implemented by SciCat, and will be enabled when OneDep releases the feature.
+
+EMPIAR does not yet provide a method for automated deposition of raw images. However, SciCat allows images to be easily retrieved and prepared for deposition. Additional functionality is planned once EMPIAR releases more information about their deposition API.
 
 #### Deposition-2: Expanding automated deposition tools for other EM disciplines
 
-Compared to task 1 of this deliverable, there are no central repositories as those offered by EBI. We are exploring possible repositories for depositions and considering the following projects:
-
-- The [NOMAD project](https://nomad-lab.eu/nomad-lab/) lists data from EELS experiments and offers an API to interact with
-- [Material Science Cloud](https://www.materialscloud.org/home) offers an archiving solution in any format and enables integration with other services, such as built-in visualizations and workflow managers.
-During the next milestones, we will work on integrating deposition from SciCat to these repositories.
+One significant repository for materials science data is [Materials Cloud](https://www.materialscloud.org/). Following consultation with materials science researchers, it became clear that relevant data from participating institutes is already collected in a FAIR manner under the [PREMISE](https://ord-premise.org/) project.
+The [NOMAD project](https://nomad-lab.eu/nomad-lab/) lists data from EELS experiments and offers an API, but no labs had a requirement to deposit OpenEM datasets in NOMAD.
+Therefore, this task was cancelled due to a lack of clear use cases.

@@ -1,14 +1,14 @@
 - id: 1
   description: "User Training"
-  status: "Open"
+  status: "Done"
   table: "org"
 - id: 2
   description: "Outreach and Dissemination"
-  status: "In Progress"
+  status: "Done"
   table: "org"
 - id: 3
   description: "Establishing Sustainability"
-  status: "In Progress"
+  status: "Done"
   table: "org"
 - id: 4
   description: "Project website"

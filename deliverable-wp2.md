@@ -18,10 +18,14 @@ SciCat Data Catalog is hosted at PSI and provides storage, archiving, and publis
 
 - [Data repository](https://discovery.psi.ch)
 - [Published datasets](https://doi.psi.ch/)
-- Authenticate using federated identities
+
+Subtasks achieved include:
+- Authenticate using eduGAIN federated identities
+- Migrate PSI Data Catalog to SciCat v4
+- Implement [customizable Jobs workflows](https://github.com/SciCatProject/backend/pull/1741)
 
 ![SciCat Metadata catalog](/assets/img/scicatwp2.png)
 
 #### SciCat-Metadata-Catalog-2: Integrate institute storage options
 
-ETHZ ScopeM users will archive data to the ETHZ Long-term Storage (LTS).
+ETHZ ScopeM users will archive data to the ETHZ Long-term Storage (LTS) using the [ScopeM Archive Service](https://github.com/SwissOpenEM/ScopeMArchiver).

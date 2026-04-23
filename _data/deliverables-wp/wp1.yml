@@ -4,9 +4,9 @@
   table: "org"
 - id: 2
   description: "Ensure streamlined and <a href=\"/software\">automatic metadata harvesting</a> at all ETH / SU sites"
-  status: "In Progress"
+  status: "Done"
   table: "org"
 - id: 3
   description: "Development of a <a href=\"/software\">SciCat Dataset Ingestor</a>"
-  status: "In Progress"
+  status: "Done"
   table: "tec"

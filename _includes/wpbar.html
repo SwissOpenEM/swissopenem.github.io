@@ -16,7 +16,7 @@ Arguments:
         <div class="wp-row">
             <div class="wp-col">{{ item.id }}</div>
             <div class="wp-col">{{ item.description }}</div>
-            <div class="wp-col wp-status {{ item.status | downcase | replace: ' ', '-' }}">{{ item.status }}</div>
+            <div class="wp-col wp-status {{ item.status | downcase | replace: ' ', '-' }}">{{ item.status_text | default: item.status }}</div>
         </div>
     {% endfor %}
 </div>

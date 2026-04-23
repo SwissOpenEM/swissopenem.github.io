@@ -1,4 +1,4 @@
-FROM ruby:3.3.3-alpine3.20
+FROM ruby:3.3-alpine
 
 WORKDIR /tmp
 ADD Gemfile /tmp/
