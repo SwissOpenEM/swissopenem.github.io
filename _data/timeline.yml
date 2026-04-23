@@ -67,7 +67,7 @@
   start_date: 2025-01-01
   end_date: 2025-03-31
   duration: null
-  percent_complete: 60
+  percent_complete: 100
   dependencies: null
 
 - task_id: "MS6"
@@ -76,7 +76,7 @@
   start_date: 2025-04-01
   end_date: 2025-06-30
   duration: null
-  percent_complete: 0
+  percent_complete: 100
   dependencies: null
 
 - task_id: "MS7"
@@ -85,5 +85,5 @@
   start_date: 2025-07-01
   end_date: 2025-12-31
   duration: null
-  percent_complete: 0
+  percent_complete: 100
   dependencies: null

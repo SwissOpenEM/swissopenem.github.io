@@ -153,18 +153,20 @@ from all facilities routinely. Features for easily deploying updates and easy
 maintenance of the services will also be implemented.
 
 {: .box-note}
-**Planned: October 2025**
+**Completed: November 2026**
 
 | Component              | Goal                                                                                           |
 | ---------------------- | ---------------------------------------------------------------------------------------------- |
 | Ingestor               | Include user feedback in the design and provide a plugin based system for metadata extractors. |
 | Education - Website    | User manual is finished.                                                                       |
-| Repository Integration | Enable upload to EMPIAR.                                                                       |
+| Repository Integration | ~~Enable upload to EMPIAR.~~                                                                   |
+
+No API is available for deposition to EMPIAR. However, preliminary steps have been implemented in the depositor service to support this once such an API is available.
 
 ### Milestone VII: Handover to Facilities
 
 {: .box-note}
-**Planned: December 2025**
+**Completed: December 2025**
 
 The final milestone hands over operation and maintenance roles to facilities, preparing
 for the end of the current funding cycle.
