@@ -26,6 +26,11 @@
   path: /documentation/admin/installation/globus
 
 - id: 6
+  title: PROXY TO DEVELOPMENT
+  description: Setting up a SOCKS5 proxy to the SciCat development server
+  path: /documentation/admin/socks5-proxy
+
+- id: 7
   title: SUPPORT
   description: Support
   path: /documentation/admin/support

@@ -24,6 +24,7 @@ More training materials are being prepared with help from a ETH-ORD M3 Open Educ
 #### Education-2: Outreach and Dissemination
 
 A list of conferences and workshops where OpenEM was represented is available on the [outreach page](/outreach). OpenEM is also active in collaberations and open source initiatives:
+
 - [The Open Standards Community for Electron Microscopy](https://osc-em.github.io/)
 - [SciCat Consortium](https://scicatproject.org)
 - [Data Stewardship Network](https://mun-lib4ri.github.io/ETH-Domain-Data-Stewardship-Network/)
