@@ -20,6 +20,7 @@ SciCat Data Catalog is hosted at PSI and provides storage, archiving, and publis
 - [Published datasets](https://doi.psi.ch/)
 
 Subtasks achieved include:
+
 - Authenticate using eduGAIN federated identities
 - Migrate PSI Data Catalog to SciCat v4
 - Implement [customizable Jobs workflows](https://github.com/SciCatProject/backend/pull/1741)

@@ -20,7 +20,6 @@ This is intended for operators trying to test the ingestor against the developme
 
 You will need ssh access to an allowed server. This will usually be the ingestor server, which should have been whitelisted by PSI already.
 
-
 ## Start the proxy
 
 ### SSH with the command line
