@@ -91,6 +91,56 @@ globus-connect-server storage-gateway update posix <id> \
   --domain clients.auth.globus.org
 ```
 
+### Apache Reverse Proxy
+
+If you plan to run the ingestor on the same server as globus then you will need to run a
+reverse proxy to direct traffic to the correct destination. Since Globus relies on
+Apache already, the easiest configuration is just to use Apache as the ingestor reverse
+proxy. Globus traffic is redirected by the Apache globus plugin, and shouldn't need any
+additional configuration.
+
+TODO: location of sites_available
+
+Create a new apache configuration file with the following:
+
+```ini
+<VirtualHost *:443>
+    ServerName ingestor.example.com
+
+    SSLEngine on
+    SSLCertificateFile    /path/to/cert.pem
+    SSLCertificateKeyFile /path/to/key.pem
+
+    # Route /dev to :8080
+    ProxyPass        /dev/  http://localhost:8080/
+    ProxyPassReverse /dev/  http://localhost:8080/
+
+    # Route /qa to :8081
+    ProxyPass        /qa/  http://localhost:8081/
+    ProxyPassReverse /qa/  http://localhost:8081/
+
+    # Route everything else to :8082
+    ProxyPass        /  http://localhost:8082/
+    ProxyPassReverse /  http://localhost:8082/
+
+    ProxyPreserveHost On
+</VirtualHost>
+```
+
+Note the trailing slashes in the ProxyPass directives. Without these the proxy will not work.
+
+TODO: apachectl configtest, a2ensite, restart
+
+After installing the [ingestor](ingestor.md), test that the redirects work by trying the following:
+
+```sh
+curl https://ingestor.example.com/version
+curl https://ingestor.example.com/dev/version
+curl https://ingestor.example.com/qa/version
+```
+
+TODO: debugging tips
+
 ### Registration
 
 The PSI globus proxy requires the endpoint to be registered before it will be available
