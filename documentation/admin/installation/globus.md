@@ -99,7 +99,10 @@ Apache already, the easiest configuration is just to use Apache as the ingestor 
 proxy. Globus traffic is redirected by the Apache globus plugin, and shouldn't need any
 additional configuration.
 
-TODO: location of sites_available
+The location of the Apache configuration directory depends on your distribution:
+
+- Debian/Ubuntu: `/etc/apache2/sites-available/`
+- RHEL/Rocky/AlmaLinux/Fedora/SUSE: `/etc/httpd/conf.d/`
 
 Create a new apache configuration file with the following:
 
@@ -129,7 +132,24 @@ Create a new apache configuration file with the following:
 
 Note the trailing slashes in the ProxyPass directives. Without these the proxy will not work.
 
-TODO: apachectl configtest, a2ensite, restart
+Check the configuration for syntax errors:
+
+```sh
+apachectl configtest
+```
+
+On Debian/Ubuntu, enable the site and reload Apache:
+
+```sh
+a2ensite <sitename>.conf
+systemctl reload apache2
+```
+
+On RHEL/Rocky/AlmaLinux/Fedora/SUSE, files in `conf.d/` are enabled automatically, so just reload:
+
+```sh
+systemctl reload httpd
+```
 
 After installing the [ingestor](ingestor.md), test that the redirects work by trying the following:
 
@@ -139,7 +159,14 @@ curl https://ingestor.example.com/dev/version
 curl https://ingestor.example.com/qa/version
 ```
 
-TODO: debugging tips
+If these requests fail, check the following:
+
+- `apachectl -S` lists all configured virtual hosts; confirm your `ServerName` and port are listed as expected.
+- Check the Apache error log (`/var/log/apache2/error.log` or `/var/log/httpd/error_log`) for `ProxyPass` or SSL errors.
+- Confirm the ingestor containers are actually listening on the ports referenced in the `ProxyPass` directives (`ss -tlnp` or `docker ps`).
+- A `503 Service Unavailable` usually means Apache cannot reach the backend port; a `404` on the proxied paths usually means the trailing slash is missing from `ProxyPass`/`ProxyPassReverse`.
+- On RHEL-based systems, SELinux may block Apache from making outbound network connections; check with `getenforce` and enable the `httpd_can_network_connect` boolean if needed (`setsebool -P httpd_can_network_connect 1`).
+- Ensure the firewall allows local traffic between Apache and the ingestor ports, and that the [external firewall rules](/documentation/admin/req-infrastructure#firewall-rules) are open for port 443.
 
 ### Registration
 
