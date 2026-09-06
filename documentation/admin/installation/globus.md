@@ -91,6 +91,83 @@ globus-connect-server storage-gateway update posix <id> \
   --domain clients.auth.globus.org
 ```
 
+### Apache Reverse Proxy
+
+If you plan to run the ingestor on the same server as globus then you will need to run a
+reverse proxy to direct traffic to the correct destination. Since Globus relies on
+Apache already, the easiest configuration is just to use Apache as the ingestor reverse
+proxy. Globus traffic is redirected by the Apache globus plugin, and shouldn't need any
+additional configuration.
+
+The location of the Apache configuration directory depends on your distribution:
+
+- Debian/Ubuntu: `/etc/apache2/sites-available/`
+- RHEL/Rocky/AlmaLinux/Fedora/SUSE: `/etc/httpd/conf.d/`
+
+Create a new apache configuration file with the following:
+
+```ini
+<VirtualHost *:443>
+    ServerName ingestor.example.com
+
+    SSLEngine on
+    SSLCertificateFile    /path/to/cert.pem
+    SSLCertificateKeyFile /path/to/key.pem
+
+    # Route /dev to :8080
+    ProxyPass        /dev/  http://localhost:8080/
+    ProxyPassReverse /dev/  http://localhost:8080/
+
+    # Route /qa to :8081
+    ProxyPass        /qa/  http://localhost:8081/
+    ProxyPassReverse /qa/  http://localhost:8081/
+
+    # Route everything else to :8082
+    ProxyPass        /  http://localhost:8082/
+    ProxyPassReverse /  http://localhost:8082/
+
+    ProxyPreserveHost On
+</VirtualHost>
+```
+
+Note the trailing slashes in the ProxyPass directives. Without these the proxy will not work.
+
+Check the configuration for syntax errors:
+
+```sh
+apachectl configtest
+```
+
+On Debian/Ubuntu, enable the site and reload Apache:
+
+```sh
+a2ensite <sitename>.conf
+systemctl reload apache2
+```
+
+On RHEL/Rocky/AlmaLinux/Fedora/SUSE, files in `conf.d/` are enabled automatically, so just reload:
+
+```sh
+systemctl reload httpd
+```
+
+After installing the [ingestor](ingestor.md), test that the redirects work by trying the following:
+
+```sh
+curl https://ingestor.example.com/version
+curl https://ingestor.example.com/dev/version
+curl https://ingestor.example.com/qa/version
+```
+
+If these requests fail, check the following:
+
+- `apachectl -S` lists all configured virtual hosts; confirm your `ServerName` and port are listed as expected.
+- Check the Apache error log (`/var/log/apache2/error.log` or `/var/log/httpd/error_log`) for `ProxyPass` or SSL errors.
+- Confirm the ingestor containers are actually listening on the ports referenced in the `ProxyPass` directives (`ss -tlnp` or `docker ps`).
+- A `503 Service Unavailable` usually means Apache cannot reach the backend port; a `404` on the proxied paths usually means the trailing slash is missing from `ProxyPass`/`ProxyPassReverse`.
+- On RHEL-based systems, SELinux may block Apache from making outbound network connections; check with `getenforce` and enable the `httpd_can_network_connect` boolean if needed (`setsebool -P httpd_can_network_connect 1`).
+- Ensure the firewall allows local traffic between Apache and the ingestor ports, and that the [external firewall rules](/documentation/admin/req-infrastructure#firewall-rules) are open for port 443.
+
 ### Registration
 
 The PSI globus proxy requires the endpoint to be registered before it will be available

@@ -38,7 +38,7 @@ The `.env.example` file contains configuration values; some are specific to the 
 | `GLOBUS_DESTINATION_FACILITY`             | `PSI`                           | Destination facility for Globus, one of PSI, PSI_QA, PS_DEV                                             | No                |
 | `SCICAT_BACKEND_URL`                      | `https://dacat.psi.ch`          | URL of Scicat's backend                                                                                 | No                |
 | `SCICAT_FRONTEND_URL`                     | `https://discovery.psi.ch`      | URL of Scicat's frontend                                                                                | No                |
-| `GLOBUS_TRANSFER_PROXY_URL`               | `https://globus-proxy..psi.ch`  | URL to the Globus Proxy                                                                                 | No                |
+| `GLOBUS_TRANSFER_PROXY_URL`               | `https://globus-proxy.psi.ch`  | URL to the Globus Proxy                                                                                 | No                |
 | `KEYCLOAK_URL`                            | `https://kc.psi.ch`             | URL to the Keycloak instance                                                                            | No                |
 | `KEYCLOAK_REALM`                          | `awi`                           | URL to the Keycloak realm                                                                               | No                |
 
