@@ -8,24 +8,29 @@
     - name: Nano Imaging Lab
       url: https://nanoscience.unibas.ch/de/services/nano-imaging-lab/
   contacts:
-    - name: Carlos Fernandez Rodriguez
-      #email: cf.rodriguez@unibas.ch
+    - name: Imre Gonda
+      email: imre.gonda@unibas.ch
     - name: Moritz Hunkeler
-      #email: moritz.hunkeler@unibas.ch
-    - name: Yves Tittes
+      email: moritz.hunkeler@unibas.ch
   storageLocation: PSI
-  facilityBackend: https://openem-ingestor.id.unibe.ch
+  network: UNIBAS VPN
+  ingestor_urls:
+    production: https://openem.unibas.ch
+    qa: https://openem.unibas.ch/qa
 
 - name: PSI Electron Microscopy Facility
   abbreviation: PSI
-  institute: Paul Scherrer Iinstitute
+  institute: Paul Scherrer Institute
   urls:
     - name: PSI EM Facility
       url: https://www.psi.ch/en/emf
   contacts:
-    - name: Data Catalog Admins
-      email: scicat-help@list.psi.ch
-  facilityBackend: https://emf-ingestor.psi.ch/
+    - name: Spencer Bliven
+      email: scicat-help@lists.psi.ch
+  network: PSI VPN
+  ingestor_urls:
+    production: https://emf-ingestor.psi.ch
+    qa: https://emf-ingestor.psi.ch/qa
 
 - name: Dubochet Center for Imaging Lausanne
   abbreviation: DCI-L
@@ -33,7 +38,25 @@
   urls:
     - name: DCI-Lausanne
       url: https://dci-lausanne.ch/
-  facilityBackend: https://dci-ingestor.unil.ch:8443
+  contacts:
+    - name: Florent Wenger
+  ingestor_urls:
+    production: https://dci-ingestor.unil.ch
+    qa: https://dci-ingestor.unil.ch/qa
+
+- name: Laboratory of Biological Electron Microscopy
+  abbreviation: LBEM
+  institute: École Polytechnique Fédérale de Lausanne
+  urls:
+    - name: LBEM
+      url: https://www.lbem.ch/
+  contacts:
+    - name: Julika Radecke
+    - name: Gaël Cartier
+  network: EPFL VPN
+  ingestor_urls:
+    production: https://em-ingestor.epfl.ch
+    qa: https://em-ingestor.epfl.ch/qa
 
 - name: ScopeM
   abbreviation: ETHZ
@@ -41,7 +64,12 @@
   urls:
     - name: ScopeM
       url: https://scopem.ethz.ch/
-  facilityBackend: http://localhost:8888
+  contacts:
+    - name: Philipp Wissmann
+  network: OpenEM Access Machine
+  ingestor_urls:
+    production: http://localhost:8888
+    qa: http://localhost:8888
 
 - name: DCI Geneva
   abbreviation: DCI-G
@@ -49,7 +77,12 @@
   urls:
     - name: DCI-Geneva
       url: https://cryoem.unige.ch/
-  facilityBackend: ""
+  contacts:
+    - name: Andrew Howe
+      email: andrew.howe@unige.ch
+  ingestor_urls:
+    production: https://openem-ingestor.unige.ch
+    qa: https://openem-ingestor.unige.ch/qa
 
 - name: DCI Bern
   abbreviation: UNIBE
@@ -57,7 +90,13 @@
   urls:
     - name: DCI-Bern
       url: https://dci-bern.ch/
-  facilityBackend: https://openem-ingestor.id.unibe.ch
+  contacts:
+    - name: David Kalbermatter
+      email: david.kalbermatter@unibe.ch
+  network: UNIBE VPN
+  ingestor_urls:
+    production: https://openem-ingestor.id.unibe.ch
+    qa: https://openem-ingestor.id.unibe.ch/qa
 
 - name: EMPA
   abbreviation: EMPA
@@ -65,4 +104,10 @@
   urls:
     - name: Electron Microscopy Center
       url: https://www.empa.ch/web/s299
-  facilityBackend: ""
+  contacts:
+    - name: Despina Adamopoulou
+      email: despoina.adamopoulou@empa.ch
+  network: Empa VPN
+  ingestor_urls:
+    production: https://openem-ingestor.empa.ch
+    qa: https://openem-ingestor.empa.ch/qa

@@ -1,16 +1,17 @@
 {% comment %}
-  Simple horizontally-centered button.
+  Small button for use inline within text (e.g. table cells), unlike
+  button.html which is meant for use with button_row.html.
 
   Arguments:
   - contents: Button contents. Accepts simple markdown.
   - href (optional): URL
 {% endcomment -%}
 {%- if include.href -%}
-  <a class="button" href="{{include.href}}">
+  <a class="inline-button" href="{{include.href}}">
     {{- include.contents | markdownify | remove: "<p>" | remove: "</p>" | strip -}}
   </a>
 {%- else -%}
-  <div class="button">
+  <span class="inline-button">
     {{- include.contents | markdownify | remove: "<p>" | remove: "</p>" | strip -}}
-  </div>
+  </span>
 {%- endif -%}

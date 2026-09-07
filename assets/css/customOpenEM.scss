@@ -153,6 +153,36 @@ footer {
   @include button-style();
 }
 
+.inline-button {
+  background-color: #419ba3;
+  border: none;
+  color: white;
+  padding: 2px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #f9f9f9;
+  }
+}
+
+.copy-to-clipboard {
+  background: none;
+  border: none;
+  color: #419ba3;
+  cursor: pointer;
+  padding: 0 4px;
+  font-size: 1em;
+
+  &:hover {
+    color: #2d6f75;
+  }
+}
+
 /* --- Cards --- */
 
 .image-grid {

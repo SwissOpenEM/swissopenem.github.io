@@ -26,4 +26,4 @@ Arguments:
 {%- endfor %}|
 {% endif -%}
 | Storage Location | {{ f.storageLocation | default: PSI }} |
-| Ingestor URL | [{{ f.facilityBackend }}](https://discovery.development.psi.ch/ingestor?backendUrl={{f.facilityBackend|url_encode}}) |
+| Ingestor URL | [{{ f.ingestor_urls.production }}](https://discovery.development.psi.ch/ingestor?backendUrl={{f.ingestor_urls.production|url_encode}}) |
