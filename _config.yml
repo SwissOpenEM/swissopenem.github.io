@@ -124,3 +124,9 @@ social-network-links:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# AGENTS.md is guidance for coding agents, not site content, and it contains
+# literal Liquid tag examples in prose that GitHub Pages' jekyll-optional-front-matter
+# would otherwise try to render as real Liquid.
+exclude:
+  - AGENTS.md
