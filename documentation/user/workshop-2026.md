@@ -21,7 +21,6 @@ After the workshop:
 - Ask your facility contact
 - Email [openem-help@lists.psi.ch](mailto:openem-help@lists.psi.ch) for cross-facility requests
 
-
 ### Facility Contact Information
 
 | Facility | Contact person               | Contact email                                                                                                      | Additional Documentation                                                  |
@@ -39,6 +38,8 @@ After the workshop:
 
 We recommend first trying the demo.
 
+<!-- markdownlint-disable MD034 MD055 MD056 -->
+
 | Facility | Ingestor URL | Network |
 | -------- | ------------ | ------- |
 | Demo | {% include inline_button.html contents="Open" href="https://discovery-qa.psi.ch/ingestor?backendUrl=https:%2F%2Fingestor.qa.psi.ch" %} `https://ingestor.qa.psi.ch/` {% include copyButton.html text="https://ingestor.qa.psi.ch/" %} | {% include inline_button.html contents="Test" href="https://ingestor.qa.psi.ch/docs/index.html" %} Internet |
@@ -49,7 +50,7 @@ We recommend first trying the demo.
 | {{ facility.abbreviation }} | {% include inline_button.html contents="Open" href=connect_url %} `{{ facility.ingestor_urls.qa }}` {% include copyButton.html text=facility.ingestor_urls.qa %} | {% include inline_button.html contents="Test" href=test_url %} {{ facility.network }} |
 {% endfor %}
 
-
+<!-- markdownlint-enable MD034 MD055 MD056 -->
 
 ## Troubleshooting
 
@@ -78,6 +79,5 @@ However, adding an eduGAIN account such as SWITCH eduId can be useful to maintai
 {% include button_row.html content=buttons %}
 
 Go to `Account Security` > `Linked Accounts` and link any additional accounts wanted.
-
 
 {% include documentationStepper/forwardBackward.html showBack=true showNext=true %}
