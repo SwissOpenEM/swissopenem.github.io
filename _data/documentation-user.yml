@@ -14,22 +14,27 @@
   description: OpenEM facilities information
   path: /documentation/user/facilities
 
-- id: 3
+- id: 4
+  title: USER WORKSHOP 2026
+  description: User Workshop 2026 facility access
+  path: /documentation/user/workshop-2026
+
+- id: 5
   title: DATASETS
   description: How to use SciCat
   path: /documentation/user/scicat
 
-- id: 4
+- id: 6
   title: UPLOAD A DATASET
   description: Data Producer - Upload a dataset to SciCat
   path: /documentation/user/producer
 
-- id: 5
+- id: 7
   title: DOWNLOAD A DATASET
   description: Data Consumer - Find and download a dataset from SciCat
   path: /documentation/user/consumer
 
-- id: 6
+- id: 8
   title: SUPPORT
   description: User Support
   path: /documentation/user/support

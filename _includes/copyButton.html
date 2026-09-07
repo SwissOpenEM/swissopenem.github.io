@@ -1,0 +1,10 @@
+{% comment %}
+  Icon button that copies text to the clipboard.
+
+  Arguments:
+  - text: The text to copy when clicked.
+{% endcomment -%}
+{%- capture button_markup -%}
+<button type="button" class="copy-to-clipboard" data-copy-text="{{ include.text }}" title="Copy to clipboard" aria-label="Copy to clipboard"><i class="fas fa-copy"></i></button>
+{%- endcapture -%}
+{{- button_markup | strip -}}
