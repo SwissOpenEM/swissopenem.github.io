@@ -1,0 +1,81 @@
+<section class="getting-started-guide" data-getting-started-guide data-progress-label="{{ page.journey.progress_label }}" data-progress-separator="{{ page.journey.progress_separator }}" aria-label="{{ page.journey.aria_label }}">
+  <p class="getting-started-guide__intro">{{ page.journey.introduction }}</p>
+
+  <div class="getting-started-map" aria-label="{{ page.journey.map_label }}">
+    <div class="getting-started-map__lane" aria-hidden="true">{{ page.journey.lane_label }}</div>
+    <div class="getting-started-flow">
+      {% for step in page.journey.steps %}
+        <div class="getting-started-stage">
+          <button class="getting-started-node getting-started-node--{{ step.id }}" type="button" data-guide-step="{{ forloop.index0 }}" aria-controls="getting-started-step-{{ forloop.index }}">
+            <span class="getting-started-node__number">{{ step.number }}</span>
+            <span class="getting-started-node__icon" aria-hidden="true">
+              {% case step.icon %}
+                {% when "scicat" %}
+                  <img src="{{ '/assets/img/scicat_logo_new_small.png' | relative_url }}" alt="">
+                {% when "storage" %}
+                  <svg viewBox="0 0 48 48" focusable="false"><path d="M8 12h32v9H8zM8 21h32v9H8zM8 30h32v9H8z"/><circle cx="34" cy="16.5" r="1.5"/><circle cx="34" cy="25.5" r="1.5"/><circle cx="34" cy="34.5" r="1.5"/></svg>
+                {% when "distribution" %}
+                  <svg viewBox="0 0 48 48" focusable="false"><circle cx="12" cy="24" r="5"/><circle cx="36" cy="12" r="5"/><circle cx="36" cy="36" r="5"/><path d="m17 22 14-8M17 26l14 8"/></svg>
+                {% else %}
+                  {% include shared/icon.html icon=step.icon %}
+              {% endcase %}
+            </span>
+            <span class="getting-started-node__title">{{ step.title }}</span>
+            <span class="getting-started-node__meta">{{ step.summary }}</span>
+          </button>
+
+          {% if step.guides %}
+            <ul class="getting-started-specific-guides{% if step.guides.size > 1 %} getting-started-specific-guides--split{% endif %}" aria-label="{{ step.guides_label }}">
+              {% for guide in step.guides %}
+                <li class="getting-started-specific-guide">
+                  <a href="{{ guide.url }}">
+                    <span class="fas fa-external-link-alt getting-started-specific-guide__icon" aria-hidden="true"></span>
+                    <span>{{ guide.label }}</span>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+
+          <div class="getting-started-stage__explanation" data-guide-mobile-panel="{{ forloop.index0 }}"></div>
+        </div>
+        {% unless forloop.last %}<span class="getting-started-connector" data-guide-connector="{{ forloop.index0 }}" aria-hidden="true"></span>{% endunless %}
+      {% endfor %}
+    </div>
+
+    <div class="getting-started-people">
+      <div class="getting-started-map__lane">
+        <span>{{ page.journey.people.title }}</span>
+        <span class="getting-started-people__hint">{{ page.journey.people.hint }}</span>
+      </div>
+      <div class="getting-started-owners">
+        {% for owner in page.journey.people.roles %}
+          <a class="getting-started-owner getting-started-owner--{{ owner.id }}" href="{{ owner.url }}">
+            <span class="getting-started-owner__identity">
+              <span class="getting-started-owner__icon" aria-hidden="true">{% include shared/icon.html icon=owner.icon %}</span>
+              <span class="getting-started-owner__content"><span class="getting-started-owner__label">{{ owner.label }}</span><span class="getting-started-owner__scope">{{ owner.scope }}</span></span>
+            </span>
+            <span class="getting-started-owner__details"><span class="getting-started-owner__description">{{ owner.description }}</span><span class="getting-started-owner__link" aria-hidden="true">{{ owner.action }} →</span></span>
+          </a>
+        {% endfor %}
+      </div>
+      <p class="getting-started-people__note">{{ page.journey.people.note }}</p>
+    </div>
+  </div>
+
+  <div class="getting-started-explainer" aria-live="polite">
+    <button class="getting-started-arrow" type="button" data-guide-previous aria-label="{{ page.journey.previous_label }}"><span aria-hidden="true">←</span></button>
+    <div class="getting-started-explainer__content">
+      <p class="getting-started-progress" data-guide-progress>{{ page.journey.progress_label }} 1 {{ page.journey.progress_separator }} {{ page.journey.steps.size }}</p>
+      {% for step in page.journey.steps %}
+        <article class="getting-started-step{% if forloop.first %} is-active{% endif %}" id="getting-started-step-{{ forloop.index }}" data-guide-panel="{{ forloop.index0 }}">
+          <h2>{{ step.explanation_title }}</h2>
+          <p>{{ step.explanation }}</p>
+        </article>
+      {% endfor %}
+    </div>
+    <button class="getting-started-arrow" type="button" data-guide-next aria-label="{{ page.journey.next_label }}"><span aria-hidden="true">→</span></button>
+  </div>
+</section>
+
+<script src="{{ '/assets/js/getting-started/journey.js' | relative_url }}" defer></script>

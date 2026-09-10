@@ -1,0 +1,46 @@
+{% assign catalogue = site.data.openem_datasets %}
+
+  <div class="dataset-showcase__summary" aria-label="{{ page.dataset.summary_label }}">
+    <strong>{{ catalogue.datasets | size }}</strong>
+    <span>OpenEM {% if catalogue.datasets.size == 1 %}{{ page.dataset.singular }}{% else %}{{ page.dataset.plural }}{% endif %} {{ page.dataset.availability }}</span>
+  </div>
+
+  <div class="dataset-grid">
+    {% for dataset in catalogue.datasets %}
+      <article class="dataset-card">
+        <div class="dataset-card__meta">
+          <span class="dataset-card__type">{{ dataset.type | escape }} data</span>
+          {% if dataset.sizeDisplay %}<span>{{ dataset.sizeDisplay }}</span>{% endif %}
+          <span>{{ dataset.createdAt | date: "%d %b %Y" }}</span>
+        </div>
+
+        <h3>{{ dataset.datasetName | escape }}</h3>
+
+        {% if dataset.description %}
+          <p>{{ dataset.description | escape }}</p>
+        {% endif %}
+
+        {% if dataset.creationLocation %}
+          <p class="dataset-card__location">
+            <span aria-hidden="true">⌖</span>
+            {{ dataset.creationLocation | remove_first: "/" | replace: "/", " · " | escape }}
+          </p>
+        {% endif %}
+
+        {% if dataset.keywords.size > 0 %}
+          <ul class="dataset-card__tags" aria-label="Keywords">
+            {% for keyword in dataset.keywords %}<li>{{ keyword | escape }}</li>{% endfor %}
+          </ul>
+        {% endif %}
+
+        <a class="dataset-card__link"
+           href="https://discovery.psi.ch/datasets/{{ dataset.pid | url_encode }}"
+           target="_blank"
+           rel="noopener noreferrer">
+          {{ page.dataset.card_action }} <span aria-hidden="true">→</span>
+        </a>
+      </article>
+    {% else %}
+      <p>{{ page.dataset.empty_message }}</p>
+    {% endfor %}
+  </div>

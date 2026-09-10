@@ -1,0 +1,19 @@
+{
+  "searchUrl": "https://discovery.psi.ch/datasets?args=%7B%22skip%22:0,%22limit%22:25%7D&searchQuery=%7B%22keywords%22:%5B%22OpenEM%22%5D%7D",
+  "datasets": [
+    {
+      "pid": "20.500.11935/e9958228-11b9-42ea-a099-813150c3ccea",
+      "datasetName": "CryoEM of Apoferritin",
+      "description": "cryoEM micrographs of Apoferritin at 0.415 Angstrom pixelsize.",
+      "type": "raw",
+      "creationLocation": "/UNIBAS/BIOEM/TITANG4",
+      "createdAt": "2024-09-12T15:13:29.051Z",
+      "size": 2018658781578,
+      "sizeDisplay": "2.02 TB",
+      "keywords": [
+        "OpenEM",
+        "Single Particle Analysis"
+      ]
+    }
+  ]
+}

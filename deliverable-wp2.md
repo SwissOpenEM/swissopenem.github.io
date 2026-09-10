@@ -8,7 +8,7 @@ permalink: /deliverable-wp2/
 
 The Scicat Metadata Catalog work package contains the following tasks and components.
 
-{% include wptasks.md tasks=site.data.deliverables-wp.wp2 %}
+{% include project/work-package-tasks.md tasks=site.data.deliverables-wp.wp2 %}
 
 ### Tasks
 

@@ -1,0 +1,11 @@
+<section class="home-about" aria-labelledby="home-about-title">
+  <div class="home-about__label" aria-hidden="true">{{ page.home.about.label }}</div>
+  <div class="home-about__copy">
+    <p class="home-about__eyebrow">{{ page.home.about.eyebrow }}</p>
+    <h2 id="home-about-title">{{ page.home.about.title }}</h2>
+    <p>{{ page.home.about.description }}</p>
+    <a class="home-about__link" href="{{ '/about/' | relative_url }}">
+      {{ page.home.about.action }} <span aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+</section>

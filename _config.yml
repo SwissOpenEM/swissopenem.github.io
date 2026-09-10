@@ -48,16 +48,18 @@ plugins:
 post_search: true
 
 navbar-links:
+  Explore: "explore"
   News: "news"
   The Project:
     - About: "about"
     - Deliverables: "deliverables"
     - Timeline: "timeline"
     - Software: "software"
+    - Team: "team"
     - Partners: "partners"
-  Team: "team"
-  Outreach: "outreach"
-  Documentation: "documentation"
+    - Outreach: "outreach"
+  Getting Started: "getting-started"
+  Documentation: "https://data-catalog-services.pages.psi.ch/"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
 site-css:
