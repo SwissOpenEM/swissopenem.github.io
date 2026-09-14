@@ -1,46 +1,33 @@
-{% assign catalogue = site.data.openem_datasets %}
+  <div class="dataset-showcase__results"
+       data-dataset-showcase
+       data-api-endpoint="{{ page.dataset.api_endpoint | escape }}"
+       data-catalogue-base-url="https://discovery.psi.ch/datasets/"
+       data-singular="{{ page.dataset.singular | escape }}"
+       data-plural="{{ page.dataset.plural | escape }}"
+       data-availability="{{ page.dataset.availability | escape }}"
+       data-card-action="{{ page.dataset.card_action | escape }}"
+       data-loading-message="{{ page.dataset.loading_message | escape }}"
+       data-empty-message="{{ page.dataset.empty_message | escape }}"
+       data-error-message="{{ page.dataset.error_message | escape }}"
+       data-error-details-label="{{ page.dataset.error_details_label | escape }}"
+       data-retry-action="{{ page.dataset.retry_action | escape }}"
+       aria-busy="true">
+    <div class="dataset-showcase__summary" aria-label="{{ page.dataset.summary_label }}" hidden>
+      <strong data-dataset-count></strong>
+      <span data-dataset-summary></span>
+    </div>
 
-  <div class="dataset-showcase__summary" aria-label="{{ page.dataset.summary_label }}">
-    <strong>{{ catalogue.datasets | size }}</strong>
-    <span>OpenEM {% if catalogue.datasets.size == 1 %}{{ page.dataset.singular }}{% else %}{{ page.dataset.plural }}{% endif %} {{ page.dataset.availability }}</span>
+    <div class="dataset-showcase__status" data-dataset-status role="status">
+      {{ page.dataset.loading_message }}
+    </div>
+
+    <div class="dataset-grid" data-dataset-grid></div>
   </div>
 
-  <div class="dataset-grid">
-    {% for dataset in catalogue.datasets %}
-      <article class="dataset-card">
-        <div class="dataset-card__meta">
-          <span class="dataset-card__type">{{ dataset.type | escape }} data</span>
-          {% if dataset.sizeDisplay %}<span>{{ dataset.sizeDisplay }}</span>{% endif %}
-          <span>{{ dataset.createdAt | date: "%d %b %Y" }}</span>
-        </div>
+  <noscript>
+    <p class="dataset-showcase__status dataset-showcase__status--error">
+      JavaScript is required to load OpenEM datasets from the PSI Data Catalog.
+    </p>
+  </noscript>
 
-        <h3>{{ dataset.datasetName | escape }}</h3>
-
-        {% if dataset.description %}
-          <p>{{ dataset.description | escape }}</p>
-        {% endif %}
-
-        {% if dataset.creationLocation %}
-          <p class="dataset-card__location">
-            <span aria-hidden="true">⌖</span>
-            {{ dataset.creationLocation | remove_first: "/" | replace: "/", " · " | escape }}
-          </p>
-        {% endif %}
-
-        {% if dataset.keywords.size > 0 %}
-          <ul class="dataset-card__tags" aria-label="Keywords">
-            {% for keyword in dataset.keywords %}<li>{{ keyword | escape }}</li>{% endfor %}
-          </ul>
-        {% endif %}
-
-        <a class="dataset-card__link"
-           href="https://discovery.psi.ch/datasets/{{ dataset.pid | url_encode }}"
-           target="_blank"
-           rel="noopener noreferrer">
-          {{ page.dataset.card_action }} <span aria-hidden="true">→</span>
-        </a>
-      </article>
-    {% else %}
-      <p>{{ page.dataset.empty_message }}</p>
-    {% endfor %}
-  </div>
+  <script src="{{ '/assets/js/explore/datasets.js' | relative_url }}" defer></script>
