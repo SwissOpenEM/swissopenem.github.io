@@ -24,7 +24,7 @@ ecosystem can be found [here]({{ "/software/" | relative_url }}).
 
 ## Timeline
 
-{% include gantt.html data=site.data.timeline %}
+{% include project/gantt.html data=site.data.timeline %}
 
 ## Initialization
 

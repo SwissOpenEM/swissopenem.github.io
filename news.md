@@ -12,4 +12,4 @@ tags:
 
 {% assign posts = site.posts | sort: "date" | reverse %}
 
-{% include news_timeline.html posts=posts %}
+{% include news/timeline.html posts=posts %}

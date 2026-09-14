@@ -8,14 +8,15 @@ permalink: /deliverable-wp4/
 
 The User Training, Outreach and Sustainability work package contains the following tasks and components.
 
-{% include wptasks.md tasks=site.data.deliverables-wp.wp4 %}
+{% include project/work-package-tasks.md tasks=site.data.deliverables-wp.wp4 %}
 
 ### Tasks
 
 #### Education-1: User Training
 
-Guides to using OpenEM services are available in the [User Manual]({% link documentation/user/overview.md %}).
-More general information about using SciCat can be found in the [Data Catalog documentation](https://data-catalog-services.pages.psi.ch/) and the [SciCat website](https://www.scicatproject.org/).
+Guides to using OpenEM services are available in the external
+[Data Catalog documentation](https://data-catalog-services.pages.psi.ch/). More general
+information about SciCat can be found on the [SciCat website](https://www.scicatproject.org/).
 
 Training for operators was provided through the [All-hands Workshop]({% link _posts/2025-03-05-depositor-newsletter.md %}) in February 2025. Additional workshops for users from OpenEM facilities were also held (for example, at [PSI](https://zenodo.org/records/19565964) in April 2026).
 

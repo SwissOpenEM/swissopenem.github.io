@@ -8,7 +8,7 @@ permalink: /deliverable-wp3/
 
 The Deposition in International Repositories work package contains the following tasks and components.
 
-{% include wptasks.md tasks=site.data.deliverables-wp.wp3 %}
+{% include project/work-package-tasks.md tasks=site.data.deliverables-wp.wp3 %}
 
 ### Tasks
 

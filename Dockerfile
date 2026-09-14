@@ -1,11 +1,11 @@
-FROM ruby:3.3-alpine
+FROM ruby:4.0.6-alpine3.24
 
 WORKDIR /tmp
 ADD Gemfile /tmp/
 ADD Gemfile.lock /tmp/
 
 RUN apk update && \
-    apk add --no-cache --virtual build-deps build-base zlib-dev && \
+    apk add --no-cache --virtual build-deps build-base openssl-dev pkgconf zlib-dev && \
     apk list -I
 RUN gem install bundler --no-document
 RUN bundle install
