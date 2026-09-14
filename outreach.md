@@ -27,6 +27,7 @@ tags:
 | Event                            | Date           | More information          |
 |----------------------------------|----------------|---------------------------|
 | OSC-EM Standards Workshop at PSI | 22-23 Feb 2024 | 22 in-person participants |
+| [OpenEM User Workshop 2026](https://indico.psi.ch/e/openem2026) | 7 Sept 2026 | |
 
 ### Further Publications
 
