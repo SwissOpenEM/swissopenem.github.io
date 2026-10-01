@@ -1269,6 +1269,15 @@ footer {
 
 /* --- Search overlay --- */
 
+/* Keep the search icon at every width, including the collapsed navigation. */
+#nav-search-icon {
+  display: inline-block;
+}
+
+#nav-search-text {
+  display: none;
+}
+
 #beautifuljekyll-search-overlay {
   align-items: flex-start;
   backdrop-filter: blur(4px);
