@@ -1,5 +1,5 @@
 ---
 layout: null
 permalink: /documentation/
-redirect_to: https://data-catalog-services.pages.psi.ch/
+redirect_to: https://data-catalog-services.pages.psi.ch/openem/openem-start/
 ---

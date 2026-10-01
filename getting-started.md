@@ -102,21 +102,21 @@ journey:
               scope: Facility-specific
               description: Acquires the microscopy data and provides its scientific context.
               action: Learn more
-              url: https://data-catalog-services.pages.psi.ch/
+              url: https://data-catalog-services.pages.psi.ch/openem/user/introduction/
             - id: operator
               icon: user-cog
               label: Operator
               scope: Facility-specific
               description: Operates and maintains the local OpenEM Ingestor.
               action: Learn more
-              url: https://data-catalog-services.pages.psi.ch/
+              url: https://data-catalog-services.pages.psi.ch/openem/operator/introduction/
             - id: developer
               icon: users-cog
               label: Developer
               scope: Open Source Community
               description: Develops SciCat, storage and distribution services.
               action: Learn more
-              url: https://data-catalog-services.pages.psi.ch/
+              url: https://data-catalog-services.pages.psi.ch/openem/developer/overview/
 ---
 
 {% include getting-started/journey.html %}
