@@ -26,7 +26,7 @@
           </li>
         {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ link[1] | relative_url }}">
+            <a class="nav-link" href="{% if link[1] contains '://' %}{{ link[1] }}{% else %}{{ link[1] | relative_url }}{% endif %}">
               {%- if link[0] == "Documentation" -%}
                 <span class="fas fa-external-link-alt nav-link__external-icon" aria-hidden="true"></span>
               {%- endif -%}
