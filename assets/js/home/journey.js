@@ -21,5 +21,5 @@
     step += 1;
   };
 
-  window.setInterval(updateLabels, 3600);
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) window.setInterval(updateLabels, 3600);
 }());
