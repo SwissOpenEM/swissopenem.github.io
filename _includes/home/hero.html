@@ -1,0 +1,90 @@
+<section class="home-hero" aria-labelledby="home-hero-title">
+  <div class="home-hero__copy"> 
+    <h1 id="home-hero-title">{{ page.home.hero.title }}<br><span>{{ page.home.hero.emphasis }}</span></h1>
+    <p class="home-hero__lead">{{ page.home.hero.description }}</p>
+
+    <div class="home-hero__actions" aria-label="{{ page.home.hero.actions_label }}">
+      <a class="home-hero__button home-hero__button--primary" href="{{ '/explore' | relative_url }}">
+        {{ page.home.hero.primary_action }} <span aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="home-hero__button" href="{{ '/getting-started/' | relative_url }}">{{ page.home.hero.secondary_action }}</a>
+    </div>
+  </div>
+
+  <div class="data-journey" role="img" aria-label="{{ page.home.journey.aria_label }}">
+    <div class="data-journey__glow" aria-hidden="true"></div>
+    <svg viewBox="0 0 760 570" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="openem-flow" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#75d0d4"/>
+          <stop offset="0.55" stop-color="#2b929c"/>
+          <stop offset="1" stop-color="#124f59"/>
+        </linearGradient>
+        <filter id="openem-shadow" x="-30%" y="-30%" width="160%" height="160%">
+          <feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#092f37" flood-opacity=".14"/>
+        </filter>
+      </defs>
+
+      <path class="journey-route journey-route--one" pathLength="1" d="M198 135 C242 135 250 205 298 225"/>
+      <path class="journey-route journey-route--two" pathLength="1" d="M198 255 C242 255 254 255 298 255"/>
+      <path class="journey-route journey-route--three" pathLength="1" d="M198 375 C242 375 250 305 298 285"/>
+      <path class="journey-route journey-route--four" pathLength="1" d="M462 218 C505 196 515 115 548 115"/>
+      <path class="journey-route journey-route--five" pathLength="1" d="M462 255 C510 255 515 255 548 255"/>
+      <path class="journey-route journey-route--six" pathLength="1" d="M462 292 C505 314 515 395 548 395"/>
+
+      <g class="facility-card facility-card--one" filter="url(#openem-shadow)">
+        <rect x="18" y="88" width="180" height="94" rx="18" class="journey-card"/>
+        <text x="57" y="149" text-anchor="middle" class="graph-icon">&#xf610;</text>
+        <text x="91" y="142" class="journey-title organisation-name" data-organisation-slot="1">{{ page.home.journey.facilities[0] }}</text>
+      </g>
+
+      <g class="facility-card facility-card--two" filter="url(#openem-shadow)">
+        <rect x="18" y="208" width="180" height="94" rx="18" class="journey-card"/>
+        <text x="57" y="269" text-anchor="middle" class="graph-icon">&#xf610;</text>
+        <text x="91" y="262" class="journey-title organisation-name" data-organisation-slot="2">{{ page.home.journey.facilities[1] }}</text>
+      </g>
+
+      <g class="facility-card facility-card--three" filter="url(#openem-shadow)">
+        <rect x="18" y="328" width="180" height="94" rx="18" class="journey-card"/>
+        <text x="57" y="389" text-anchor="middle" class="graph-icon">&#xf610;</text>
+        <text x="91" y="382" class="journey-title organisation-name" data-organisation-slot="3">{{ page.home.journey.facilities[2] }}</text>
+      </g>
+
+      <g class="scicat-stage" filter="url(#openem-shadow)">
+        <rect x="298" y="174" width="164" height="162" rx="28" class="scicat-card"/>
+        <image href="{{ '/assets/img/scicat_logo_new_full.svg' | relative_url }}" x="314" y="207" width="132" height="46" preserveAspectRatio="xMidYMid meet"/>
+        <text x="380" y="282" text-anchor="middle" class="scicat-meta">{{ page.home.journey.catalogue_label }}</text>
+        <text x="380" y="302" text-anchor="middle" class="scicat-host">{{ page.home.journey.catalogue_host }}</text>
+      </g>
+
+      <g class="journey-result journey-result--archive" filter="url(#openem-shadow)">
+        <rect x="548" y="67" width="194" height="96" rx="20" class="result-card"/>
+        <text x="586" y="129" text-anchor="middle" class="graph-icon">&#xf187;</text>
+        <text x="617" y="111" class="result-title">{{ page.home.journey.outputs[0].title }}</text>
+        <text x="617" y="128" class="result-meta">{{ page.home.journey.outputs[0].detail }}</text>
+      </g>
+
+      <g class="journey-result journey-result--repository" filter="url(#openem-shadow)">
+        <rect x="548" y="207" width="194" height="96" rx="20" class="result-card"/>
+        <text x="586" y="269" text-anchor="middle" class="graph-icon">&#xf1c0;</text>
+        <text x="617" y="251" class="result-title">{{ page.home.journey.outputs[1].title }}</text>
+        <text x="617" y="268" class="result-meta">{{ page.home.journey.outputs[1].detail }}</text>
+      </g>
+
+      <g class="journey-result journey-result--consumer" filter="url(#openem-shadow)">
+        <rect x="548" y="347" width="194" height="96" rx="20" class="result-card"/>
+        <text x="586" y="409" text-anchor="middle" class="graph-icon">&#xf007;</text>
+        <text x="617" y="391" class="result-title">{{ page.home.journey.outputs[2].title }}</text>
+        <text x="617" y="408" class="result-meta">{{ page.home.journey.outputs[2].detail }}</text>
+      </g>
+
+      <g class="fair-principles">
+        <text x="380" y="480" text-anchor="middle" class="fair-principles__heading">{{ page.home.journey.principles_heading }}</text>
+        <g transform="translate(139 496)"><rect width="105" height="56" rx="28"/><text x="52.5" y="35" text-anchor="middle">{{ page.home.journey.principles[0] }}</text></g>
+        <g transform="translate(251 496)"><rect width="112" height="56" rx="28"/><text x="56" y="35" text-anchor="middle">{{ page.home.journey.principles[1] }}</text></g>
+        <g transform="translate(370 496)"><rect width="137" height="56" rx="28"/><text x="68.5" y="35" text-anchor="middle">{{ page.home.journey.principles[2] }}</text></g>
+        <g transform="translate(514 496)"><rect width="107" height="56" rx="28"/><text x="53.5" y="35" text-anchor="middle">{{ page.home.journey.principles[3] }}</text></g>
+      </g>
+    </svg>
+  </div>
+</section>

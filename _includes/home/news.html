@@ -1,0 +1,36 @@
+{% assign home_posts = site.posts | sort: "date" | reverse | slice: 0, 3 -%}
+<section class="home-news" aria-labelledby="latest-news-title">
+  <header class="home-news__header">
+    <div>
+      <h2 id="latest-news-title">{{ page.home.news.title }}</h2>
+    </div>
+    <a class="home-news__all" href="{{ '/news' | relative_url }}">{{ page.home.news.all_action }} <span aria-hidden="true">&rarr;</span></a>
+  </header>
+
+  <div class="home-news__grid">
+    {% for post in home_posts -%}
+      <article class="news-card{% if forloop.first %} news-card--featured{% endif %}">
+        {% if post.thumbnail-img -%}
+          <a class="news-card__image" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+            <img src="{{ post.thumbnail-img | relative_url }}" alt="" loading="lazy">
+          </a>
+        {% else -%}
+          <div class="news-card__visual" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        {% endif -%}
+        <div class="news-card__body">
+          <div class="news-card__meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+            {% if post.tags.first -%}<span>{{ post.tags.first }}</span>{%- else -%}<span>Update</span>{%- endif %}
+          </div>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <div class="news-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 28 }}</div>
+          <a class="news-card__link" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title | escape }}">
+            {{ page.home.news.item_action }} <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </article>
+    {%- endfor %}
+  </div>
+</section>
