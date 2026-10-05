@@ -34,4 +34,4 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem "beautiful-jekyll-theme", "~> 6.0"
 gem "jekyll-remote-theme", "~> 0.4"
-gem "jekyll-redirect-from", "~> 0.16"
+gem "jekyll-redirect-from", "~> 0.17"
