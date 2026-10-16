@@ -4,7 +4,7 @@
     <h2 id="home-about-title">{{ page.home.about.title }}</h2>
   </header>
   <div class="home-about__media">
-    <video class="home-about__video" controls playsinline preload="auto"
+    <video class="home-about__video" controls playsinline preload="metadata"
            poster="{{ page.home.about.video.poster | relative_url }}"
            aria-label="{{ page.home.about.video.label | escape }}">
       <source src="{{ page.home.about.video.src | relative_url }}" type="video/mp4">
