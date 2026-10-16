@@ -47,7 +47,7 @@ home:
       - Reusable
   about:
     video:
-      src: /assets/videos/OpenEM_compressed.mp4?v=2
+      src: /assets/videos/OpenEM_compressed.mp4?v=3
       poster: /assets/videos/OpenEM_poster.jpg
       label: Introduction to the OpenEM project
       fallback: Download the OpenEM project video
