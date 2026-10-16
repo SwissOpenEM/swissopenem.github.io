@@ -1,8 +1,17 @@
 <section class="home-about" aria-labelledby="home-about-title">
-  <div class="home-about__label" aria-hidden="true">{{ page.home.about.label }}</div>
-  <div class="home-about__copy">
+  <header class="home-about__header">
     <p class="home-about__eyebrow">{{ page.home.about.eyebrow }}</p>
     <h2 id="home-about-title">{{ page.home.about.title }}</h2>
+  </header>
+  <div class="home-about__media">
+    <video class="home-about__video" controls playsinline preload="metadata"
+           poster="{{ page.home.about.video.poster | relative_url }}"
+           aria-label="{{ page.home.about.video.label | escape }}">
+      <source src="{{ page.home.about.video.src | relative_url }}" type="video/mp4">
+      <a href="{{ page.home.about.video.src | relative_url }}">{{ page.home.about.video.fallback }}</a>
+    </video>
+  </div>
+  <div class="home-about__copy">
     <p>{{ page.home.about.description }}</p>
     <a class="home-about__link" href="{{ '/about/' | relative_url }}">
       {{ page.home.about.action }} <span aria-hidden="true">&rarr;</span>

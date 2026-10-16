@@ -1,22 +1,16 @@
 {% comment %}
-Table for work-package tasks
-
-Arguments:
-
-- items: List of workpackage items (from site.data.deliverables-*)
-
+Render each task once, with its description and compact status badge.
+Arguments: items — work-package tasks from site.data.deliverables-wp.
 {% endcomment %}
-<div class="wp-bar">
-    <div class="wp-header-row">
-        <div class="wp-header-col">ID</div>
-        <div class="wp-header-col">Description</div>
-        <div class="wp-header-col">Status</div>
-    </div>
-    {% for item in include.items %}
-        <div class="wp-row">
-            <div class="wp-col">{{ item.id }}</div>
-            <div class="wp-col">{{ item.description }}</div>
-            <div class="wp-col wp-status {{ item.status | downcase | replace: ' ', '-' }}">{{ item.status_text | default: item.status }}</div>
-        </div>
-    {% endfor %}
+<div class="wp-tasks">
+  {% for item in include.items %}
+    <article class="wp-task" aria-labelledby="{{ item.anchor }}">
+      <header class="wp-task-header">
+        <span class="wp-task-id">Task {{ item.id }}</span>
+        <h4 id="{{ item.anchor }}">{{ item.title }}</h4>
+        <span class="wp-status {{ item.status | downcase | replace: ' ', '-' }}">{{ item.status_text | default: item.status }}</span>
+      </header>
+      <div class="wp-task-details">{{ item.details | markdownify }}</div>
+    </article>
+  {% endfor %}
 </div>

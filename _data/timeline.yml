@@ -87,3 +87,21 @@
   duration: null
   percent_complete: 100
   dependencies: null
+
+- task_id: "extension-preparation"
+  task_name: "OpenEM Extension Preparations"
+  resource: "Go-Live"
+  start_date: 2026-01-01
+  end_date: 2026-06-01
+  duration: null
+  percent_complete: 100
+  dependencies: null
+
+- task_id: "MS8"
+  task_name: "MS-VIII: Go-Live"
+  resource: "Go-Live"
+  start_date: 2026-06-01
+  end_date: 2026-09-30
+  duration: null
+  percent_complete: 100
+  dependencies: null

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Partners
+subtitle: Our partners and collaborations
 permalink: /partners/
 tags:
   - Project partners
@@ -10,13 +11,17 @@ tags:
   - Industry partners
 ---
 
-<div class="image-grid">
-  {% for partner in site.data.partners %}
-    <div class="grid-item">
-      <a href="{{ partner.link }}">
-        <img src="{{ partner.image }}" alt="{{ partner.title }}">
-        <h3>{{ partner.title }}</h3>
-      </a>
-    </div>
-  {% endfor %}
+<div class="partners-page">
+  <ul class="partners-grid">
+    {% for partner in site.data.partners %}
+      <li class="partner-card">
+        <a class="partner-card__link" href="{{ partner.link }}">
+          <div class="partner-card__logo">
+            <img src="{{ partner.image | relative_url }}" alt="" loading="lazy">
+          </div>
+          <h2 class="partner-card__name">{{ partner.title | escape }}</h2>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 </div>

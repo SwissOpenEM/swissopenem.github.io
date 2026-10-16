@@ -7,19 +7,35 @@
     affiliation: EMPA
     wp: Focus WP - Metadata Standards
     components: Metadata Extractor - Material Sciences, SciCat Extensions
-  - name: Attila Nacsa
-    image: Attila_Nacsa.jpg
-    components: Ingestor - Backend, SciCat CI
-    affiliation: UNIGE
-    wp: Focus WP - Metadata Standards
+  - name: André Baumberger
+    image: Baumberger_Andre.jpg
+    affiliation: Indema
+    wp: Focus WP - Project Extension
+    components: Ingestor - Depositor - Deployment
+  - name: Spencer Bliven
+    image: Spencer_Bliven.jpg
+    position: Project Coordinator
+    affiliation: PSI
+    components: SciCat Extensions, Archival & Retrieval PSI, Authentication Infrastructure
+    wp: Focus WP - Scicat Metadata Catalog
   - name: Sofya Laskina
     image: Sofya_Laskina.jpg
     affiliation: EPFL
     wp: Focus WP - Deposition in International Repositories
     components: OneDep-Converter, SciCat Extensions
+  - name: Attila Nacsa
+    image: Attila_Nacsa.jpg
+    components: Ingestor - Backend, SciCat CI
+    affiliation: UNIGE
+    wp: Focus WP - Metadata Standards
+  - name: Yves Tittes
+    image: Yves_Tittes.jpg
+    affiliation: UNIBAS
+    wp: Focus WP - Metadata Standards
+    components: Metadata Extractor - Life Sciences, SciCat Extensions
   - name: David Wiessner
     image: David_Wiessner.jpg
-    affiliation: UNIBE
+    affiliation: UNIBE / Indema
     wp: Focus WP - Education
     components: Project-Website, Ingestor - Frontend
   - name: Philipp Wissmann
@@ -27,30 +43,10 @@
     affiliation: ETHZ
     wp: Focus WP - Metadata Standards
     components: Ingestor - Backend, Archival & Retrieval ETHZ
-  - name: Spencer Bliven
-    image: Spencer_Bliven.jpg
-    position: Project Coordinator
-    affiliation: PSI
-    components: SciCat Extensions, Archival & Retrieval PSI, Authentication Infrastructure
-    wp: Focus WP - Scicat Metadata Catalog
-  - name: Yves Tittes
-    image: Yves_Tittes.jpg
-    affiliation: UNIBAS
-    wp: Focus WP - Metadata Standards
-    components: Metadata Extractor - Life Sciences, SciCat Extensions
 - name: Steering Board
   description:
     responsibility: Steering committee of the project
   members:
-    - name: Benoit Zuber
-      affiliation: UNIBE
-      image: Benoit_Zuber.jpg
-      page: https://www.anatomie.unibe.ch/ueber_uns/leitung/detail/index_ger.php?id=329
-    - name: Henning Stahlberg
-      affiliation: EPFL
-      wp: 
-      image: Henning_Stahlberg.jpg
-      page: https://www.epfl.ch/labs/lbem/prof-henning-stahlberg/
     - name: Nicolas Blanc
       image: Nicolas_Blanc.jpeg
       affiliation: ETHZ
@@ -67,3 +63,12 @@
       image: Timm_Maier.jpg
       affiliation: UNIBAS
       page: https://www.biozentrum.unibas.ch/research/research-groups/research-groups-a-z/overview/unit/research-group-timm-maier
+    - name: Henning Stahlberg
+      affiliation: EPFL
+      wp:
+      image: Henning_Stahlberg.jpg
+      page: https://www.epfl.ch/labs/lbem/prof-henning-stahlberg/
+    - name: Benoit Zuber
+      affiliation: UNIBE
+      image: Benoit_Zuber.jpg
+      page: https://www.anatomie.unibe.ch/ueber_uns/leitung/detail/index_ger.php?id=329

@@ -1,8 +1,26 @@
 - id: 1
-  description: "Updates and improvements to the SciCat Data Catalog"
   status: "Done"
   table: "tec"
+  title: "Establish Open EM data hub"
+  anchor: scicat-metadata-catalog-1-establish-open-em-data-hub
+  details: |
+    SciCat Data Catalog is hosted at PSI and provides storage, archiving, and publishing for large-scale facilities (SLS, SwissFEL, etc).
+
+    - [Data repository](https://discovery.psi.ch)
+    - [Published datasets](https://doi.psi.ch/)
+
+    Subtasks achieved include:
+
+    - Authenticate using eduGAIN federated identities
+    - Migrate PSI Data Catalog to SciCat v4
+    - Implement [customizable Jobs workflows](https://github.com/SciCatProject/backend/pull/1741)
+
+    ![SciCat Metadata catalog](/assets/img/scicatwp2.png)
+
 - id: 2
-  description: "Integrate institute storage options "
   status: "Done"
   table: "tec"
+  title: "Integrate institute storage options"
+  anchor: scicat-metadata-catalog-2-integrate-institute-storage-options
+  details: |
+    ETHZ ScopeM users will archive data to the ETHZ Long-term Storage (LTS) using the [ScopeM Archive Service](https://github.com/SwissOpenEM/ScopeMArchiver).
