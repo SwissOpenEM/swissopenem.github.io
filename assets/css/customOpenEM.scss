@@ -170,27 +170,13 @@ footer {
   display: grid;
   gap: clamp(1.5rem, 3vw, 2.5rem);
   grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
-  margin: 0 auto clamp(4rem, 7vw, 6rem);
+  margin: 0 auto clamp(2.5rem, 4vw, 4rem);
   max-width: 1140px;
   min-height: min(590px, calc(100vh - 110px));
   overflow: hidden;
   padding: clamp(1.5rem, 3vw, 2.75rem) clamp(0.5rem, 1.5vw, 1rem);
   position: relative;
 
-  &::before {
-    background:
-      radial-gradient(circle at 73% 45%, rgba(89, 196, 194, 0.2), transparent 25%),
-      radial-gradient(ellipse at 35% 40%, rgba(222, 244, 242, 0.65), transparent 48%);
-    border: 0;
-    border-radius: 45%;
-    bottom: -8%;
-    content: '';
-    left: -4%;
-    pointer-events: none;
-    position: absolute;
-    right: -4%;
-    top: -8%;
-  }
 }
 
 .home-hero__copy {
@@ -230,7 +216,7 @@ footer {
   align-items: center;
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid #b9d5d6;
-  border-radius: 999px;
+  border-radius: 10px;
   color: var(--home-ink);
   display: inline-flex;
   font-size: 0.92rem;
@@ -291,7 +277,8 @@ footer {
 }
 
 .data-journey__glow {
-  animation: journey-glow 2.8s 1.4s ease-out both;
+  // Reveal the glow after the FAIR principles finish (7.2s + 0.55s).
+  animation: journey-glow 2.8s 7.75s ease-out both;
   background: rgba(87, 194, 193, 0.2);
   border-radius: 50%;
   filter: blur(20px);
@@ -435,7 +422,7 @@ footer {
   display: grid;
   column-gap: clamp(1.5rem, 3vw, 2rem);
   grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
-  margin: 0 auto clamp(4rem, 8vw, 7rem);
+  margin: 0 auto clamp(2.5rem, 4vw, 4rem);
   max-width: 1140px;
   overflow: hidden;
   padding: clamp(1.5rem, 3vw, 2.5rem);
