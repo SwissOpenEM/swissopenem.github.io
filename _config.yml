@@ -70,6 +70,7 @@ site-css:
 site-js:
   - "/assets/js/copyToClipboard.js"
   - "/assets/js/external-links.js"
+  - "/assets/js/responsive-tables.js"
 
   #####################################
 # --- Footer social media links --- #

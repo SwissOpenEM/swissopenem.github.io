@@ -10,10 +10,12 @@ all but one instance to avoid multiple inclusion.
 Usage: {% include project/gantt.html data="{{site.data.timeline}}" %}
 
 {% endcomment -%}
-<div data-gantt="{{- include.data | jsonify | escape -}}">
+<div class="project-gantt" role="region" aria-label="Project timeline, scroll horizontally to explore" tabindex="0">
+  <div class="project-gantt__chart" data-gantt="{{- include.data | jsonify | escape -}}">
     <div class="spinner-border" role="status">
         <span class="sr-only">Loading...</span>
     </div>
+  </div>
 </div>
 <noscript><em>Javascript required for interactive timeline</em></noscript>
 {% unless include.skip_scripts -%}
