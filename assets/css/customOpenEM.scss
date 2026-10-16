@@ -1455,7 +1455,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 2px;
-    background: #ccc;
+    background: #cfe1e0;
   }
 }
 
@@ -1471,7 +1471,7 @@ footer {
     width: 12px;
     height: 12px;
     background: #fff;
-    border: 2px solid #ccc;
+    border: 2px solid #7bb9b8;
     border-radius: 50%;
     transform: translateX(-50%);
   }
@@ -1485,8 +1485,9 @@ footer {
 
 .timeline-content {
   padding: 1em;
-  background: #f9f9f9;
-  border-radius: 4px;
+  background: #f7fbfb;
+  border: 1px solid #dcebea;
+  border-radius: 26px;
   font-weight: normal;
   margin-left: 2em;
   /* Abstand vom Zeitstrahl */
@@ -2110,7 +2111,7 @@ footer {
   appearance: none;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 50%;
+  border-radius: 10px;
   color: #fff;
   cursor: pointer;
   display: flex;
