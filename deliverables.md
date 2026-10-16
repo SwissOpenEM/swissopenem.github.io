@@ -9,94 +9,41 @@ tags:
   - Metadata catalog
   - International repositories
   - Work packages
+work_packages:
+  - number: 1
+    title: Metadata Standards
+  - number: 2
+    title: SciCat Metadata Catalog
+  - number: 3
+    title: Deposition in International Repositories
+  - number: 4
+    title: Education
 ---
 
-All delivery results of the project are described here. The schedule and dependencies are described on the <a href="/timeline">Timeline page</a>.
+All delivery results of the project are described here. The schedule and dependencies are described on the [Timeline page]({{ '/timeline' | relative_url }}).
 
 Different components or organisational topics are being worked on within each work package.
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deliverables</title>
-</head>
-<body>
-
-<div class="deliverable-container">
-    <div class="deliverable-box" id="box-1" onclick="showContent(1, false)">
-        <p class="deliverable-box-text">Metadata Standards</p>
-        <img src="/assets/img/wp/WP1.svg" alt="Metadata Standards Image">
+<section class="deliverables" aria-label="Work packages and tasks" data-deliverables>
+  <p class="deliverable-hint" id="deliverable-hint">Select a work package to view its tasks and progress below. <span aria-hidden="true">↓</span></p>
+  <div class="deliverable-container" role="group" aria-describedby="deliverable-hint" aria-label="Select a work package">
+    {% for wp in page.work_packages %}
+      {% capture wp_url %}/deliverable-wp{{ wp.number }}/{% endcapture %}
+      <button class="deliverable-box{% if forloop.first %} active{% endif %}" type="button" data-wp="{{ wp.number }}" data-url="{{ wp_url | relative_url }}" aria-controls="deliverable-content" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
+        <span class="deliverable-box-number">WP {{ wp.number }}</span>
+        <img src="{{ '/assets/img/wp/WP' | append: wp.number | append: '.svg' | relative_url }}" alt="" width="40" height="40">
+        <span class="deliverable-box-text">{{ wp.title }}</span>
+        <span class="deliverable-box-action" aria-hidden="true"><span class="deliverable-box-view">View tasks</span><span class="deliverable-box-selected">Selected</span> <span>↓</span></span>
+      </button>
+    {% endfor %}
+  </div>
+  <div class="deliverable-results">
+    <p class="deliverable-results-label" data-wp-label aria-live="polite">Tasks &amp; progress · WP 1</p>
+    <div id="deliverable-content" class="deliverable-content" role="region" aria-label="Selected work package tasks" aria-busy="true">
+      <p>Loading tasks…</p>
     </div>
-    <div class="deliverable-box" id="box-2" onclick="showContent(2, false)">
-        <p class="deliverable-box-text">Scicat Metadata Catalog</p>
-        <img src="/assets/img/wp/WP2.svg" alt="Scicat Metadata Catalog Image">
-    </div>
-    <div class="deliverable-box" id="box-3" onclick="showContent(3, false)">
-        <p class="deliverable-box-text">Deposition in International Repositories</p>
-        <img src="/assets/img/wp/WP3.svg" alt="Deposition in International Repositories Image">
-    </div>
-    <div class="deliverable-box" id="box-4" onclick="showContent(4, false)">
-        <p class="deliverable-box-text">Education</p>
-        <img src="/assets/img/wp/WP4.svg" alt="User Training, Outreach and Sustainability Image">
-    </div>
-</div>
+  </div>
+  <noscript><p>View the tasks on the individual work package pages:</p><ul>{% for wp in page.work_packages %}{% capture wp_url %}/deliverable-wp{{ wp.number }}/{% endcapture %}<li><a href="{{ wp_url | relative_url }}">WP {{ wp.number }}: {{ wp.title }}</a></li>{% endfor %}</ul></noscript>
+</section>
 
-<div id="deliverable-content" class="deliverable-content">
-    Klicken Sie auf eine Box, um den Inhalt anzuzeigen.
-</div>
-
-<script>
-    function showContent(boxNumber, init) {
-        const urls = {
-            1: '/deliverable-wp1/',
-            2: '/deliverable-wp2/',
-            3: '/deliverable-wp3/',
-            4: '/deliverable-wp4/',
-        };
-
-        fetch(urls[boxNumber])
-            .then(response => response.text())
-            .then(data => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(data, 'text/html');
-                const mainContent = doc.querySelector('div[role="main"]');
-                if (mainContent) {
-                    const innerDiv = mainContent.querySelector('div');
-                    const innerInnerDiv = innerDiv.querySelector('div');
-                    if (innerInnerDiv) {
-                        document.getElementById('deliverable-content').innerHTML = innerInnerDiv.innerHTML;
-                    } else {
-                        document.getElementById('deliverable-content').innerHTML = 'The inner content could not be found.';
-                    }
-                } else {
-                    document.getElementById('deliverable-content').innerHTML = 'The content could not be found.';
-                }
-
-                // Highlight active box
-                const boxes = document.querySelectorAll('.deliverable-box');
-                boxes.forEach(box => box.classList.remove('active'));
-                boxes[boxNumber - 1].classList.add('active');
-
-                if (!init) {
-                    const element = document.getElementById('deliverable-content');
-                    const yOffset = -100; // Höhe des Offsets, z.B. die Höhe der Menüleiste
-                    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                    window.scrollTo({ top: y, behavior: 'smooth' });
-                }
-
-            })
-            .catch(error => {
-                document.getElementById('deliverable-content').innerHTML = 'The content could not be found.';
-                console.error('Error fetching content:', error);
-            });
-    }
-
-    // Automatically select Box 1 when the page loads
-    document.addEventListener('DOMContentLoaded', () => {
-        showContent(1, true);
-    });
-</script>
-
-</body>
-</html>
+<script src="{{ '/assets/js/project/deliverables.js' | relative_url }}" defer></script>
