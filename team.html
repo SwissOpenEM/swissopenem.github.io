@@ -11,11 +11,14 @@ tags:
   - Research institutions
 ---
 
-<h2>Participating Institutes</h2>
-
-<div class="institutes-content-container">
-    <img src="/assets/img/opem_map.svg" alt="Map of participating institutions">
-    <ul class="institutes-container">
+<div class="team-page">
+  <section class="team-institutes" aria-labelledby="team-institutes-title">
+    <div class="team-institutes__map">
+      <img src="{{ '/assets/img/opem_map.svg' | relative_url }}" alt="Map of participating institutions in Switzerland">
+    </div>
+    <div class="team-institutes__content">
+      <h2 id="team-institutes-title">Participating Institutes</h2>
+      <ul class="team-institutes__list">
         <li><a href="https://www.psi.ch">Paul Scherrer Institute (PSI)</a></li>
         <li><a href="https://www.epfl.ch">Swiss Federal Institute of Technology Lausanne (EPFL)</a></li>
         <li><a href="https://ethz.ch">Swiss Federal Institute of Technology in Zürich (ETHZ)</a></li>
@@ -23,65 +26,67 @@ tags:
         <li><a href="https://www.unibas.ch">University of Basel (UniBas)</a></li>
         <li><a href="https://www.unibe.ch/">University of Bern (UniBe)</a></li>
         <li><a href="https://unige.ch/">University of Geneva (UniGe)</a></li>
-        <li><a href="#">University of Lausanne (UNIL)</a></li>
+        <li><a href="https://www.unil.ch/">University of Lausanne (UNIL)</a></li>
         <li><a href="https://www.uzh.ch/">University of Zurich (UZH)</a></li>
         <li><a href="https://www.dubochetcenter.ch/">Dubochet Center for Imaging (DCI)</a></li>
-    </ul>
-</div>
+      </ul>
+    </div>
+  </section>
 
-<div class="text-center">
-    {% for team in site.data.team %}
-        <h2>{{ team.name }}</h2>
-        <div class="subtitle">
-            <div>{{ team.description.role }}</div>
-            <div>{{ team.description.responsibility }}</div>
-            <div>{{ team.description.affiliation }}</div>
-            <br>
-        </div>
-        <ul class="team">
-            {% for person in team.members %}
-                <table>
-                    <tr>
-                        <td class="team-round-image">
-                                <img
-                                    src="/assets/img/team/{{ person.image }}"
-                                    alt="{{ person.name }}"
-                                />
-                        </td>
-                        <td class="team-top-aligned">
-                            <b>
-                                {% if person.page %}
-                                <a href="{{ person.page }}">{{ person.name }}</a>
-                                {% else %}
-                                {{ person.name }}
-                                {% endif %}
-                            </b>
-                            <div>{{ person.affiliation }}</div>
-                            {% if person.position %}
-                            <div>{{ person.position }}</div>
-                            {% endif %}
-                            <div>{{ person.wp }}</div>
-                            <div><i>{{person.components}}</i></div>
-                        </td>
-                    </tr>
-                </table>
-            {% endfor %}
-        </ul>
-    {% endfor %}
-</div>
-
-<div class="text-center">
-    {% for team in site.data.team-supporters %}
-        <h2>{{ team.name }}</h2>
-        <div class="subtitle">
-            <div>{{ team.description.role }}</div>
-            <div>{{ team.description.responsibility }}</div>
-            <div>{{ team.description.affiliation }}</div>
-            <br>
-        </div>
-        {% assign member_count = team.members | size %}
+  {% for team in site.data.team %}
+    {% assign team_id = team.name | slugify %}
+    <section class="team-section" aria-labelledby="{{ team_id }}">
+      <header class="team-section__header">
+        <h2 id="{{ team_id }}">{{ team.name }}</h2>
+        {% if team.description.role %}<p>{{ team.description.role }}</p>{% endif %}
+        {% if team.description.responsibility %}<p>{{ team.description.responsibility }}</p>{% endif %}
+        {% if team.description.affiliation %}<p>{{ team.description.affiliation }}</p>{% endif %}
+      </header>
+      <ul class="team-grid">
         {% for person in team.members %}
-            {{ person.name }}{% if forloop.index < member_count %}, {% endif %}
+          <li class="team-card">
+            <div class="team-card__identity">
+              <img class="team-card__portrait"
+                   src="{{ '/assets/img/team/' | append: person.image | relative_url }}"
+                   alt="{{ person.name | escape }}" width="104" height="104" loading="lazy">
+              <div>
+                <span class="team-card__affiliation">{{ person.affiliation }}</span>
+                <h3 class="team-card__name">
+                  {% if person.page %}
+                    <a href="{{ person.page }}">{{ person.name }}</a>
+                  {% else %}
+                    {{ person.name }}
+                  {% endif %}
+                </h3>
+                {% if person.position %}<p class="team-card__position">{{ person.position }}</p>{% endif %}
+              </div>
+            </div>
+            {% if person.wp or person.components %}
+              <div class="team-card__details">
+                {% if person.wp %}<p class="team-card__focus">{{ person.wp }}</p>{% endif %}
+                {% if person.components %}<p class="team-card__components">{{ person.components }}</p>{% endif %}
+              </div>
+            {% endif %}
+          </li>
         {% endfor %}
-    {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+
+  {% for team in site.data.team-supporters %}
+    {% assign team_id = team.name | slugify %}
+    <section class="team-section team-supporters" aria-labelledby="{{ team_id }}">
+      <header class="team-section__header">
+        <h2 id="{{ team_id }}">{{ team.name }}</h2>
+        {% if team.description.role %}<p>{{ team.description.role }}</p>{% endif %}
+        {% if team.description.responsibility %}<p>{{ team.description.responsibility }}</p>{% endif %}
+        {% if team.description.affiliation %}<p>{{ team.description.affiliation }}</p>{% endif %}
+      </header>
+      <ul class="team-supporters__list">
+        {% for person in team.members %}
+          <li>{{ person.name }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
 </div>

@@ -1390,53 +1390,214 @@ footer {
 
 /* --- Team --- */
 
-.team {
-  width: 80%;
-  margin: auto;
-}
+.team-page {
+  --team-ink: #123b43;
+  --team-muted: #587176;
+  --team-teal-dark: #12636d;
+  color: var(--team-ink);
+  margin: 0 auto 4rem;
+  max-width: 1140px;
 
-.team-round-image {
-  width: 21%;
+  a {
+    color: var(--team-teal-dark);
 
-  img {
-    width: 150px;
-    /* Einheitliche Breite */
-    height: 150px;
-    /* Einheitliche Höhe */
-    border-radius: 10px;
-    object-fit: cover;
-    /* Stellt sicher, dass das Bild innerhalb der Grenzen bleibt */
+    &:hover {
+      color: var(--team-ink);
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 3px solid #238d96;
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
   }
 }
 
-.team-top-aligned {
-  vertical-align: top;
-}
-
-.institutes-content-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.team-institutes {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  background: #f3f9f8;
+  border: 1px solid #dcebea;
+  border-radius: 26px;
+}
 
-  img {
-    max-width: 45%;
-    /* Maximale Breite des Bildes */
-    height: auto;
-    /* Beibehaltung des Seitenverhältnisses */
+.team-institutes__map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.team-institutes__content h2,
+.team-section__header h2 {
+  color: var(--team-ink);
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.team-institutes__list {
+  display: grid;
+  gap: 0.65rem;
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.team-section {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.team-section__header {
+  margin-bottom: 1.5rem;
+
+  p {
+    color: var(--team-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0.5rem 0 0;
   }
 }
 
-.institutes-container {
-  max-width: 45%;
-  /* Maximale Breite der Liste */
-  list-style-type: none;
-  /* Entfernt die Bulletpoints */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
   padding: 0;
+}
 
-  li {
-    margin: 10px 0;
-    /* Abstand zwischen den Listenelementen */
+.team-card {
+  min-width: 0;
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid #d4e3e4;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(18, 59, 67, 0.04);
+}
+
+.team-card__identity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  > div {
+    min-width: 0;
+  }
+}
+
+.team-card__portrait {
+  flex: 0 0 104px;
+  width: 104px;
+  height: 104px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #edf6f5;
+}
+
+.team-card__affiliation {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background: #e3f5f3;
+  border-radius: 6px;
+  color: var(--team-teal-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.team-card__name {
+  color: var(--team-ink);
+  font-size: 1.1rem !important;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+  margin: 0.5rem 0 0;
+  overflow-wrap: anywhere;
+}
+
+.team-card__position {
+  color: var(--team-teal-dark);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0.35rem 0 0;
+}
+
+.team-card__details {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dcebea;
+  font-size: 0.82rem;
+  line-height: 1.6;
+
+  p {
+    margin: 0;
+  }
+
+  .team-card__components {
+    color: var(--team-muted);
+    margin-top: 0.5rem;
+  }
+}
+
+.team-card__focus {
+  color: var(--team-teal-dark);
+  font-weight: 600;
+}
+
+.team-supporters {
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  background: #f3f9f8;
+  border: 1px solid #dcebea;
+  border-radius: 26px;
+}
+
+.team-supporters__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1199px) {
+  .team-grid,
+  .team-supporters__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .team-institutes,
+  .team-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .team-institutes__map {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .team-supporters__list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .team-card__portrait {
+    flex-basis: 88px;
+    width: 88px;
+    height: 88px;
   }
 }
 
