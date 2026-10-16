@@ -433,34 +433,34 @@ footer {
   border-radius: 28px;
   color: #fff;
   display: grid;
-  gap: clamp(2rem, 6vw, 6rem);
-  grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
+  column-gap: clamp(1.5rem, 3vw, 2rem);
+  grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
   margin: 0 auto clamp(4rem, 8vw, 7rem);
   max-width: 1140px;
   overflow: hidden;
-  padding: clamp(2.25rem, 6vw, 5rem);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
   position: relative;
+  row-gap: clamp(1.5rem, 2.5vw, 2rem);
 }
 
-.home-about__label {
-  align-items: center;
-  aspect-ratio: 1;
+.home-about__media {
+  background: #0b252b;
   border: 1px solid rgba(134, 216, 211, 0.38);
-  border-radius: 50%;
-  color: #86d8d3;
-  display: flex;
-  font-size: clamp(1.6rem, 3vw, 2.5rem);
-  font-weight: 700;
-  justify-content: center;
-  letter-spacing: -0.04em;
-  position: relative;
+  border-radius: 18px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+  min-width: 0;
+  overflow: hidden;
+}
 
-  &::after {
-    border: 1px solid rgba(134, 216, 211, 0.16);
-    border-radius: 50%;
-    content: '';
-    inset: 12%;
-    position: absolute;
+.home-about__video {
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: contain;
+  width: 100%;
+
+  &:focus-visible {
+    outline: 3px solid #86d8d3;
+    outline-offset: -3px;
   }
 }
 
@@ -473,27 +473,31 @@ footer {
   text-transform: uppercase;
 }
 
-.home-about__copy {
-  position: relative;
+.home-about__header {
+  grid-column: 1 / -1;
 
   h2 {
     color: #fff;
-    font-size: clamp(2rem, 3.4vw, 3.2rem) !important;
+    font-size: clamp(1.75rem, 2.6vw, 2.4rem) !important;
     letter-spacing: -0.045em;
-    line-height: 1.08;
-    margin: 0 0 1.4rem;
+    line-height: 1.2;
+    margin: 0;
   }
+}
 
-  > p:not(.home-about__eyebrow) {
+.home-about__copy {
+  > p {
     color: #c5d9da;
     font-size: 1.05rem;
-    line-height: 1.7;
-    margin-bottom: 1.7rem;
+    line-height: 1.65;
+    margin: 0;
   }
 }
 
 .home-about__link {
   color: #86d8d3;
+  display: inline-block;
+  margin-top: 1.5rem;
   font-weight: 700;
   text-decoration: none;
 
@@ -834,6 +838,12 @@ footer {
   }
 }
 
+@media (max-width: 991px) {
+  .home-about {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 @media (max-width: 720px) {
   .home-hero {
     grid-template-columns: minmax(0, 1fr);
@@ -861,10 +871,6 @@ footer {
   .home-about {
     grid-template-columns: 1fr;
     padding: 2.25rem 1.5rem;
-  }
-
-  .home-about__label {
-    max-width: 150px;
   }
 
   .home-news__header {
