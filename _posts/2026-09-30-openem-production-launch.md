@@ -38,4 +38,3 @@ Ready to explore? Browse publicly available electron microscopy datasets through
 The next release is already planned and will include the **Depositor release**
 and **Ingestor improvements**. These updates will follow in a separate release;
 we will share further details as it approaches.
-
