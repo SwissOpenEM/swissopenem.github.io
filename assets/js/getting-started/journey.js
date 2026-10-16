@@ -64,7 +64,24 @@
   };
 
   stepButtons.forEach((button) => {
-    button.addEventListener('click', () => selectStep(Number(button.dataset.guideStep)));
+    button.addEventListener('click', () => {
+      selectStep(Number(button.dataset.guideStep));
+
+      if (compactLayout.matches) return;
+
+      const explainer = desktopPanelContainer.parentElement;
+      const bounds = explainer.getBoundingClientRect();
+      const navbar = document.querySelector('.navbar.fixed-top');
+      const topInset = (navbar ? navbar.getBoundingClientRect().bottom : 0) + 24;
+      const distance = Math.min(bounds.bottom - window.innerHeight + 24, bounds.top - topInset);
+
+      if (distance > 0) {
+        window.scrollBy({
+          top: distance,
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+        });
+      }
+    });
   });
 
   previousButton.addEventListener('click', () => selectStep(currentStep - 1));

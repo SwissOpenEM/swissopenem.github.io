@@ -1053,7 +1053,7 @@ footer {
   button {
     background: var(--dataset-accent);
     border: 1px solid var(--dataset-accent);
-    border-radius: 999px;
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(23, 54, 58, 0.12);
     color: #fff;
     cursor: pointer;
@@ -1199,7 +1199,7 @@ footer {
 
 .dataset-skeleton--tag-short,
 .dataset-skeleton--tag-long {
-  border-radius: 999px;
+  border-radius: 10px;
   height: 1.45rem;
   width: 4.8rem;
 }
@@ -1265,7 +1265,7 @@ footer {
 
   li {
     background: #e9f4f5;
-    border-radius: 999px;
+    border-radius: 10px;
     color: #28656b;
     font-size: 0.78rem;
     padding: 0.3rem 0.7rem;
