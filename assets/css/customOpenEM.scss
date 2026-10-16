@@ -4,6 +4,38 @@
 
 $openem-font-sans: "Inter", Arial, Helvetica, sans-serif;
 
+.production-launch-thanks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1.75rem 0 2rem;
+  padding: 1.25rem;
+  background: #f3f8f7;
+  border: 1px solid #dce7e7;
+  border-radius: 12px;
+
+  img {
+    flex: 1 1 280px;
+    width: 100%;
+    max-width: 420px;
+    min-width: 0;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  p {
+    flex: 1 1 200px;
+    margin: 0;
+    padding-left: 1rem;
+    border-left: 3px solid #238d96;
+    color: #123b43;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+}
+
 body {
   font-family: $openem-font-sans;
 }
