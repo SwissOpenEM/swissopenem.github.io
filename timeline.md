@@ -19,6 +19,8 @@ as described below. Milestones have been chosen to span multiple deliverables an
 highlight the overall progress of the project towards our envisioned FAIR and open
 EM infrastructure.
 
+In 2026, the project was extended to enable its successful completion.
+
 More details regarding the the software components and their integration into the OpenEM
 ecosystem can be found [here]({{ "/software/" | relative_url }}).
 
@@ -168,7 +170,7 @@ No API is available for deposition to EMPIAR. However, preliminary steps have be
 {: .box-note}
 **Completed: December 2025**
 
-The final milestone hands over operation and maintenance roles to facilities, preparing
+This milestone hands over operation and maintenance roles to facilities, preparing
 for the end of the current funding cycle.
 
 | Component              | Goal                                               |
@@ -176,3 +178,17 @@ for the end of the current funding cycle.
 | Repository Integration | Deal with datasets using different version schema. |
 | SciCat                 | Easier authorization and user management.          |
 | Education - Website    | User training workshops and materials              |
+
+## Go-Live
+
+### Milestone VIII: Go-Live
+
+{: .box-note}
+**Completed: September 2026**
+
+| Component              | Goal                                                  |
+| ---------------------- | ----------------------------------------------------- |
+| Production Deployment  | Transition OpenEM to the production system.            |
+| Education - Website    | Update the documentation and website.                 |
+| Ingestor               | Address user feedback.                                |
+| Repository Integration | Complete the OneDep integration.                       |

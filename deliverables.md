@@ -25,7 +25,7 @@ All delivery results of the project are described here. The schedule and depende
 Different components or organisational topics are being worked on within each work package.
 
 <section class="deliverables" aria-label="Work packages and tasks" data-deliverables>
-  <p class="deliverable-hint" id="deliverable-hint">Select a work package to view its tasks and progress below. <span aria-hidden="true">↓</span></p>
+  <p class="deliverable-hint" id="deliverable-hint">Select a work package to view its tasks and progress below.</p>
   <div class="deliverable-container" role="group" aria-describedby="deliverable-hint" aria-label="Select a work package">
     {% for wp in page.work_packages %}
       {% capture wp_url %}/deliverable-wp{{ wp.number }}/{% endcapture %}
