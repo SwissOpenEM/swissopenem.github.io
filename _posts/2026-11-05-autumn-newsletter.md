@@ -7,12 +7,16 @@ tags:
   - newsletter
   - production
   - release
-thumbnail-img: /assets/videos/OpenEM_poster.jpg
+thumbnail-img: /assets/img/OpenEM-poster-thumbnail.png
 excerpt: |-
-  OpenEM is running in production on discovery.psi.ch, around 70 users can already log
-  in with eduGAIN, and the next release brings autocompletion, tooltips, transfer
-  tracking and automated EMDB deposition. Here is where things stand and how you can
-  help.
+  At the end of September, OpenEM reached a milestone: the funded project wrapped up, and
+  what began as a research collaboration is now a live service. Data from participating
+  microscopes can go straight into long-term storage, with metadata captured
+  automatically, and come out the other side as a published dataset with a DOI. Around 70
+  researchers already have accounts.
+
+  In this issue: how to log in, a first look at the next release (including direct
+  deposition to EMDB), and how you can help OpenEM grow.
 ---
 
 Dear OpenEM community,
@@ -126,8 +130,12 @@ SciCat as tooltips, so every improvement helps users enter better metadata.
   [OSC-EM discussions](https://github.com/orgs/osc-em/discussions) or the
   [mailing list](https://listas.csic.es/cnb/wws/info/oscem) and help us refine the
   metadata definitions.
-- **Report bugs and request features** through your facility operator, on
-  [GitHub](TODO-github-issues-url), or on [Slack](TODO-slack-url).
+- **Report bugs and request features** through your facility operator, the
+  [OpenEM support mailing list](https://psilists.ethz.ch/sympa/info/openem-help)
+  (`openem-help@lists.psi.ch`), GitHub, or
+  [Slack](https://join.slack.com/t/openem/shared_invite/zt-2zol5byg0-hQPsS3xb_CPsNk7QsbY8tw).
+- **Spread the word.** Forward this newsletter to colleagues and invite them to join the
+  [OpenEM members mailing list](https://psilists.ethz.ch/sympa/info/openem-members).
 
 Thank you to everyone who has tested, ingested, and given feedback so far!
 
