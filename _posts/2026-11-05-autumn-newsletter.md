@@ -9,14 +9,8 @@ tags:
   - release
 thumbnail-img: /assets/img/OpenEM-poster-thumbnail.png
 excerpt: |-
-  At the end of September, OpenEM reached a milestone: the funded project wrapped up, and
-  what began as a research collaboration is now a live service. Data from participating
-  microscopes can go straight into long-term storage, with metadata captured
-  automatically, and come out the other side as a published dataset with a DOI. Around 70
-  researchers already have accounts.
-
-  In this issue: how to log in, a first look at the next release (including direct
-  deposition to EMDB), and how you can help OpenEM grow.
+  OpenEM is now a live service, taking microscope data from archive to published DOI.
+  Find out how to log in, what's coming in the next release, and how you can help.
 ---
 
 Dear OpenEM community,
