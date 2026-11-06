@@ -33,3 +33,14 @@ This is equivalent running `jekyll serve`.
 
 This site uses the [Beautiful Jekyll](https://github.com/daattali/beautiful-jekyll) theme
 by [Dean Attali](https://deanattali.com/).
+
+## Content guidelines
+
+### News
+
+- Add news items to `_posts`
+- Include the publication date in the filename and `date` frontmatter. Choose a
+  publication date in the past, as future dates are considered drafts.
+- Thumbnail images should be 1200x800. However, this is cropped towards the center
+  depending on the window width. Keep important content in the middle third of the
+  image. See `thumbnail_template.svg` for guides to what is visible in various layouts.
