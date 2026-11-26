@@ -1,0 +1,55 @@
+{% comment %}
+Modal for choosing which facility ingestor to open. Opened by any element with
+data-facility-picker-open; see assets/js/getting-started/facility-picker.js.
+Facilities come from _data/facilities.yml; labels and discovery URLs from
+page.journey.facility_picker.
+{% endcomment %}
+{% assign picker = page.journey.facility_picker %}
+{% assign production_host = picker.production_url | remove: "https://" %}
+{% assign test_host = picker.test_url | remove: "https://" %}
+<dialog class="facility-picker" data-facility-picker data-production-host="{{ production_host }}" data-test-host="{{ test_host }}" aria-labelledby="facility-picker-title">
+  <div class="facility-picker__body">
+    <div class="facility-picker__header">
+      <h2 class="facility-picker__title" id="facility-picker-title">{{ picker.title }}</h2>
+      <button class="facility-picker__close" type="button" data-facility-picker-close aria-label="{{ picker.close_label }}"><span aria-hidden="true">&times;</span></button>
+    </div>
+    <p class="facility-picker__intro">{{ picker.introduction }}</p>
+
+    <a class="facility-picker__option facility-picker__option--automatic" href="{{ picker.production_url }}/ingestor?discovery=true" data-production-href="{{ picker.production_url }}/ingestor?discovery=true" data-test-href="{{ picker.test_url }}/ingestor?discovery=true" autofocus>
+      <span class="fas fa-magic facility-picker__option-icon" aria-hidden="true"></span>
+      <span class="facility-picker__option-text">
+        <span class="facility-picker__option-title">{{ picker.automatic_label }}</span>
+        <span class="facility-picker__option-meta">{{ picker.automatic_description }}</span>
+      </span>
+    </a>
+
+    <p class="facility-picker__divider">{{ picker.facilities_label }}</p>
+    <ul class="facility-picker__facilities">
+      {% assign facilities = site.data.facilities | sort: "name" %}
+      {% for facility in facilities %}
+        {% assign test_href = facility.ingestor_urls.qa | url_encode | prepend: "/ingestor?backendUrl=" | prepend: picker.test_url %}
+        {% if facility.ingestor_urls.production %}
+          {% assign production_href = facility.ingestor_urls.production | url_encode | prepend: "/ingestor?backendUrl=" | prepend: picker.production_url %}
+        {% else %}
+          {% assign production_href = test_href %}
+        {% endif %}
+        <li{% unless facility.ingestor_urls.production %} data-facility-picker-test-only hidden{% endunless %}>
+          <a class="facility-picker__option" href="{{ production_href }}" data-production-href="{{ production_href }}" data-test-href="{{ test_href }}">
+            <span class="facility-picker__option-text">
+              <span class="facility-picker__option-title">{{ facility.name }}</span>
+              <span class="facility-picker__option-meta">{{ facility.institute }}</span>
+            </span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <div class="facility-picker__footer">
+      <label class="facility-picker__environment">
+        <input class="facility-picker__switch" type="checkbox" role="switch" data-facility-picker-test>
+        <span>{{ picker.test_label }}</span>
+      </label>
+      <span class="facility-picker__host" data-facility-picker-host>{{ production_host }}</span>
+    </div>
+  </div>
+</dialog>

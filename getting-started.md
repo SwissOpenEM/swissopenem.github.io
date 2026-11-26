@@ -43,6 +43,7 @@ journey:
                 url: https://discovery.psi.ch/login
               - label: Transfer Data
                 url: https://discovery.psi.ch/ingestor?discovery=true
+                facility_picker: true
           explanation_title: Extract and complete metadata
           explanation: >-
               The end user starts the ingestion process. The OpenEM Ingestor then extracts
@@ -91,6 +92,18 @@ journey:
           explanation: >-
               The Depositor prepares selected data and metadata for submission to third-party
               repositories, extending access beyond the OpenEM platform.
+    facility_picker:
+        title: Transfer data
+        introduction: >-
+            Open the OpenEM Ingestor for your facility. Facility ingestors are usually
+            only reachable from the facility network or VPN.
+        automatic_label: Automatic
+        automatic_description: Detect the ingestor available on your network
+        facilities_label: Or choose your facility
+        test_label: Test environment
+        close_label: Close
+        production_url: https://discovery.psi.ch
+        test_url: https://discovery-qa.psi.ch
     people:
         title: People
         hint: Click your role to learn more.

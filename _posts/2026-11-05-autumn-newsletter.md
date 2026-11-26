@@ -33,7 +33,7 @@ long-term storage, and publish it with a DOI.
 
 Interested in using OpenEM at your microscope? **Contact your facility operator** to get
 started. You can find the operators for each facility on the
-[facility contacts page](TODO-facility-contacts-url).
+[facility contacts page](https://data-catalog-services.pages.psi.ch/openem/user/facilities/).
 
 ## Share the OpenEM video
 
@@ -64,7 +64,7 @@ researchers:
 The documentation has moved to the PSI Data Catalog documentation portal at
 [data-catalog-services.pages.psi.ch](https://data-catalog-services.pages.psi.ch/openem/openem-start/),
 which is also linked directly from SciCat. The best place to begin is the
-[**quickstart guide**](TODO-quickstart-url).
+[**quickstart guide**](https://data-catalog-services.pages.psi.ch/openem/openem-start/).
 
 Accounts have been created for **around 70 users** so far.
 
